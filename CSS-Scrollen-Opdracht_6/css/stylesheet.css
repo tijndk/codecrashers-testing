@@ -41,9 +41,9 @@ body {
     background-position: center center;
 }
 
+
 div#scroll-container {
     width: clamp(50vw, 75vw, 80vw);
-    height: auto;
     margin: 0 auto;
     margin-top: 50px;
 
@@ -53,24 +53,26 @@ div#scroll-container {
     
     overflow: auto;
     scroll-snap-type: x mandatory;
-    scroll-snap-stop: always;
 
     background-color: rgba(46, 139, 86, 0.5);
     border-radius: 10px;
 }
+
+/* Opdracht 6.3 */
 div#scroll-container > div {
     min-width: 200px;
     scroll-snap-align: none;
 }
+/* --- */
 
-figure {
+#scroll-container figure {
     width: clamp(50vw, 75vw, 80vw);
     scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
-
 figure img {
-    width: clamp(50vw, 75vw, 80vw);
+    width: 48vw;
     border-radius: 10px;
     box-shadow: 0px 0px 8px 2px darkgreen;
 }
@@ -79,5 +81,3 @@ figure figcaption {
     text-align: center;
     text-shadow: 1px 1px 2px darkgreen;
 }
-
-/* maak opdracht 6.2 scrollbar style af */
