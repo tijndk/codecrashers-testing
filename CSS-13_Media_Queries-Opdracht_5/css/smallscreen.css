@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* BASIS VOOR VAKER VOORKOMENDE DINGEN */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: #222222;
+    text-decoration: none;
+    padding: 0px 5px;
+}
+
+.active {
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 2px;
+}
+
+h2 {
+    font-size: 18px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+input, select, button {
+    font-family: 'Poppins', sans-serif;
+}
+/* --------------------------- */
+
+/* De header met logo, menu-knop, en cart-knop */
+header {
+    height: 60px;
+    padding: 0 15px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    background-color: white;
+}
+/* --------------------------- */
+
+/* De content in het midden van de pagina */
+/* Het gedeelte met plaatjes */
+/* grote voorbeeld plaatje */
+#gallery #big-image {
+    max-width: 700px;
+    height: auto;
+
+    position: relative
+}
+#gallery #big-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+/*  */
+
+/* pijltjes voor vorige en volgende afbeelding */
+#big-image #prev-next-item {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+}
+#big-image #prev-next-item img {
+    width: 65px;
+    height: 65px;
+}
+/*  */
+
+/* afbeelding vergroten */
+#big-image #zoom-item {
+    margin-right: 10px;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#big-image #zoom-item img {
+    width: 65px;
+    height: 65px;
+}
+/*  */
+
+/* 4 kleine afbeeldingen */
+#gallery #small-images {
+    max-height: 90px;
+    margin: 8px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    column-gap: 2px;
+}
+#gallery #small-images img {
+    min-width: 65px;
+    max-width: 90px;
+    height: auto;
+
+    opacity: 50%;
+}
+#gallery #small-images img.active {
+    opacity: 100%;
+}
+/*  */
+/*  */
+
+/* content gedeelte met naam, prijs, add to cart en etc */
+section#info {
+    padding: 0 10px 45px;
+}
+section#info h1 {
+    font-size: 20px;
+    line-height: 50px;
+    font-weight: normal;
+}
+section#info h1 em {
+    font-size: 22px;
+}
+
+section#info p:first-of-type {
+    padding: 15px 0 35px;
+}
+
+div.add-quantity {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    column-gap: 20px;
+}
+section#info input[type="number"] {
+    width: 116px;
+    height: 56px;
+    margin-bottom: 5px;
+    text-align: center;
+
+    border: 2px solid #E4E4E4;
+}
+section#info p:nth-of-type(4), section#info p:nth-of-type(5), section#info p:nth-of-type(6) {
+    font-size: 13px;
+    line-height: 25px;
+}
+p::before {
+    text-transform: uppercase;
+    color: #767676;
+}
+section#info p:nth-of-type(4) {
+    padding-top: 32px;
+}
+section#info p:nth-of-type(4)::before {
+    content: "sku: ";
+}
+section#info p:nth-of-type(5)::before {
+    content: "categories: ";
+}section#info p:nth-of-type(6)::before {
+    content: "tags: ";
+}
+section#info button {
+    width: 248px;
+    height: 60px;
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: none;
+
+    color: white;
+    background-color: #222222;
+}
+section#info .fa-share-nodes, section#info .fa-heart {
+    font-size: 16px;
+}
+section#info p:nth-of-type(2), section#info p:nth-of-type(3) {
+    text-transform: uppercase;
+    font-style: italic;
+
+    padding-right: 30px;
+
+    display: inline;
+}
+/*  */
+
+/* Gedeelte met description en veel tekst */
+#description {
+    padding: 0 10px 54px;
+}
+
+#description ul:first-of-type {
+    font-style: italic;
+    text-transform: uppercase;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    color: #767676;
+}
+#description ul:first-of-type li {
+    padding: 0 10px;
+}
+#description ul:first-of-type li.active {
+    color: #222222;
+}
+#description ul:nth-of-type(2) {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+#description ul:nth-of-type(2) li::marker {
+    color: #C4C4C4;
+}
+
+#description h3 {
+    font-style: italic;
+    font-size: 16px;
+    font-weight: normal;
+}
+#description h3:first-of-type {
+    padding: 24px 0 25px;
+}
+#description h3:nth-of-type(2) {
+    padding-bottom: 22px;
+}
+#description h3:nth-of-type(3) {
+    padding-top: 37px;
+    padding-bottom: 22px;
+}
+#description h3:nth-of-type(4) {
+    padding-top: 30px;
+}
+#description ol {
+    list-style-position: inside;
+}
+#description ol li::marker {
+    font-size: 16px;
+    font-style: italic;
+    color: #767676;
+}
+/* --------------------------- */
+
+/* De footer met allemaal linkjes enzo */
+footer {
+    padding: 0 10px;
+
+    background-color: #E4E4E4;
+}
+
+footer div.inner-footer h2 {
+    padding-top: 25px;
+    padding-bottom: 8px;
+}
+footer div.inner-top {
+    line-height: 26px;
+    padding-top: 50px;
+    padding-bottom: 16px;
+}
+footer div.inner-top img {
+    padding-bottom: 30px;
+}
+div.inner-footer div.inner-top p.socials {
+    font-size: 16px;
+    letter-spacing: 10px;
+    padding-top: 28px;
+}
+.fa-twitter {
+    color: #767676;
+}
+
+footer div.inner-middle {
+    line-height: 44px;
+
+    display: grid;
+    grid-template-areas:
+    'company shop'
+    'about fill';
+}
+
+footer div.inner-bottom {
+    padding-top: 32px;
+    padding-bottom: 65px;
+
+    border-bottom: 1px solid #CFCDCD;
+}
+
+div.inner-bottom form {
+    padding-top: 20px;
+}
+#emailaddress, #join {
+    padding: 23px;
+
+    background-color: white;
+    border: none;
+}
+#emailaddress {
+    width: 50%;
+    margin: 15px 0 41px;
+}
+#emailaddress::placeholder {
+    color: #222222;
+}
+#join {
+    font-style: italic;
+}
+
+.inner-bottom p {
+    font-size: 15px;
+    font-style: italic;
+}
+.inner-bottom img[alt="secure-payments"] {
+    max-width: 265px;
+}
+
+div.bottom-footer {
+    padding-bottom: 20px;
+    padding-top: 14px;
+    line-height: 45px;
+}
+div.bottom-footer label {
+    color: #767676;
+    margin-right: 15px;
+}
+div.bottom-footer select {
+    background-color: transparent;
+    border: none;
+    appearance: none;
+    
+    background-image: url(../images/back-top.svg);
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 55%;
+}
+div.bottom-footer select:hover {
+    border-bottom: 1px solid #222222;
+}
+select#language {
+    width: 180px;
+}
+select#currency {
+    width: 60px;
+}
+/* --------------------------- */
+
+/* back to top knop */
+.back-to-top {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEEEEE;
+}
+/*  */
