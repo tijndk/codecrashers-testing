@@ -3,12 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>Uomo Shop | Lightweight Puffer Jacket With a Hood</title>
-        <link rel="icon" href="images/logo.svg">
         <meta name="description" content="">
         <!-- responsive -->
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <!-- stylesheet voor telefoon -->
+        <!-- stylesheet voor rechtop staande telefoon -->
         <link rel="stylesheet" href="css/smallscreen.css">
+        <!-- stylesheet voor grotere desktops, tv's -->
+        <link rel="stylesheet" media="(min-width: 1200px)" href="css/desktop.css">
         <!-- koppeling met google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +20,29 @@
     <body>
         <div id="container">
             <header>
-                <img src="images/navigation_icon.svg" alt="navigation">
-                <img src="images/logo.svg" alt="logo">
-                <img src="images/shopping-cart_icon.svg" alt="shopping-cart">
+                <input id="menu-toggle" type="checkbox" />
+                <label class='menu-button-container' for="menu-toggle">
+                    <div class='menu-button'></div>
+                </label>
+                <div>
+                    <img src="images/logo.svg" alt="logo">
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">shop</a></li>
+                            <li><a href="#">collection</a></li>
+                            <li><a href="#">journal</a></li>
+                            <li><a href="#">lookbook</a></li>
+                            <li class="active"><a href="#">pages</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="icons">
+                    <a href="#"><img src="images/001-loupe.svg" alt="search"></a>
+                    <a href="#"><img src="images/002-user.svg" alt="profile"></a>
+                    <a href="#"><img src="images/004-heart.svg" alt="heart"></a>
+                    <a href="#"><img src="images/shopping-cart_icon.svg" alt="shopping-cart"></a>
+                </div>
             </header>
             <section class="content">
                 <div id="gallery">
@@ -43,6 +64,13 @@
                     </div>
                 </div>
                 <section id="info">
+                    <div>
+                        <p>home / the shop</p>
+                        <div>
+                            <p>&lt; prev</p>
+                            <p>next &gt; </p>
+                        </div>
+                    </div>
                     <h1>Lightweight Puffer Jacket With a Hood</h1>
                     <h1><em>$449</em></h1>
                     <p>Phasellus sed volutpat orci. Fusce eget lore mauris vehicula elementum gravida nec dui. Aenean aliquam varius ipsum, non ultricies tellus sodales eu.</p>
@@ -57,9 +85,10 @@
                 </section>
                 <section id="description">
                     <ul>
-                        <li class="active">description</li>
-                        <li>additional information</li>
-                        <li>reviews (3)</li>
+                        <li class="active">description <p>-</p></li>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <li>additional information <p>+</p></li>
+                        <li>reviews (3) <p>+</p></li>
                     </ul>
                     <h3>Sed do eiusmod tempor incididunt ut labore</h3>
                     <p>
@@ -79,6 +108,43 @@
                     </ol>
                     <h3>Lining</h3>
                     <p>100% Polyester, Main: 100% Polyester</p>
+                </section>
+                <section>
+                    <h1>related <span>products</span></h1>
+                    <div>
+                        <figure>
+                            <img src="https://static.e-stradivarius.net/5/photos4/2024/V/0/1/p/1792/300/001/1792300001_1_1_1.jpg?t=1704713706403&impolicy=stradivarius-itxmediumhigh&imwidth=480&imformat=chrome&imdensity=2.625" alt="Leather Jacket">
+                            <figcaption>
+                                <p>Dresses</p>
+                                <p>Cropped Faux Leather Jacket</p>
+                                <p>$29</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://img01.ztat.net/article/spp-media-p1/53131e49fdc442c98259f7719cb5b08b/cc3b9fd58dee442384c2b940541c0829.jpg?imwidth=1800" alt="Calvin Shorts">
+                            <figcaption>
+                                <p>Dresses</p>
+                                <p>Calvin Shorts</p>
+                                <p>$62</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://media.gamestop.com/i/gamestop/11203419/Kirby-Box-Art-Logo-Long-Sleeve-Black-T-Shirt" alt="Kirby T-Shirt">
+                            <figcaption>
+                                <p>Dresses</p>
+                                <p>Kirby T-Shirt</p>
+                                <p>$17</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://arancrafts.com/wp-content/uploads/2018/11/1473-CHUNKY-CABLE-KNIT-SCARF-X4855-scaled.jpg" alt="Cableknit Shawl">
+                            <figcaption>
+                                <p>Dresses</p>
+                                <p>Cableknit Shawl</p>
+                                <p><del>$129</del> <ins>$99</ins></p>
+                            </figcaption>
+                        </figure>
+                    </div>
                 </section>
             </section>
             <footer>
@@ -145,22 +211,24 @@
                 </div>
                 <div class="bottom-footer">
                     <p>&#169;2020 Uomo</p>
-                    <div class="language">
-                    <label for="language">Language</label>
-                    <select name="language" id="language">
-                        <option>United Kingdom | English</option>
-                        <option>Netherlands | Dutch</option>
-                        <option>Mexico | Spanish</option>
-                        <option>Canada | French</option>
-                    </select>
-                    </div>
-                    <div class="currency">
-                        <label for="currency">Currency</label>
-                        <select name="currency" id="currency">
-                            <option>&#36; USD</option>
-                            <option>&#163; GBP</option>
-                            <option>&#8364; EUR</option>
+                    <div class="lang-curr">
+                        <div class="language">
+                        <label for="language">Language</label>
+                        <select name="language" id="language">
+                            <option>United Kingdom | English</option>
+                            <option>Netherlands | Dutch</option>
+                            <option>Mexico | Spanish</option>
+                            <option>Canada | French</option>
                         </select>
+                        </div>
+                        <div class="currency">
+                            <label for="currency">Currency</label>
+                            <select name="currency" id="currency">
+                                <option>&#36; USD</option>
+                                <option>&#163; GBP</option>
+                                <option>&#8364; EUR</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </footer>

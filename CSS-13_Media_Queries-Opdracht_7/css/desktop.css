@@ -1,0 +1,242 @@
+body {
+    background-image: linear-gradient(to bottom, white 0% 74.8%, #e4e4e4 74.8% 100%);
+}
+div#container {
+    max-width: 1420px;
+    margin: 0 auto;
+}
+/* De header met logo, verschillende tabs, en knoppen */
+header > .menu-button-container {
+    position: absolute;
+    top: 3px;
+    right: 20px;
+}
+
+header > div:first-of-type {
+    display: flex;
+    flex-direction: row;
+}
+header nav.menu {
+    display: block;
+    width: 675px;
+}
+header nav.menu ul {
+    text-transform: uppercase;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+nav.menu {
+    position: relative;
+    margin-top: 0px;
+}
+
+#menu-toggle ~ div > .menu li {
+    height: 30px;
+}
+
+#menu-toggle:checked ~ div .menu li {
+    border: none;
+    height: 30px;
+    padding: 0;
+}
+.menu > li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+
+header div.icons {
+    width: 240px;
+    height: 28px;
+
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 6px;
+    right: 26px;
+}
+div#container header div.icons a {
+    display: block;
+}
+/* --------------------------- */
+
+/* De content in het midden van de pagina */
+section.content {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 68.4% 31.6%;
+    grid-template-areas:
+    'gallery info'
+    'gallery description'
+    'related-products related-products';
+}
+div#container section.content h1 {
+    font-size: 26px;
+}
+/* Het gedeelte met plaatjes */
+div#gallery {
+    padding-right: 0;
+    padding-bottom: 0;
+    grid-area: gallery;
+    max-width: 806px;
+}
+
+div#gallery div#small-images {
+    max-height: 700px;
+    width: 90px;
+    row-gap: 8px;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+div#gallery div#small-images img {
+    height: 90px;
+}
+
+div#gallery div#big-image {
+    top: 0;
+    left: 106px;
+}
+/*  */
+
+/* content gedeelte met naam, prijs, add to cart en etc */
+section#info {
+    grid-area: info;
+    padding-bottom: 10px;
+}
+
+section#info>div:first-of-type {
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+section#info>div:first-of-type>div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+}
+
+section#info div.add-quantity {
+    justify-content: flex-start;
+}
+section#info input[type="number"] {
+    width: 105px;
+}
+section#info button {
+    width: 230px;
+}
+/*  */
+
+/* Gedeelte met description, additional information en reviews */
+section#description {
+    grid-area: description;
+}
+section#description .active {
+    text-decoration: none;
+}
+section#description > ul:first-of-type {
+    font-size: 16px;
+    font-style: normal;
+    flex-flow: column nowrap;
+}
+#description > ul:first-of-type li {
+    padding: 0;
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #E4E4E4;
+}
+#description > ul:first-of-type > p {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+}
+#description > ul:first-of-type > li p {
+    display: block;
+    color: #222222;
+    font-size: 18px;
+}
+
+section#description > h3, section#description > p, #description > ul, section#description > ol {
+    display: none;
+}
+
+#container > section.content > section:last-child {
+    display: block;
+    grid-area: related-products;
+    padding: 0 10px;
+}
+
+#container > section.content > section:last-child h1 {
+    display: block;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+#container > section.content > section:last-child h1 span {
+    font-weight: bold;
+}
+#container > section.content > section:last-child div {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 95px;
+}
+
+#container > section.content > section:last-child figure {
+    width: 280px;
+    height: auto;
+}
+#container > section.content > section:last-child figure img {
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: contain;
+}
+#container > section.content > section:last-child figure p:first-child {
+    color: #767676;
+}
+#container > section.content > section:last-child figure p:nth-child(2), #container > section.content > section:last-child figure p:nth-child(3) {
+    font-size: 16px;
+}
+
+figure del {
+    color: #767676;
+}
+figure ins {
+    text-decoration: none;
+}
+/* --------------------------- */
+
+/* Gedeelte met de footer */
+footer div.inner-footer {
+    display: flex;
+    flex-direction: row;
+}
+div.inner-footer div.inner-top {
+    padding-top: 65px;
+}
+div.inner-footer div.inner-middle{
+    padding-top: 25px;
+}
+div.inner-footer div.inner-bottom {
+    border: none;
+}
+
+div.bottom-footer {
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.lang-curr {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+}
+/* --------------------------- */

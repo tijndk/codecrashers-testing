@@ -53,11 +53,112 @@ header {
 
     background-color: white;
 }
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #222;
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+  
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+.menu-button-container {
+    display: flex;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+  
+#menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+  
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+nav.menu > ul > li {
+    overflow: hidden;
+}
+
+
+.menu {
+    width: 100%;
+    margin-top: 60px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#menu-toggle ~ div > .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#menu-toggle:checked ~ div > .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu > ul li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+}
+
+header > div:first-of-type, header div.icons {
+    height: 28px;
+}
+
 /* --------------------------- */
 
 /* De content in het midden van de pagina */
 /* Het gedeelte met plaatjes */
 /* grote voorbeeld plaatje */
+#gallery {
+    position: relative;
+    padding: 0 15px 40px;
+}
 #gallery #big-image {
     max-width: 700px;
     height: auto;
@@ -138,7 +239,7 @@ section#info h1 em {
     font-size: 22px;
 }
 
-section#info p:first-of-type {
+section#info > p:first-of-type {
     padding: 15px 0 35px;
 }
 
@@ -158,23 +259,31 @@ section#info input[type="number"] {
 
     border: 2px solid #E4E4E4;
 }
-section#info p:nth-of-type(4), section#info p:nth-of-type(5), section#info p:nth-of-type(6) {
+section#info > p:nth-of-type(4), section#info > p:nth-of-type(5), section#info > p:nth-of-type(6) {
     font-size: 13px;
     line-height: 25px;
+}
+section#info > p:nth-of-type(2), section#info > p:nth-of-type(3) {
+    text-transform: uppercase;
+    font-style: italic;
+
+    padding-right: 30px;
+
+    display: inline;
 }
 p::before {
     text-transform: uppercase;
     color: #767676;
 }
-section#info p:nth-of-type(4) {
+section#info > p:nth-of-type(4) {
     padding-top: 32px;
 }
-section#info p:nth-of-type(4)::before {
+section#info > p:nth-of-type(4)::before {
     content: "sku: ";
 }
-section#info p:nth-of-type(5)::before {
+section#info > p:nth-of-type(5)::before {
     content: "categories: ";
-}section#info p:nth-of-type(6)::before {
+}section#info > p:nth-of-type(6)::before {
     content: "tags: ";
 }
 section#info button {
@@ -191,14 +300,6 @@ section#info button {
 section#info .fa-share-nodes, section#info .fa-heart {
     font-size: 16px;
 }
-section#info p:nth-of-type(2), section#info p:nth-of-type(3) {
-    text-transform: uppercase;
-    font-style: italic;
-
-    padding-right: 30px;
-
-    display: inline;
-}
 /*  */
 
 /* Gedeelte met description en veel tekst */
@@ -208,16 +309,15 @@ section#info p:nth-of-type(2), section#info p:nth-of-type(3) {
 
 #description ul:first-of-type {
     font-style: italic;
-    text-transform: uppercase;
 
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-
-    color: #767676;
 }
 #description ul:first-of-type li {
+    text-transform: uppercase;
     padding: 0 10px;
+    color: #767676;
 }
 #description ul:first-of-type li.active {
     color: #222222;
@@ -264,7 +364,12 @@ footer {
 
     background-color: #E4E4E4;
 }
-
+footer div.inner-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid #CFCDCD;
+}
 footer div.inner-footer h2 {
     padding-top: 25px;
     padding-bottom: 8px;
@@ -289,17 +394,16 @@ div.inner-footer div.inner-top p.socials {
 footer div.inner-middle {
     line-height: 44px;
 
-    display: grid;
-    grid-template-areas:
-    'company shop'
-    'about fill';
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    column-gap: 110px;
 }
 
 footer div.inner-bottom {
+    max-width: 410px;
     padding-top: 32px;
     padding-bottom: 65px;
-
-    border-bottom: 1px solid #CFCDCD;
 }
 
 div.inner-bottom form {
@@ -308,6 +412,7 @@ div.inner-bottom form {
 #emailaddress, #join {
     padding: 23px;
 
+    color: #222222;
     background-color: white;
     border: none;
 }
@@ -331,6 +436,8 @@ div.inner-bottom form {
 }
 
 div.bottom-footer {
+    display: flex;
+    flex-direction: column;
     padding-bottom: 20px;
     padding-top: 14px;
     line-height: 45px;
@@ -354,9 +461,11 @@ div.bottom-footer select:hover {
 }
 select#language {
     width: 180px;
+    color: #222222;
 }
 select#currency {
     width: 60px;
+    color: #222222;
 }
 /* --------------------------- */
 
@@ -374,3 +483,24 @@ select#currency {
     background-color: #EEEEEE;
 }
 /*  */
+
+/* Dingen die niet of anders getoond worden op mobiel */
+
+header>div.icons>a:nth-child(1), header>div.icons>a:nth-child(2), header>div.icons>a:nth-child(3) {
+    display: none;
+}
+header>div.icons>a:nth-child(4) {
+    display: block;
+    padding: 0;
+}
+
+section#info>div:first-of-type {
+    display: none;
+}
+#container > section.content > section:last-child, #container > section.content > section:last-child h1, #container > section.content > section:last-child img {
+    display: none;
+}
+section#description ul p, section#description ul li p {
+    display: none;
+}
+/* --------------------------- */
