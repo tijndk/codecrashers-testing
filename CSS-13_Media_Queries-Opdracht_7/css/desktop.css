@@ -35,20 +35,23 @@ nav.menu {
 #menu-toggle ~ div > .menu li {
     height: 30px;
 }
-
+#menu-toggle:checked ~ div > .menu {
+    height: 0;
+}
 #menu-toggle:checked ~ div .menu li {
     border: none;
     height: 30px;
     padding: 0;
 }
-.menu > li {
+.menu > ul li {
     display: flex;
     justify-content: center;
-    width: 100%;
-    color: white;
-    background-color: #222;
+    width: 95px;
   }
 
+.menu > ul li a {
+    padding: 0 15px;
+}
 header div.icons {
     width: 240px;
     height: 28px;
