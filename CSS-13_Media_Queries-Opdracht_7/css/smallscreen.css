@@ -55,10 +55,14 @@ header {
 }
 
 /* Het overlay menu */
-body:has(#menu-toggle:checked) { /* zo kan je niet over heel de pagina scrollen terwijl je in de overlay zit */
+html:has(#menu-toggle:checked), body:has(#menu-toggle:checked) { /* zo kan je niet over heel de pagina scrollen terwijl je in de overlay zit */
     height: 100%;
     overflow-y: hidden;
 }
+body:has(#menu-toggle:checked) {
+    position: relative;
+}
+
 
 #menu-toggle {
     display: none;
