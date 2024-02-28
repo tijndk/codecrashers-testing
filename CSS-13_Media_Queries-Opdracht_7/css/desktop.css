@@ -5,11 +5,14 @@ div#container {
     max-width: 1420px;
     margin: 0 auto;
 }
+
 /* De header met logo, verschillende tabs, en knoppen */
 header > .menu-button-container {
     position: absolute;
     top: 3px;
     right: 20px;
+
+    pointer-events: none;
 }
 
 header > div:first-of-type {
@@ -27,31 +30,57 @@ header nav.menu ul {
     justify-content: space-evenly;
 }
 
+/* Het overlay menu */
+body:has(#menu-toggle:checked) {
+    height: 100%;
+    overflow-y: auto;
+}
 nav.menu {
     position: relative;
     margin-top: 0px;
+}
+#menu-toggle:checked ~ div > .menu {
+    height: 0;
+    border: none;
+}
+
+#menu-toggle:checked ~ div > .menu > form[action="index.html"] {
+    display: none;
 }
 
 #menu-toggle ~ div > .menu li {
     height: 30px;
 }
-#menu-toggle:checked ~ div > .menu {
-    height: 0;
-}
-#menu-toggle:checked ~ div .menu li {
-    border: none;
-    height: 30px;
+
+#menu-toggle:checked ~ div > .menu li {
     padding: 0;
 }
 .menu > ul li {
     display: flex;
     justify-content: center;
     width: 95px;
+
+    background-image: none;
   }
 
 .menu > ul li a {
     padding: 0 15px;
 }
+
+header:has(#menu-toggle:checked) ~ footer div.inner-top > p.socials {
+    padding-top: 28px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+header:has(#menu-toggle:checked) ~ footer div.bottom-footer div.lang-curr {
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+/* --------------------------- */
+
 header div.icons {
     width: 240px;
     height: 28px;

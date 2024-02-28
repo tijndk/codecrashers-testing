@@ -49,9 +49,15 @@ header {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 60;
 
     background-color: white;
+}
+
+/* Het overlay menu */
+body:has(#menu-toggle:checked) { /* zo kan je niet over heel de pagina scrollen terwijl je in de overlay zit */
+    height: 100%;
+    overflow-y: hidden;
 }
 
 #menu-toggle {
@@ -65,17 +71,19 @@ header {
     background-color: #222;
     position: absolute;
     height: 2px;
-    width: 30px;
+    width: 20px;
     transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.menu-button::before {
+.menu-button::before, .menu-button:after {
     content: '';
+    width: 25px;
     margin-top: -8px;
 }
   
 .menu-button::after {
     content: '';
+    width: 25px;
     margin-top: 8px;
 }
 
@@ -103,11 +111,6 @@ header {
     transform: rotate(-405deg);
 }
 
-nav.menu > ul > li {
-    overflow: hidden;
-}
-
-
 .menu {
     width: 100%;
     margin-top: 60px;
@@ -115,9 +118,65 @@ nav.menu > ul > li {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 50;
+}
+#menu-toggle:checked ~ div > .menu {
+    height: 100vh;
+    background-color: white;
+    border-top: 1px solid #E4E4E4;
 }
 
+/* Search bar */
+nav.menu > form[action="index.html"] {
+    display: none;
+}
+#menu-toggle:checked ~ div > .menu > form[action="index.html"] {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+form[action="index.html"] > input[name="search"], form[action="index.html"] > button[type="submit"] {
+    border: 1px solid #E4E4E4;
+    border-radius: 3px;
+}
+form[action="index.html"] > input[name="search"] {
+    width: 75%;
+    height: 38px;
+    padding-left: 17px;
+
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+form[action="index.html"] > button[type="submit"] {
+    color: #222222;
+    width: 40px;
+    height: 40px;
+
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    background-color: white;
+}
+/*  */
+
+.menu > ul li {
+    width: 100%;
+    margin: 0;
+    padding: 0.5em 0;
+
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    
+    color: #222222;
+    background-color: white;
+    background-image: url(../images/Expand-Less.svg);
+    background-repeat: no-repeat;
+    background-position-x: 97%;
+    background-position-y: 46%;
+}
 #menu-toggle ~ div > .menu li {
     height: 0;
     margin: 0;
@@ -125,30 +184,55 @@ nav.menu > ul > li {
     border: 0;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }
-
-#menu-toggle:checked ~ div > .menu {
-    background-color: white;
-    height: 100vh;    
-}
 #menu-toggle:checked ~ div > .menu li {
     height: 2.5em;
-    padding: 0.5em;
+    padding: 0.5em 0;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.menu > ul li {
-    display: flex;
-    justify-content: flex-start;
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
-    color: #222222;
-    background-color: white;
-}
 
 .menu > ul li a {
-    padding-right: 20px;
+    padding-right: 100%;
 }
+header:has(#menu-toggle:checked) > div.icons > a:nth-child(2) {
+    width: 100%;
+    height: 30px;
+    padding-left: 20px;
+    padding-top: 25px;
+
+    display: block;
+    position: fixed;
+    bottom: 145px;
+    left: 0;
+    z-index: 60;
+
+    border-top: 1px solid #E4E4E4;
+}
+header:has(#menu-toggle:checked) > div.icons > a:nth-child(2)::after {
+    content: 'my account';
+    text-transform: uppercase;
+
+    width: 100px;
+    position: absolute;
+    bottom: 5px;
+    left: 55px;
+}
+
+header:has(#menu-toggle:checked) ~ footer div.inner-top > p.socials {
+    padding-top: 0;
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+    z-index: 60;
+}
+
+header:has(#menu-toggle:checked) ~ footer div.bottom-footer div.lang-curr {
+    position: fixed;
+    bottom: 50px;
+    left: 20px;
+    z-index: 60;
+}
+/* --------------------------- */
 
 header > div:first-of-type, header div.icons {
     height: 28px;
@@ -419,6 +503,7 @@ div.inner-bottom form {
     color: #222222;
     background-color: white;
     border: none;
+    border-radius: 0;
 }
 #emailaddress {
     width: 50%;
@@ -464,7 +549,7 @@ div.bottom-footer select:hover {
     border-bottom: 1px solid #222222;
 }
 select#language {
-    width: 180px;
+    width: 188px;
     color: #222222;
 }
 select#currency {
