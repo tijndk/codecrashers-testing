@@ -1,0 +1,108 @@
+/* Opdracht 7.1 */
+:root {
+	scrollbar-width: none;
+
+	/* Opdracht 7.2 */
+	scroll-snap-type: both mandatory;
+	/* -- */
+}
+:root::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+/* - */
+
+html, body {
+	background-color: black;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+/* Opdracht 7.3 */
+body > div:has(img[src*="characters" i]) {
+	position: fixed;
+	top: 46%;
+	left: 47.5%;
+}
+/*  */
+
+main {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-areas:
+		'level-1-1 level-2-1 level-3-1 level-4-1'
+		'level-1-2 level-2-2 level-3-2 level-4-2'
+		'level-1-3 level-2-3 level-3-3 level-4-3'
+		'level-1-4 level-2-4 level-3-4 level-4-4'
+	;
+
+	/* Opdracht 7.1 */
+	touch-action: none;
+	/* - */
+}
+
+section {
+	width: 100vw;
+	height: 100vh;
+
+	/* Opdracht 7.2 */
+	scroll-snap-align: center;
+	/* -- */
+}
+
+section img {
+	width: 100%;
+	height: 100%;
+}
+
+.level-1-1 {
+	grid-area: level-1-1;
+}
+.level-2-1 {
+	grid-area: level-2-1;
+}
+.level-3-1 {
+	grid-area: level-3-1;
+}
+.level-4-1 {
+	grid-area: level-4-1;
+}
+.level-1-2 {
+	grid-area: level-1-2;
+}
+.level-2-2 {
+	grid-area: level-2-2;
+}
+.level-3-2 {
+	grid-area: level-3-2;
+}
+.level-4-2 {
+	grid-area: level-4-2;
+}
+.level-1-3 {
+	grid-area: level-1-3;
+}
+.level-2-3 {
+	grid-area: level-2-3;
+}
+.level-3-3 {
+	grid-area: level-3-3;
+}
+.level-4-3 {
+	grid-area: level-4-3;
+}
+.level-1-4 {
+	grid-area: level-1-4;
+}
+.level-2-4 {
+	grid-area: level-2-4;
+}
+.level-3-4 {
+	grid-area: level-3-4;
+}
+.level-4-4 {
+	grid-area: level-4-4;
+}
