@@ -5,6 +5,7 @@
 	/* Opdracht 7.2 */
 	scroll-snap-type: both mandatory;
 	/* -- */
+	touch-action: pan-x pan-y;
 }
 :root::-webkit-scrollbar {
 	width: 0px;
@@ -60,10 +61,6 @@ main {
 		'level-1-3 level-2-3 level-3-3 level-4-3'
 		'level-1-4 level-2-4 level-3-4 level-4-4'
 	;
-
-	/* Opdracht 7.1 */
-	touch-action: pan-x pan-y;
-	/* - */
 }
 
 section {
