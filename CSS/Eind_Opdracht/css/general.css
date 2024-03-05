@@ -1,0 +1,193 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+div#container {
+    max-width: 85vw;    /* check of dit responsive is!! */
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ff05b5;
+}
+div#container > section {
+    width: 100%;
+}
+
+/* Het gedeelte van de header */
+header > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header > div > nav {
+    width: 1100px;      /* maak responsive!!! */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header > div > nav > ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 10px;
+}
+
+
+/* Het "Newest Arrivals" gedeelte, de slider */
+div#slider {
+    display: grid;
+    grid-template-areas:
+    'latest-trends image'
+    'newest-arrivals image'
+    'text image'
+    'shop-now image';
+}
+
+div#slider > p:first-of-type {
+    grid-area: latest-trends;
+}
+div#slider > h1 {
+    grid-area: newest-arrivals;
+}
+div#slider > p:last-of-type {
+    grid-area: text;
+}
+div#slider > a {
+    grid-area: shop-now;
+}
+div#slider > img {
+    grid-area: image;
+}
+
+
+/* het "Shop By Category" gedeelte */
+article#category > section {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Het "Trendy Item" gedeelte */
+article#trendy > header > ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 10px;      /* haal dit later weg wanneer je * margin aan hebt gezet */
+}
+
+article#trendy > section {
+    display: flex;
+    flex-direction: row;
+}
+
+#trendy figcaption > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#trendy figcaption > div > p {
+    color: #B9A16B;
+}
+
+/* het gedeelte met "for her", "for him", en promotie */
+div#banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+div#banner > div {
+    width: 450px;       /* check of je dit responsive moet maken!!!! */
+    height: 450px;      /* check of je dit responsive moet maken!!!! */
+    background-position: center center;
+
+    background-image: url(../images/placeholder.png);
+}
+
+div#banner > div:last-child {
+    background-color: #B9A16B;
+    background-image: none;
+}
+
+
+/* het gedeelte met "summer collection" */
+div#weekdeal {
+    display: grid;
+    grid-template-areas:
+    'weekdeal image'
+    'summer-collection image'
+    'shop-now image'
+    'timer image';
+}
+
+div#weekdeal > p:first-of-type {
+    grid-area: weekdeal;
+}
+div#weekdeal > h1 {
+    grid-area: summer-collection;
+}
+div#weekdeal > a {
+    grid-area: shop-now;
+}
+div#weekdeal > p.timer {
+    grid-area: timer;
+}
+div#weekdeal > img {
+    grid-area: image;
+}
+
+
+/* het gedeelte met "Best Selling" items */
+article#best-selling > section {
+    display: flex;
+    flex-direction: row;
+}
+#best-selling figcaption > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#best-selling figcaption > div > p {
+    color: #B9A16B;
+}
+
+
+/* het gedeelte met de icons; delivery, customer support, en money back */
+div#icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+/* Het gedeelte met de fotos en "#Uomostyle" */
+div#instagram-gallery {
+    display: grid;
+    grid-template-columns: 465px 465px 465px;   /* maak responsive!!! */
+    grid-template-rows: 275px 124px 400px;      /* maak responsive!!! */
+    grid-template-areas:
+    'uomostyle pic-2 pic-3'
+    'pic-1 pic-2 pic-3'
+    'pic-1 pic-4 pic-5';
+}
+
+div#instagram-gallery > section {
+    grid-area: uomostyle;
+}
+div#instagram-gallery > img:first-of-type {
+    grid-area: pic-1;
+}
+div#instagram-gallery > img:nth-of-type(2) {
+    grid-area: pic-2;
+}
+div#instagram-gallery > img:nth-of-type(3) {
+    grid-area: pic-3;
+}
+div#instagram-gallery > img:nth-of-type(4) {
+    grid-area: pic-4;
+}
+div#instagram-gallery > img:last-of-type {
+    grid-area: pic-5;
+}
