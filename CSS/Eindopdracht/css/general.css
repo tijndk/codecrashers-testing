@@ -17,10 +17,12 @@ body {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 3vw;
+    text-transform: capitalize;
 }
 h2 {
-    font-size: 30px;
+    font-size: 1.5vw;
+    text-transform: capitalize;
 }
 
 ul {
@@ -139,15 +141,21 @@ div.icons img {
 /* Het "Newest Arrivals" gedeelte, de slider */
 div#slider {
     display: grid;
+    align-items: center;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 35% 15% 15% 35%;
     grid-template-areas:
     'latest-trends image'
     'newest-arrivals image'
     'text image'
     'shop-now image';
+
+    background-color: #f7f7f7;
 }
 
 div#slider > p:first-of-type {
     grid-area: latest-trends;
+    align-self: end;
 }
 div#slider > h1 {
     grid-area: newest-arrivals;
@@ -157,9 +165,12 @@ div#slider > p:last-of-type {
 }
 div#slider > a {
     grid-area: shop-now;
+    align-self: start;
 }
 div#slider > img {
     grid-area: image;
+    width: 100%;
+    height: auto;
 }
 
 
