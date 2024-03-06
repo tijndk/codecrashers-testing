@@ -10,6 +10,10 @@
         <link rel="stylesheet" href="css/general.css">
         <!-- koppeling met fontawesome -->
         <script src="https://kit.fontawesome.com/72b6362755.js" crossorigin="anonymous"></script>
+        <!-- koppeling met google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="container">
@@ -48,17 +52,17 @@
                 </div>
             </header>
             <section>
-                <div id="slider" style="background-color: darkgreen; margin:10px 0;">
+                <div id="slider" style="background-color: darkgreen;">
                     <p>latest trends</p>
                     <h1>newest arrivals</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
                         Odio pulvinar in ipsum amet.
                     </p>
-                    <a href="#" target="_self">shop now</a>
+                    <a href="#" target="_self" class="active">shop now</a>
                     <img src="images/placeholder.png" alt="placeholder">
                 </div>
-                <article id="category" style="background-color: green; margin:10px 0;">
+                <article id="category" style="background-color: green;">
                     <header>
                         <h2>shop by category</h2>
                         <p>the world's premium brands in one destination.</p>
@@ -102,13 +106,13 @@
                         </figure>
                     </section>
                 </article>
-                <article id="trendy" style="background-color: darkgreen; margin:10px 0;">
+                <article id="trendy" style="background-color: darkgreen;">
                     <header>
                         <h2>trendy items</h2>
                         <p>the world's premium brands in one destination.</p>
                         <ul>
                             <li><a href="#" target="_self">man</a></li>
-                            <li><a href="#" target="_self">women</a></li>
+                            <li class="active"><a href="#" target="_self">women</a></li>
                             <li><a href="#" target="_self">one sale</a></li>
                             <li><a href="#" target="_self">new</a></li>
                         </ul>
@@ -156,31 +160,31 @@
                         </figure>
                     </section>
                 </article>
-                <div id="banner" style="background-color:green; margin: 10px 0;">
+                <div id="banner" style="background-color:green;">
                     <div>
                         <p>for her</p>
-                        <a href="#" target="_self">shop now</a>
+                        <a href="#" target="_self" class="active ">shop now</a>
                     </div>
                     <div>
                         <p>for him</p>
-                        <a href="#" target="_self">shop now</a>
+                        <a href="#" target="_self" class="active ">shop now</a>
                     </div>
                     <div>
                         <p>Free delivery for UOMO members</p>
                         <p>promotions up to 10% off</p>
-                        <a href="#" target="_self">see more</a>
+                        <a href="#" target="_self" class="active">see more</a>
                     </div>
                 </div>
-                <div id="weekdeal" style="background-color: darkgreen; margin: 10px 0;">
+                <div id="weekdeal" style="background-color: darkgreen;">
                     <p>deal of the week</p>
                     <h1>summer collection</h1>
-                    <a href="#" target="_self">shop now</a>
+                    <a href="#" target="_self" class="active">shop now</a>
                     <p id="timer">
                         <span>05</span> : <span>07</span> : <span>09</span> : <span>03</span>
                     </p>
                     <img src="images/placeholder.png" width="678" height="529" alt="placeholder">
                 </div>
-                <article id="best-selling" style="background-color: green; margin:10px 0;">
+                <article id="best-selling" style="background-color: green;">
                     <header>
                         <h2>best selling</h2>
                         <p>the world's premium brands in one destination.</p>
@@ -228,7 +232,7 @@
                         </figure>
                     </section>
                 </article>
-                <div id="icons" style="background-color: darkgreen; margin: 10px 0;">
+                <div id="icons" style="background-color: darkgreen;">
                     <div>
                         <img src="images/007-shipping_image.svg" alt="shipping">
                         <figcaption>
@@ -251,7 +255,7 @@
                         </figcaption>
                     </div>
                 </div>
-                <div id="instagram-gallery" style="background-color: green; margin: 10px 0;">
+                <div id="instagram-gallery" style="background-color: green;">
                     <section>
                         <h2><a href="https://www.instagram.com">#Uomostyle</a></h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed maecenas a, massa odio est pellentesque sodales.</p>
@@ -286,7 +290,7 @@
                         <h3>company</h3>
                         <ul>
                             <li><a href="#">About Us</a></li>
-                            <li><a href="#" class="active">Careers</a></li>
+                            <li><a href="#">Careers</a></li>
                             <li><a href="#">Affiliates</a></li>
                             <li><a href="#">Blog</a></li>
                             <li><a href="#">Contact Us</a></li>
@@ -343,8 +347,11 @@
                     </div>
                 </div>
             </footer>
+            <div id="back-to-top">
+                <a href="#container">
+                    <img src="images/012-back_top.svg" alt="back-to-top" width="14px" height="14px">
+                </a>
+            </div>
         </div>
     </body>
 </html>
-
-<!-- VOEG "BACK TO TOP" KNOP TOE!! -->

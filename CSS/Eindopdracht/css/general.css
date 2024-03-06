@@ -1,7 +1,44 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
-} */
+}
+
+/* variabelen */
+:root {
+    --searchbar-border: 1px solid #E4E4E4;
+    --background-color-one: #ffffff;
+}
+
+/* font voor de hele pagina */
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: #222222;
+}
+
+h1 {
+    font-size: 60px;
+}
+h2 {
+    font-size: 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* alle tekst linkjes zijn niet blauw meer met underline */
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.active {
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 2px;
+}
 
 div#container {
     max-width: 85vw;    /* check of dit responsive is!! */
@@ -17,22 +54,85 @@ div#container > section {
 }
 
 /* Het gedeelte van de header */
+header {
+    height: 90px;
+    background-color: var(--background-color-one);
+}
 header > div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    position: relative;
+    top: 25%;
 }
 header > div > nav {
-    width: 1100px;      /* maak responsive!!! */
+    width: 65%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
+nav.menu > form {
+    display: flex;
+
+    background-color: var(--background-color-one);
+}
+
+nav.menu button:first-of-type {
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+
+    cursor: pointer;
+
+    border: var(--searchbar-border);
+    border-right: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-color: var(--background-color-one);
+}
+nav.menu input[name="search"] {
+    font-family: "Poppins", sans-serif;
+    height: 48px;
+    width: 11vw;
+    padding-left: 10px;
+
+    border: var(--searchbar-border);
+    border-left: none;
+    border-right: none;
+    background-color: var(--background-color-one);
+}
+nav.menu select[name="categories"] {
+    font-family: "Poppins", sans-serif;
+    height: 50px;
+
+    border: var(--searchbar-border);
+    border-left: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: var(--background-color-one);
+}
+
 header > div > nav > ul {
+    width: 40%;
+    font-weight: 500;
+
     display: flex;
     flex-direction: row;
-    list-style-type: none;
-    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.icons {
+    width: 10%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+div.icons img {
+    padding: 5px;
 }
 
 
@@ -74,7 +174,6 @@ article#category > section {
 article#trendy > header > ul {
     display: flex;
     flex-direction: row;
-    list-style-type: none;
     gap: 10px;      /* haal dit later weg wanneer je * margin aan hebt gezet */
 }
 
@@ -190,4 +289,23 @@ div#instagram-gallery > img:nth-of-type(4) {
 }
 div#instagram-gallery > img:last-of-type {
     grid-area: pic-5;
+}
+
+
+/* De "back to top" knop */
+#back-to-top {
+    width: 45px;        /* maak responsive */
+    height: 45px;
+
+    position: fixed;
+    bottom: 10%;
+    right: 1%;
+
+    border: 1px solid #767676;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+#back-to-top img[alt="back-to-top"] {
+    padding: 15px;
 }
