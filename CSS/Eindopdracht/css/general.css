@@ -7,6 +7,8 @@
 :root {
     --searchbar-border: 1px solid #E4E4E4;
     --background-color-one: #ffffff;
+    --color-one: #222222;
+    --color-two: #B9A16B;
 }
 
 /* font voor de hele pagina */
@@ -17,16 +19,45 @@ body {
 }
 
 h1 {
+    font-family: "Lora", serif;
     font-size: 3vw;
     text-transform: capitalize;
 }
 h2 {
+    font-family: "Lora", serif;
     font-size: 1.5vw;
     text-transform: capitalize;
 }
 
 ul {
     list-style-type: none;
+}
+
+/* alle lijntjes/streepjes op de pagina zoals voor "LATEST TRENDS" en onder "SHOP NOW" */
+div#slider > p:first-of-type::before, div#weekdeal > p:first-of-type::before {
+    content: '';
+    height: 2px;
+    width: 40px;
+
+    display: inline-block;
+    position: relative;
+    bottom: 4px;
+    left: 0;
+    background-color: var(--color-two);
+}
+
+.underline::after {
+    content: '';
+    height: 2px;
+    width: 30px;
+
+    display: block;
+    position: absolute;
+    background-color: var(--color-one);
+}
+.underline.white::after {
+    width: 50px;
+    background-color: var(--background-color-one);
 }
 
 /* alle tekst linkjes zijn niet blauw meer met underline */
@@ -36,11 +67,6 @@ a {
     color: #222222;
 }
 
-.active {
-    text-decoration: underline;
-    text-underline-offset: 7px;
-    text-decoration-thickness: 2px;
-}
 
 div#container {
     max-width: 85vw;    /* check of dit responsive is!! */
@@ -56,11 +82,15 @@ div#container > section {
 }
 
 /* Het gedeelte van de header */
-header {
+div#container > header {
     height: 90px;
     background-color: var(--background-color-one);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
-header > div {
+div#container > header > div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -68,11 +98,11 @@ header > div {
     position: relative;
     top: 25%;
 }
-header > div > nav {
-    width: 65%;
+div#container > header > div > nav {
+    width: 80%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 nav.menu > form {
@@ -93,6 +123,9 @@ nav.menu button:first-of-type {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
     background-color: var(--background-color-one);
+}
+nav.menu input[name="search"]:active {
+    border: none;
 }
 nav.menu input[name="search"] {
     font-family: "Poppins", sans-serif;
@@ -117,17 +150,17 @@ nav.menu select[name="categories"] {
 }
 
 header > div > nav > ul {
-    width: 40%;
+    width: 50%;
     font-weight: 500;
 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 div.icons {
-    width: 10%;
+    width: 13%;
 
     display: flex;
     justify-content: space-between;
@@ -152,11 +185,21 @@ div#slider {
 
     background-color: #f7f7f7;
 }
-
+div#slider > p:first-of-type, div#slider > h1, div#slider > p:last-of-type, div#slider > a {
+    width: 75%;
+    position: relative;
+    top: 0;
+    left: 15%;
+}
 div#slider > p:first-of-type {
+    text-transform: uppercase;
+    color: var(--color-two);
+    font-weight: 500;
+
     grid-area: latest-trends;
     align-self: end;
 }
+
 div#slider > h1 {
     grid-area: newest-arrivals;
 }
@@ -165,6 +208,7 @@ div#slider > p:last-of-type {
 }
 div#slider > a {
     grid-area: shop-now;
+    width: 20%;
     align-self: start;
 }
 div#slider > img {
@@ -178,6 +222,10 @@ div#slider > img {
 article#category > section {
     display: flex;
     flex-direction: row;
+}
+
+article#category figcaption {
+    font-family: "Lora", serif;
 }
 
 
@@ -198,8 +246,8 @@ article#trendy > section {
     flex-direction: row;
     justify-content: space-between;
 }
-#trendy figcaption > div > p {
-    color: #B9A16B;
+#trendy figcaption p {
+    color: var(--color-two);
 }
 
 /* het gedeelte met "for her", "for him", en promotie */
@@ -217,7 +265,7 @@ div#banner > div {
 }
 
 div#banner > div:last-child {
-    background-color: #B9A16B;
+    background-color: var(--color-two);
     background-image: none;
 }
 
@@ -240,6 +288,7 @@ div#weekdeal > h1 {
 }
 div#weekdeal > a {
     grid-area: shop-now;
+    width: 20%;
 }
 div#weekdeal > p.timer {
     grid-area: timer;
@@ -260,12 +309,12 @@ article#best-selling > section {
     justify-content: space-between;
 }
 #best-selling figcaption > div > p {
-    color: #B9A16B;
+    color: var(--color-two);
 }
 
 
-/* het gedeelte met de icons; delivery, customer support, en money back */
-div#icons {
+/* het gedeelte met de plaatjes; delivery, customer support, en money back */
+div#promises {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
