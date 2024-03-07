@@ -26,21 +26,22 @@ div#container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #ff05b5;
+    background-color: snow;
 }
 div#container > section {
     width: 100%;
 }
 
-h1 {
+h1, h2 {
     font-family: "Lora", serif;
-    font-size: 3vw;
     text-transform: capitalize;
+    font-weight: normal;
+}
+h1 {
+    font-size: 3vw;
 }
 h2 {
-    font-family: "Lora", serif;
     font-size: 1.5vw;
-    text-transform: capitalize;
 }
 
 ul {
@@ -68,6 +69,15 @@ div#slider > p:first-of-type::before, div#weekdeal > p:first-of-type::before {
     background-color: var(--color-two);
 }
 .underline::after {
+    content: '';
+    height: 2px;
+    width: 30px;
+
+    display: block;
+    position: absolute;
+    background-color: var(--color-one);
+}
+nav.menu > ul a:hover::after {
     content: '';
     height: 2px;
     width: 30px;
@@ -173,7 +183,7 @@ div.icons {
 div.icons img {
     padding: 5px;
 }
-/* EINDE van de header */
+/* -EINDE van de header- */
 
 
 /* het CONTENT gedeelte */
@@ -229,6 +239,7 @@ div#slider > a {
     grid-area: shop-now;
     width: 20%;
     align-self: start;
+    font-weight: 500;
 }
 div#slider > img {
     grid-area: image;
@@ -242,11 +253,9 @@ article#category {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-article#category > header {
     text-align: center;
 }
+
 article#category > section {
     width: 100%;
     display: flex;
@@ -255,8 +264,14 @@ article#category > section {
     column-gap: 5px;
 }
 
+article#category figure {
+    transition: 250ms;
+}
+article#category figure:hover {
+    transform: scale(1.05);
+}
 /* kleine randje om de afbeeldingen in "shop by category" */
-article#category figure div.category-img-border {
+article#category figure div.category.img-border {
     width: 100%;
     height: 170px;
 
@@ -266,16 +281,16 @@ article#category figure div.category-img-border {
 
     border: 1px solid #E4E4E4;
 }
-#category figure:nth-of-type(2) .category-img-border, #category figure:nth-of-type(3) .category-img-border, #category figure:nth-of-type(5) .category-img-border, #category figure:last-of-type .category-img-border {
+#category figure:nth-of-type(2) .category.img-border, #category figure:nth-of-type(3) .category.img-border, #category figure:nth-of-type(5) .category.img-border, #category figure:last-of-type .category.img-border {
     width: 180px;
 }
-article#category figure:first-of-type div.category-img-border {
+article#category figure:first-of-type div.category.img-border {
     width: 176px;
 }
-article#category figure:nth-of-type(4) div.category-img-border {
+article#category figure:nth-of-type(4) div.category.img-border {
     width: 212px;
 }
-/* einde van rand div */
+/* -einde van rand div- */
 
 
 article#category img {
@@ -286,20 +301,56 @@ article#category figcaption {
     font-family: "Lora", serif;
     font-size: 15px;
     line-height: 30px;
-    text-align: center;
 }
+/* -EINDE van Shop By Category gedeelte- */
 
 
 /* Het "Trendy Item" gedeelte */
+article#trendy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article#trendy > header {
+    text-align: center;
+}
+
 article#trendy > header > ul {
     display: flex;
     flex-direction: row;
-    gap: 10px;      /* haal dit later weg wanneer je * margin aan hebt gezet */
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+article#trendy > header > ul a:hover::after {
+    content: '';
+    height: 2px;
+    width: 30px;
+
+    display: block;
+    position: absolute;
+    background-color: var(--color-one);
 }
 
 article#trendy > section {
     display: flex;
     flex-direction: row;
+}
+article#trendy > section a {
+    text-transform: capitalize;
+}
+
+/* kleine randje om de afbeeldingen in "Trendy Items" */
+article#trendy figure div.trendy.img-border {
+    width: 330px;       /* VERANDER DIT + VERANDER DE GROOTTE PER DIV */
+    height: 330px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #E4E4E4;
 }
 
 #trendy figcaption > div {
@@ -316,6 +367,8 @@ div#banner {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 div#banner > div {
     width: 450px;       /* check of je dit responsive moet maken!!!! */
@@ -328,6 +381,10 @@ div#banner > div {
 div#banner > div:last-child {
     background-color: var(--color-two);
     background-image: none;
+}
+div#banner > div:last-child > p:first-of-type {
+    font-weight: normal;
+    text-transform: none;
 }
 
 
@@ -411,7 +468,7 @@ div#instagram-gallery > img:nth-of-type(4) {
 div#instagram-gallery > img:last-of-type {
     grid-area: pic-5;
 }
-/* EINDE van content gedeelte */
+/* -EINDE van content gedeelte- */
 
 
 /* De "back to top" knop */
@@ -431,4 +488,4 @@ div#instagram-gallery > img:last-of-type {
 #back-to-top img[alt="back-to-top"] {
     padding: 15px;
 }
-/* EINDE van back to top */
+/* -EINDE van back to top- */
