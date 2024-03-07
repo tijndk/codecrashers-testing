@@ -16,6 +16,20 @@ body {
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     color: #222222;
+    background-color: var(--background-color-one);
+}
+
+div#container {
+    max-width: 90vw;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ff05b5;
+}
+div#container > section {
+    width: 100%;
 }
 
 h1 {
@@ -33,6 +47,14 @@ ul {
     list-style-type: none;
 }
 
+/* alle tekst linkjes zijn niet blauw meer met underline */
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+
 /* alle lijntjes/streepjes op de pagina zoals voor "LATEST TRENDS" en onder "SHOP NOW" */
 div#slider > p:first-of-type::before, div#weekdeal > p:first-of-type::before {
     content: '';
@@ -45,7 +67,6 @@ div#slider > p:first-of-type::before, div#weekdeal > p:first-of-type::before {
     left: 0;
     background-color: var(--color-two);
 }
-
 .underline::after {
     content: '';
     height: 2px;
@@ -60,26 +81,7 @@ div#slider > p:first-of-type::before, div#weekdeal > p:first-of-type::before {
     background-color: var(--background-color-one);
 }
 
-/* alle tekst linkjes zijn niet blauw meer met underline */
-a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #222222;
-}
 
-
-div#container {
-    max-width: 85vw;    /* check of dit responsive is!! */
-    margin: 0 auto;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #ff05b5;
-}
-div#container > section {
-    width: 100%;
-}
 
 /* Het gedeelte van de header */
 div#container > header {
@@ -136,6 +138,7 @@ nav.menu input[name="search"] {
     border: var(--searchbar-border);
     border-left: none;
     border-right: none;
+    
     background-color: var(--background-color-one);
 }
 nav.menu select[name="categories"] {
@@ -146,6 +149,7 @@ nav.menu select[name="categories"] {
     border-left: none;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+    color: var(--color-one);
     background-color: var(--background-color-one);
 }
 
@@ -169,7 +173,22 @@ div.icons {
 div.icons img {
     padding: 5px;
 }
+/* EINDE van de header */
 
+
+/* het CONTENT gedeelte */
+/* zorgt voor wat ruimte tussen de verschillende 'blokjes' */
+div#gap-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+}
+div#gap-container header p {
+    font-size: 13px;
+    line-height: 40px;
+    text-transform: capitalize;
+    color: #808080;
+}
 
 /* Het "Newest Arrivals" gedeelte, de slider */
 div#slider {
@@ -219,13 +238,55 @@ div#slider > img {
 
 
 /* het "Shop By Category" gedeelte */
+article#category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article#category > header {
+    text-align: center;
+}
 article#category > section {
+    width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    column-gap: 5px;
+}
+
+/* kleine randje om de afbeeldingen in "shop by category" */
+article#category figure div.category-img-border {
+    width: 100%;
+    height: 170px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #E4E4E4;
+}
+#category figure:nth-of-type(2) .category-img-border, #category figure:nth-of-type(3) .category-img-border, #category figure:nth-of-type(5) .category-img-border, #category figure:last-of-type .category-img-border {
+    width: 180px;
+}
+article#category figure:first-of-type div.category-img-border {
+    width: 176px;
+}
+article#category figure:nth-of-type(4) div.category-img-border {
+    width: 212px;
+}
+/* einde van rand div */
+
+
+article#category img {
+    object-fit: cover;
 }
 
 article#category figcaption {
     font-family: "Lora", serif;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
 }
 
 
@@ -350,6 +411,7 @@ div#instagram-gallery > img:nth-of-type(4) {
 div#instagram-gallery > img:last-of-type {
     grid-area: pic-5;
 }
+/* EINDE van content gedeelte */
 
 
 /* De "back to top" knop */
@@ -369,3 +431,4 @@ div#instagram-gallery > img:last-of-type {
 #back-to-top img[alt="back-to-top"] {
     padding: 15px;
 }
+/* EINDE van back to top */
