@@ -44,10 +44,10 @@
                         </ul>
                     </nav>
                     <div class="icons">
-                        <a href="#"><img src="images/002-user.svg" alt="search"></a>
-                        <a href="#"><img src="images/004-heart_black.svg" alt="profile"></a>
-                        <a href="#"><img src="images/003-shopping_bag_black.svg" alt="heart"></a>
-                        <a href="#"><img src="images/005-nav_icon.svg" alt="shopping-cart"></a>
+                        <a href="#"><img src="images/002-user.svg" alt="profile"></a>
+                        <a href="#"><img src="images/004-heart_black.svg" alt="heart"></a>
+                        <a href="#"><img src="images/003-shopping_bag_black.svg" alt="shopping-cart"></a>
+                        <a href="#"><img src="images/005-nav_icon.svg" alt="menu"></a>
                     </div>
                 </div>
             </header>
@@ -119,18 +119,26 @@
                             </figure>
                         </section>
                     </article>
-                    <article id="trendy" style="background-color: darkgreen;">
+                    <article id="trendy">
                         <header>
                             <h2>trendy items</h2>
                             <p>the world's premium brands in one destination.</p>
                             <ul>
                                 <li><a href="#" target="_self">man</a></li>
                                 <li class="underline"><a href="#" target="_self">women</a></li>
-                                <li><a href="#" target="_self">one sale</a></li>
+                                <li><a href="#" target="_self">on sale</a></li>
                                 <li><a href="#" target="_self">new</a></li>
                             </ul>
                         </header>
                         <section>
+                            <div>
+                                <a href="#">
+                                    <img src="images/012-back_top.svg" width="22" height="12" alt="previous">
+                                </a>
+                                <a href="#">
+                                    <img src="images/012-back_top.svg" width="22" height="12" alt="next">
+                                </a>
+                            </div>
                             <figure>
                                 <a href="#" target="_self">
                                     <div class="trendy img-border">
@@ -139,21 +147,50 @@
                                 </a>
                                 <figcaption>
                                     <div>
-                                        <a href="#" target="_self">Jewellery</a> <p>*****</p>
+                                        <a href="#" target="_self">Jewellery</a>
+                                        <p>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </p>
                                     </div>
                                     <a href="#" target="_self">sea shell sterling silver</a>
                                     <p>$29</p>
                                 </figcaption>
                             </figure>
                             <figure>
-                                <a href="#" target="_self">
-                                    <div class="trendy img-border">
-                                        <img src="images/placeholder.png" width="260" height="260" alt="placeholder">
+                                <div class="trendy img-border">
+                                    <div id="item-overlay">
+                                        <a href="#">
+                                            <div>
+                                                <img src="images/003-shopping_bag_white.svg" width="16" height="18" alt="shopping-cart">
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div>
+                                                <img src="images/006-eye_white.svg" width="20" height="12" alt="view">
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div>
+                                                <img src="images/004-heart_white.svg" width="18" height="15" alt="heart">
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
+                                    <img src="images/placeholder.png" width="260" height="260" alt="placeholder">
+                                </div>
                                 <figcaption>
                                     <div>
-                                        <a href="#" target="_self">Jewellery</a> <p>*****</p>
+                                        <a href="#" target="_self">Jewellery</a>
+                                        <p>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </p>
                                     </div>
                                     <a href="#" target="_self">sphere sterling</a>
                                     <p>$29</p>
@@ -162,12 +199,23 @@
                             <figure>
                                 <a href="#" target="_self">
                                     <div class="trendy img-border">
+                                        <div id="sale">
+                                            <p>-67%</p>
+                                            <p>HOT</p>
+                                        </div>
                                         <img src="images/placeholder.png" width="240" height="240" alt="placeholder">
                                     </div>
                                 </a>
                                 <figcaption>
                                     <div>
-                                        <a href="#" target="_self">Jewellery</a> <p>*****</p>
+                                        <a href="#" target="_self">Jewellery</a>
+                                        <p>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </p>
                                     </div>
                                     <a href="#" target="_self">two stone sterling silver</a>
                                     <p>$29</p>
@@ -181,7 +229,14 @@
                                 </a>
                                 <figcaption>
                                     <div>
-                                        <a href="#" target="_self">Jewellery</a> <p>*****</p>
+                                        <a href="#" target="_self">Jewellery</a>
+                                        <p>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </p>
                                     </div>
                                     <a href="#" target="_self">classic round cut</a>
                                     <p>$29</p>
@@ -219,42 +274,109 @@
                             <p>the world's premium brands in one destination.</p>
                         </header>
                         <section>
+                            <div>
+                                <img src="images/012-back_top.svg" width="22" height="12" alt="previous">
+                                <img src="images/012-back_top.svg" width="22" height="12" alt="next">
+                            </div>
                             <figure>
                                 <a href="#" target="_self">
-                                    <img src="images/placeholder.png" width="249" height="186" alt="placeholder">
+                                    <div class="best-selling img-border">
+                                        <img src="images/placeholder.png" width="249" height="186" alt="placeholder">
+                                    </div>
                                 </a>
                                 <figcaption>
-                                    <div><a href="#" target="_self">Jewellery</a> <p>*****</p></div>
+                                    <div>
+                                        <a href="#" target="_self">Jewellery</a>
+                                        <p>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </p>
+                                    </div>
                                     <a href="#" target="_self">sea shell sterling silver</a>
                                     <p>$29</p>
                                 </figcaption>
                             </figure>
                             <figure>
-                                <a href="#" target="_self">
+                                <div class="best-selling img-border">
+                                    <div id="item-overlay">
+                                        <a href="#">
+                                            <div>
+                                                <img src="images/003-shopping_bag_white.svg" width="16" height="18" alt="shopping-cart">
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div>
+                                                <img src="images/006-eye_white.svg" width="20" height="12" alt="view">
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div>
+                                                <img src="images/004-heart_white.svg" width="18" height="15" alt="heart">
+                                            </div>
+                                        </a>
+                                    </div>
                                     <img src="images/placeholder.png" width="260" height="260" alt="placeholder">
-                                </a>
+                                </div>
                                 <figcaption>
-                                    <div><a href="#" target="_self">Jewellery</a> <p>*****</p></div>
+                                    <div>
+                                        <a href="#" target="_self">Jewellery</a>
+                                        <p>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </p>
+                                    </div>
                                     <a href="#" target="_self">sphere sterling</a>
                                     <p>$29</p>
                                 </figcaption>
                             </figure>
                             <figure>
                                 <a href="#" target="_self">
-                                    <img src="images/placeholder.png" width="240" height="240" alt="placeholder">
+                                    <div class="best-selling img-border">
+                                        <div id="sale">
+                                            <p>-67%</p>
+                                            <p>HOT</p>
+                                        </div>
+                                        <img src="images/placeholder.png" width="240" height="240" alt="placeholder">
+                                    </div>
                                 </a>
                                 <figcaption>
-                                    <div><a href="#" target="_self">Jewellery</a> <p>*****</p></div>
+                                    <div>
+                                        <a href="#" target="_self">Jewellery</a>
+                                        <p>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </p>
+                                    </div>
                                     <a href="#" target="_self">two stone sterling silver</a>
                                     <p>$29</p>
                                 </figcaption>
                             </figure>
                             <figure>
                                 <a href="#" target="_self">
-                                    <img src="images/placeholder.png" width="256" height="192" alt="placeholder">
+                                    <div class="best-selling img-border">
+                                        <img src="images/placeholder.png" width="256" height="192" alt="placeholder">
+                                    </div>
                                 </a>
                                 <figcaption>
-                                    <div><a href="#" target="_self">Jewellery</a> <p>*****</p></div>
+                                    <div>
+                                        <a href="#" target="_self">Jewellery</a>
+                                        <p>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </p>
+                                    </div>
                                     <a href="#" target="_self">classic round cut</a>
                                     <p>$29</p>
                                 </figcaption>
