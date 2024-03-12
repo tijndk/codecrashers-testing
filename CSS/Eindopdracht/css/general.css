@@ -47,6 +47,9 @@ h1 {
 h2 {
     font-size: 1.5vw;
 }
+h3 {
+    font-size: 20px;
+}
 
 ul {
     list-style-type: none;
@@ -686,11 +689,22 @@ div#weekdeal > img {
 
 /* het gedeelte met de plaatjes; delivery, customer support, en money back */
 div#promises {
+    text-align: center;
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-
+div#promises h3 {
+    font-family: "Lora", serif;
+    text-transform: capitalize;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+div#promises p {
+    font-weight: 500;
+    color: var(--color-three);
+}
 
 /* Het gedeelte met de fotos en "#Uomostyle" */
 div#instagram-gallery {
