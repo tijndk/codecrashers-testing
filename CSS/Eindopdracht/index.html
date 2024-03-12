@@ -35,19 +35,19 @@
                             </select>
                         </form>
                         <ul>
-                            <li><a href="#">home</a></li>
-                            <li><a href="#">shop</a></li>
-                            <li><a href="#">collection</a></li>
-                            <li><a href="#">journal</a></li>
-                            <li><a href="#">lookbook</a></li>
-                            <li class="underline"><a href="#">pages</a></li>
+                            <li><a href="#" target="_self">home</a></li>
+                            <li><a href="#" target="_self">shop</a></li>
+                            <li><a href="#" target="_self">collection</a></li>
+                            <li><a href="#" target="_self">journal</a></li>
+                            <li><a href="#" target="_self">lookbook</a></li>
+                            <li class="underline"><a href="#" target="_self">pages</a></li>
                         </ul>
                     </nav>
                     <div class="icons">
-                        <a href="#"><img src="images/002-user.svg" alt="profile"></a>
-                        <a href="#"><img src="images/004-heart_black.svg" alt="heart"></a>
-                        <a href="#"><img src="images/003-shopping_bag_black.svg" alt="shopping-cart"></a>
-                        <a href="#"><img src="images/005-nav_icon.svg" alt="menu"></a>
+                        <a href="#" target="_self"><img src="images/002-user.svg" alt="profile"></a>
+                        <a href="#" target="_self"><img src="images/004-heart_black.svg" alt="heart"></a>
+                        <a href="#" target="_self"><img src="images/003-shopping_bag_black.svg" alt="shopping-cart"></a>
+                        <a href="#" target="_self"><img src="images/005-nav_icon.svg" alt="menu"></a>
                     </div>
                 </div>
             </header>
@@ -124,27 +124,43 @@
                             <h2>trendy items</h2>
                             <p>the world's premium brands in one destination.</p>
                             <ul>
-                                <li><a href="#" target="_self">man</a></li>
+                                <li><a href="#" target="_self">men</a></li>
                                 <li class="underline"><a href="#" target="_self">women</a></li>
+                                <li><a href="#" target="_self">unisex</a></li>
                                 <li><a href="#" target="_self">on sale</a></li>
                                 <li><a href="#" target="_self">new</a></li>
                             </ul>
                         </header>
                         <section>
                             <div>
-                                <a href="#">
+                                <a href="#trendy">
                                     <img src="images/012-back_top.svg" width="22" height="12" alt="previous">
                                 </a>
-                                <a href="#">
+                                <a href="#trendy">
                                     <img src="images/012-back_top.svg" width="22" height="12" alt="next">
                                 </a>
                             </div>
                             <figure>
-                                <a href="#" target="_self">
-                                    <div class="trendy img-border">
-                                        <img src="images/placeholder.png" width="249" height="186" alt="placeholder">
+                                <div class="trendy img-border">
+                                    <div id="item-overlay">
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/003-shopping_bag_white.svg" width="16" height="18" alt="shopping-cart">
+                                            </div>
+                                        </a>
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/006-eye_white.svg" width="20" height="12" alt="view">
+                                            </div>
+                                        </a>
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/004-heart_white.svg" width="18" height="15" alt="heart">
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
+                                    <img src="images/placeholder.png" width="249" height="186" alt="placeholder">
+                                </div>
                                 <figcaption>
                                     <div>
                                         <a href="#" target="_self">Jewellery</a>
@@ -163,17 +179,17 @@
                             <figure>
                                 <div class="trendy img-border">
                                     <div id="item-overlay">
-                                        <a href="#">
+                                        <a href="#" target="_self">
                                             <div>
                                                 <img src="images/003-shopping_bag_white.svg" width="16" height="18" alt="shopping-cart">
                                             </div>
                                         </a>
-                                        <a href="#">
+                                        <a href="#" target="_self">
                                             <div>
                                                 <img src="images/006-eye_white.svg" width="20" height="12" alt="view">
                                             </div>
                                         </a>
-                                        <a href="#">
+                                        <a href="#" target="_self">
                                             <div>
                                                 <img src="images/004-heart_white.svg" width="18" height="15" alt="heart">
                                             </div>
@@ -197,15 +213,30 @@
                                 </figcaption>
                             </figure>
                             <figure>
-                                <a href="#" target="_self">
-                                    <div class="trendy img-border">
-                                        <div id="sale">
-                                            <p>-67%</p>
-                                            <p>HOT</p>
-                                        </div>
-                                        <img src="images/placeholder.png" width="240" height="240" alt="placeholder">
+                                <div class="trendy img-border">
+                                    <div id="item-overlay">
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/003-shopping_bag_white.svg" width="16" height="18" alt="shopping-cart">
+                                            </div>
+                                        </a>
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/006-eye_white.svg" width="20" height="12" alt="view">
+                                            </div>
+                                        </a>
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/004-heart_white.svg" width="18" height="15" alt="heart">
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
+                                    <div id="sale">
+                                        <p>-67%</p>
+                                        <p>HOT</p>
+                                    </div>
+                                    <img src="images/placeholder.png" width="240" height="240" alt="placeholder">
+                                </div>
                                 <figcaption>
                                     <div>
                                         <a href="#" target="_self">Jewellery</a>
@@ -222,11 +253,26 @@
                                 </figcaption>
                             </figure>
                             <figure>
-                                <a href="#" target="_self">
-                                    <div class="trendy img-border">
-                                        <img src="images/placeholder.png" width="256" height="192" alt="placeholder">
+                                <div class="trendy img-border">
+                                    <div id="item-overlay">
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/003-shopping_bag_white.svg" width="16" height="18" alt="shopping-cart">
+                                            </div>
+                                        </a>
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/006-eye_white.svg" width="20" height="12" alt="view">
+                                            </div>
+                                        </a>
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/004-heart_white.svg" width="18" height="15" alt="heart">
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
+                                    <img src="images/placeholder.png" width="256" height="192" alt="placeholder">
+                                </div>
                                 <figcaption>
                                     <div>
                                         <a href="#" target="_self">Jewellery</a>
@@ -279,11 +325,26 @@
                                 <img src="images/012-back_top.svg" width="22" height="12" alt="next">
                             </div>
                             <figure>
-                                <a href="#" target="_self">
-                                    <div class="best-selling img-border">
-                                        <img src="images/placeholder.png" width="249" height="186" alt="placeholder">
+                                <div class="best-selling img-border">
+                                    <div id="item-overlay">
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/003-shopping_bag_white.svg" width="16" height="18" alt="shopping-cart">
+                                            </div>
+                                        </a>
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/006-eye_white.svg" width="20" height="12" alt="view">
+                                            </div>
+                                        </a>
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/004-heart_white.svg" width="18" height="15" alt="heart">
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
+                                    <img src="images/placeholder.png" width="249" height="186" alt="placeholder">
+                                </div>
                                 <figcaption>
                                     <div>
                                         <a href="#" target="_self">Jewellery</a>
@@ -302,17 +363,17 @@
                             <figure>
                                 <div class="best-selling img-border">
                                     <div id="item-overlay">
-                                        <a href="#">
+                                        <a href="#" target="_self">
                                             <div>
                                                 <img src="images/003-shopping_bag_white.svg" width="16" height="18" alt="shopping-cart">
                                             </div>
                                         </a>
-                                        <a href="#">
+                                        <a href="#" target="_self">
                                             <div>
                                                 <img src="images/006-eye_white.svg" width="20" height="12" alt="view">
                                             </div>
                                         </a>
-                                        <a href="#">
+                                        <a href="#" target="_self">
                                             <div>
                                                 <img src="images/004-heart_white.svg" width="18" height="15" alt="heart">
                                             </div>
@@ -336,15 +397,30 @@
                                 </figcaption>
                             </figure>
                             <figure>
-                                <a href="#" target="_self">
-                                    <div class="best-selling img-border">
-                                        <div id="sale">
-                                            <p>-67%</p>
-                                            <p>HOT</p>
-                                        </div>
-                                        <img src="images/placeholder.png" width="240" height="240" alt="placeholder">
+                                <div class="best-selling img-border">
+                                    <div id="item-overlay">
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/003-shopping_bag_white.svg" width="16" height="18" alt="shopping-cart">
+                                            </div>
+                                        </a>
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/006-eye_white.svg" width="20" height="12" alt="view">
+                                            </div>
+                                        </a>
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/004-heart_white.svg" width="18" height="15" alt="heart">
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
+                                    <div id="sale">
+                                        <p>-67%</p>
+                                        <p>HOT</p>
+                                    </div>
+                                    <img src="images/placeholder.png" width="240" height="240" alt="placeholder">
+                                </div>
                                 <figcaption>
                                     <div>
                                         <a href="#" target="_self">Jewellery</a>
@@ -361,11 +437,26 @@
                                 </figcaption>
                             </figure>
                             <figure>
-                                <a href="#" target="_self">
-                                    <div class="best-selling img-border">
-                                        <img src="images/placeholder.png" width="256" height="192" alt="placeholder">
+                                <div class="best-selling img-border">
+                                    <div id="item-overlay">
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/003-shopping_bag_white.svg" width="16" height="18" alt="shopping-cart">
+                                            </div>
+                                        </a>
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/006-eye_white.svg" width="20" height="12" alt="view">
+                                            </div>
+                                        </a>
+                                        <a href="#" target="_self">
+                                            <div>
+                                                <img src="images/004-heart_white.svg" width="18" height="15" alt="heart">
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
+                                    <img src="images/placeholder.png" width="256" height="192" alt="placeholder">
+                                </div>
                                 <figcaption>
                                     <div>
                                         <a href="#" target="_self">Jewellery</a>
@@ -408,7 +499,7 @@
                     </div>
                     <div id="instagram-gallery" style="background-color: green;">
                         <section>
-                            <h2><a href="https://www.instagram.com">#Uomostyle</a></h2>
+                            <h2><a href="https://www.instagram.com" target="_blank">#Uomostyle</a></h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed maecenas a, massa odio est pellentesque sodales.</p>
                         </section>
                         <img src="images/placeholder.png" width="465" height="524" alt="placeholder">
@@ -441,32 +532,33 @@
                     <nav class="Company">
                         <h3>company</h3>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Affiliates</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#" target="_self">About Us</a></li>
+                            <li><a href="#" target="_self">Careers</a></li>
+                            <li><a href="#" target="_self">Affiliates</a></li>
+                            <li><a href="#" target="_self">Blog</a></li>
+                            <li><a href="#" target="_self">Contact Us</a></li>
                         </ul>
                     </nav>
                     <nav class="Shop">
                         <h3>shop</h3>
                         <ul>
-                            <li><a href="#">New Arrivals</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Men</a></li>
-                            <li><a href="#">Women</a></li>
-                            <li><a href="#">Shop All</a></li>
+                            <li><a href="#" target="_self">New Arrivals</a></li>
+                            <li><a href="#" target="_self">Accessories</a></li>
+                            <li><a href="#" target="_self">Men</a></li>
+                            <li><a href="#" target="_self">Women</a></li>
+                            <li><a href="#" target="_self">Unisex</a></li>
+                            <li><a href="#" target="_self">Shop All</a></li>
                         </ul>
                     </nav>
                     <nav class="Help">
                         <h3>help</h3>
                         <ul>
-                            <li><a href="#">Customer Service</a></li>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Find a Store</a></li>
-                            <li><a href="#">Legal & Privacy</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Gift Card</a></li>
+                            <li><a href="#" target="_self">Customer Service</a></li>
+                            <li><a href="#" target="_self">My Account</a></li>
+                            <li><a href="#" target="_self">Find a Store</a></li>
+                            <li><a href="#" target="_self">Legal & Privacy</a></li>
+                            <li><a href="#" target="_self">Contact</a></li>
+                            <li><a href="#" target="_self">Gift Card</a></li>
                         </ul>
                     </nav>
                     <div id="mobile-app">

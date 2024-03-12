@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /* variabelen */
 :root {
@@ -366,9 +369,10 @@ article#best-selling > section {
     position: relative;
 }
 
+/* de pijltjes naar links en rechts by Trendy Items */
 article#trendy > section > div,
 article#best-selling > section > div {
-    width: 93vw;
+    width: 94vw;
 
     display: flex;
     justify-content: space-between;
@@ -388,11 +392,8 @@ article#trendy img[alt="next"],
 article#best-selling img[alt="next"] {
     rotate: 90deg;
 }
+/* EINDE van pijltjes */
 
-article#trendy > section a,
-article#best-selling > section a {
-    text-transform: capitalize;
-}
 
 /* kleine randje om de afbeeldingen in "Trendy Items" en "Best Selling" */
 article#trendy figure div.trendy.img-border,
@@ -433,6 +434,7 @@ article#best-selling figure div.best-selling.img-border {
 #best-selling figcaption > a, #best-selling figcaption > p {    /* Font voor de prijs en de naam */
     font-family: "Lora", serif;
     font-size: 16px;
+    text-transform: capitalize;
 }
 
 #trendy figcaption > div > a,
@@ -450,7 +452,28 @@ article#best-selling figure div.best-selling.img-border {
 }
 
 /* De soort overlays in "Trendy Items" en "Best Selling" in de tweede en derde afbeelingen; met het mandje, oog, en hartje, en met de -67% en HOT */
-div#item-overlay {
+.img-border div#item-overlay {
+    display: none;
+}
+.img-border:hover div#item-overlay {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+figure:nth-of-type(2) #item-overlay {
     width: 100%;
     height: 100%;
     
