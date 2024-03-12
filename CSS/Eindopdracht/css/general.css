@@ -430,7 +430,7 @@ article#best-selling figure div.best-selling.img-border {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 5px;
+    margin: 0 5px 5px 0;
 }
 
 #trendy figcaption > a, #trendy figcaption > p,
@@ -442,6 +442,7 @@ article#best-selling figure div.best-selling.img-border {
 
 #trendy figcaption > div > a,
 #best-selling figcaption > div > a {    /* De kleur van de categorie */
+    text-transform: capitalize;
     color: var(--color-three);
 }
 #trendy figcaption p, 
