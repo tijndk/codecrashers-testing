@@ -241,7 +241,8 @@ div#slider {
     background-color: #f7f7f7;
 }
 div#slider > p:first-of-type,
-div#slider > h1, div#slider > p:last-of-type,
+div#slider > h1,
+div#slider > p:last-of-type,
 div#slider > a {
     width: 75%;
     position: relative;
@@ -592,29 +593,94 @@ div#banner > div:last-child > div > p:first-of-type {
 /* het gedeelte met "summer collection" */
 div#weekdeal {
     display: grid;
+    align-items: center;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 35% 15% 15% 35%;
     grid-template-areas:
     'weekdeal image'
     'summer-collection image'
     'shop-now image'
     'timer image';
+
+    background-image: linear-gradient(#EBEBEB 0% 100%), url(../images/image-background.png);
+    background-size: contain;
+    background-blend-mode: color;
+}
+
+div#weekdeal > p:first-of-type,
+div#weekdeal > h1,
+div#weekdeal > p:last-of-type,
+div#weekdeal > a {
+    width: 75%;
+    position: relative;
+    top: 0;
+    left: 15%;
 }
 
 div#weekdeal > p:first-of-type {
     grid-area: weekdeal;
+    align-self: end;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--color-two);
 }
 div#weekdeal > h1 {
     grid-area: summer-collection;
 }
 div#weekdeal > a {
     grid-area: shop-now;
+    font-weight: 500;
     width: 20%;
 }
-div#weekdeal > p.timer {
+
+div#weekdeal > p#timer {
     grid-area: timer;
+    font-size: 30px;
+    font-weight: 500;
+    width: 340px;
+    align-self: start;
 }
+
+p#timer span {
+    position: relative;
+    margin: 20px;
+}
+p#timer span::after {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #767676;
+
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+}
+
+p#timer span:first-of-type {
+    margin-left: 0;
+}
+p#timer span:last-of-type {
+    margin-right: 0;
+}
+
+p#timer span:first-of-type::after {
+    content: 'days';
+}
+p#timer span:nth-of-type(2)::after {
+    content: 'hours';
+}
+p#timer span:nth-of-type(3)::after {
+    content: 'mins';
+}
+p#timer span:last-of-type::after {
+    content: 'sec';
+}
+
 div#weekdeal > img {
     grid-area: image;
+    width: 100%;
+    height: auto;
 }
+/* EINDE van Summer Collection */
 
 
 /* het gedeelte met de plaatjes; delivery, customer support, en money back */
