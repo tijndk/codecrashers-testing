@@ -17,7 +17,7 @@ html {
 
 /* font voor de hele pagina */
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;     /* Poppins ipv. Sofia Pro */
     font-size: 14px;
     color: #222222;
     background-color: var(--background-color-one);
@@ -107,8 +107,11 @@ figcaption div > a:hover::after {
 .underline.white::after {
     width: 50px;
     background-color: var(--background-color-one);
+    left: 17px;
 }
-
+div#banner > div:last-child > div .underline.white::after {
+    left: 85px;
+}
 
 
 /* Het gedeelte van de header */
@@ -149,7 +152,6 @@ nav.menu > form {
 
 nav.menu button:first-of-type {
     font-size: 20px;
-    height: 50px;
     width: 50px;
 
     cursor: pointer;
@@ -282,7 +284,7 @@ article#category {
     text-align: center;
 }
 
-article#category > section {
+article#category > div {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -359,8 +361,8 @@ article#trendy > header > ul {
 }
    
 
-article#trendy > section, 
-article#best-selling > section {
+article#trendy > div, 
+article#best-selling > div {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -370,8 +372,8 @@ article#best-selling > section {
 }
 
 /* de pijltjes naar links en rechts by Trendy Items */
-article#trendy > section > div,
-article#best-selling > section > div {
+article#trendy > div > div,
+article#best-selling > div > div {
     width: 94vw;
 
     display: flex;
@@ -379,8 +381,8 @@ article#best-selling > section > div {
     position: absolute;
     top: calc(50% - 6px);
 }
-article#trendy > section > div > a,
-article#best-selling > section > div > a {
+article#trendy > div > div > a,
+article#best-selling > div > div > a {
  padding: 5px;
 }
 
@@ -452,10 +454,10 @@ article#best-selling figure div.best-selling.img-border {
 }
 
 /* De soort overlays in "Trendy Items" en "Best Selling" in de tweede en derde afbeelingen; met het mandje, oog, en hartje, en met de -67% en HOT */
-.img-border div#item-overlay {
+.img-border div.item-overlay {
     display: none;
 }
-.img-border:hover div#item-overlay {
+.img-border:hover div.item-overlay {
     width: 100%;
     height: 100%;
 
@@ -473,7 +475,7 @@ article#best-selling figure div.best-selling.img-border {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-figure:nth-of-type(2) #item-overlay {
+figure:nth-of-type(2) .item-overlay {
     width: 100%;
     height: 100%;
     
@@ -489,7 +491,7 @@ figure:nth-of-type(2) #item-overlay {
 
     background-color: rgba(255, 255, 255, 0.9);
 }
-div#item-overlay div {
+div.item-overlay div {
     width: 50px;
     height: 50px;
 
@@ -499,17 +501,17 @@ div#item-overlay div {
 
     background-color: var(--color-one);
 }
-div#item-overlay a:first-child div {
+div.item-overlay a:first-child div {
     background-color: var(--color-two);
 }
 
 
-div#sale {
+div.sale {
     position: absolute;
     top: 20px;
     left: 20px;
 }
-div#sale > p {
+div.sale > p {
     font-size: 12px;
     text-align: center;
     line-height: 25px;
@@ -519,7 +521,7 @@ div#sale > p {
     
     background-color: #D6001C;
 }
-div#sale > p:last-child {
+div.sale > p:last-child {
     margin-top: 15px;
     background-color: var(--color-one);
 }
@@ -528,28 +530,63 @@ div#sale > p:last-child {
 
 /* het gedeelte met "for her", "for him", en promotie */
 div#banner {
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    font-weight: 500;
-    text-transform: uppercase;
+    column-gap: 6.45px;
 }
 div#banner > div {
-    width: 450px;       /* check of je dit responsive moet maken!!!! */
-    height: 450px;      /* check of je dit responsive moet maken!!!! */
-    background-position: center center;
+    max-width: 450px;
+    width: 33%;
+    aspect-ratio: 1 / 1;
 
-    background-image: url(../images/placeholder.png);
+    background-image: 
+    linear-gradient(to bottom, rgba(34, 34, 34, 0.3) 0% 100%),
+    url(../images/placeholder.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+div#banner > div > div {
+    width: 106px;
+    position: relative;
+    top: calc(50% - 30px);
+    left: calc(50% - 53px);
+}
+
+div#banner > div > div > p,
+div#banner > div > div > a {
+    color: white;
+}
+
+div#banner > div > div > p {
+    font-size: 26px;
+    font-weight: 500;
+}
+div#banner > div > div > a {
+    font-weight: normal;
 }
 
 div#banner > div:last-child {
     background-color: var(--color-two);
     background-image: none;
 }
-div#banner > div:last-child > p:first-of-type {
+div#banner > div:last-child > div {
+    width: 230px;
+    top: calc(50% - 60px);
+    left: calc(50% - 115px);
+}
+div#banner > div:last-child > div > p:first-of-type {
+    font-size: 14px;
     font-weight: normal;
     text-transform: none;
 }
+/* EINDE van de banner */
 
 
 /* het gedeelte met "summer collection" */
