@@ -30,7 +30,6 @@ div#container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: snow;
 }
 div#container > section {
     width: 100%;
@@ -227,10 +226,13 @@ div#gap-container header p {
     line-height: 40px;
     text-transform: capitalize;
     color: var(--color-three);
+
+    margin-bottom: 20px;
 }
 
 /* Het "Newest Arrivals" gedeelte, de slider */
 div#slider {
+    margin-top: 10px;
     display: grid;
     align-items: center;
     grid-template-columns: 45% 55%;
@@ -310,7 +312,7 @@ article#category figure div.category.img-border {
     justify-content: center;
     align-items: center;
 
-    border: 1px solid #E4E4E4;
+    border: var(--searchbar-border);
 }
 #category figure:nth-of-type(2) .category.img-border,
 #category figure:nth-of-type(3) .category.img-border,
@@ -357,13 +359,22 @@ article#best-selling > header > p {
 }
 
 article#trendy > header > ul {
+    font-weight: 500;
+    margin-bottom: 40px;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 25px;
-    font-weight: 500;
 }
-   
+
+article#trendy > header > ul a {
+    color: var(--color-three);
+}
+article#trendy > header > ul a:hover,
+article#trendy > header > ul > li:nth-of-type(2) > a {
+    color: var(--color-one);
+}
+
 
 article#trendy > div, 
 article#best-selling > div {
@@ -414,7 +425,7 @@ article#best-selling figure div.best-selling.img-border {
     align-items: center;
     position: relative;
 
-    border: 1px solid #E4E4E4;
+    border: var(--searchbar-border);
 }
 
 
@@ -711,8 +722,19 @@ div#promises p {
 /* Het gedeelte met de fotos en "#Uomostyle" */
 .instagram-gallery.row {
     padding: 0 4px;
+    margin-bottom: 80px;
     display: flex;
     justify-content: center;
+    position: relative;
+}
+.instagram-gallery:after {
+    content: '';
+    width: 110%;
+    height: 1px;
+    position: absolute;
+    bottom: -80px;
+    left: -5%;
+    background-color: #E4E4E4;
 }
 
 .instagram-gallery section {
@@ -747,7 +769,120 @@ div#promises p {
     vertical-align: middle;
     object-fit: cover;
 }
+/* EINDE van #Uomostyle */
+
 /* -EINDE van content gedeelte- */
+
+
+/* alles van de footer */
+footer {
+    margin-top: 60px;
+}
+div#footer-content {
+    display: grid;
+    justify-items: center;
+    row-gap: 60px;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-areas: 
+    'sign-up sign-up sign-up sign-up sign-up'
+    'contact company shop help mobile-app';
+}
+
+div#footer-content h3 {
+    text-transform: uppercase;
+    font-weight: 500;
+
+    margin-bottom: 15px;
+}
+
+div#footer-content p,
+div#footer-content a {
+    font-family: "Lora", serif;
+}
+
+div#footer-content ul a {
+    text-transform: capitalize;
+    line-height: 40px;
+}
+
+
+footer #sign-up {
+    grid-area: sign-up;
+    font-family: "Lora", serif;
+    text-align: center;
+}
+
+footer #sign-up h2 {
+    margin-bottom: 10px;
+}
+
+footer #sign-up input[type="email"] {
+    width: 528px;
+    height: 58px;
+    margin: 20px 15px 0 0;
+    padding-left: 20px;
+
+    color: #767676;
+    border: var(--searchbar-border);
+}
+
+footer #sign-up input[type="submit"] {
+    width: 150px;
+    height: 60px;
+
+    border: none;
+    color: white;
+    background-color: var(--color-one);
+}
+
+
+footer #contact {
+    grid-area: contact;
+}
+
+footer #contact p {
+    margin-top: 20px;
+}
+footer #contact p.socials {
+    max-width: 225px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+footer #company {
+    grid-area: company;
+}
+footer #shop {
+    grid-area: shop;
+}
+footer #help {
+    grid-area: help;
+}
+
+
+footer #mobile-app {
+    grid-area: mobile-app;
+    margin-left: 15%;
+}
+
+footer #mobile-app p {
+    line-height: 40px;
+}
+
+footer #mobile-app img:first-of-type {
+    margin-bottom: 15px;
+}
+
+
+
+div#bottom-footer {
+    display: grid;
+    grid-template-columns: 80% 15% 5%;      /* FIX DIT OFZO/ga verder */
+    grid-template-areas:
+    'copyright language currency';
+}
+/* -EINDE van de footer- */
 
 
 /* De "back to top" knop */
