@@ -45,7 +45,7 @@ h1 {
     font-size: 3vw;
 }
 h2 {
-    font-size: 1.5vw;
+    font-size: max(20px, 1.5vw);
 }
 h3 {
     font-size: 20px;
@@ -705,35 +705,47 @@ div#promises p {
     font-weight: 500;
     color: var(--color-three);
 }
+/* EINDE van plaatjes */
+
 
 /* Het gedeelte met de fotos en "#Uomostyle" */
-div#instagram-gallery {
-    display: grid;
-    grid-template-columns: 465px 465px 465px;   /* maak responsive!!! */
-    grid-template-rows: 275px 124px 400px;      /* maak responsive!!! */
-    grid-template-areas:
-    'uomostyle pic-2 pic-3'
-    'pic-1 pic-2 pic-3'
-    'pic-1 pic-4 pic-5';
+.instagram-gallery.row {
+    padding: 0 4px;
+    display: flex;
+    justify-content: center;
 }
 
-div#instagram-gallery > section {
-    grid-area: uomostyle;
+.instagram-gallery section {
+    height: 276px;
+    margin-top: 8px;
+    color: white;
+    background-color: var(--color-one);
 }
-div#instagram-gallery > img:first-of-type {
-    grid-area: pic-1;
+
+.instagram-gallery h2, .instagram-gallery p {
+    padding: 0 10%;
 }
-div#instagram-gallery > img:nth-of-type(2) {
-    grid-area: pic-2;
+.instagram-gallery h2 {
+    padding-top: 15%;
+    padding-bottom: 5%;
 }
-div#instagram-gallery > img:nth-of-type(3) {
-    grid-area: pic-3;
+
+.instagram-gallery h2 a {
+    color: white;
+    text-transform: capitalize;
 }
-div#instagram-gallery > img:nth-of-type(4) {
-    grid-area: pic-4;
+
+.column {
+    width: 33%;
+    max-width: 465px;
+    padding: 0 4px;
 }
-div#instagram-gallery > img:last-of-type {
-    grid-area: pic-5;
+
+.column img {
+    width: 100%;
+    margin-top: 8px;
+    vertical-align: middle;
+    object-fit: cover;
 }
 /* -EINDE van content gedeelte- */
 
