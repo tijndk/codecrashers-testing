@@ -1,0 +1,57 @@
+/* gedeelte van de header */        /* FIX DE HEADER LATER */
+div#container > header > div > nav.menu {
+    display: none;
+}
+
+div.icons > a:first-child,
+div.icons > a:nth-child(2) {
+    display: none;
+}
+/* -EINDE van de header- */
+
+/* OVERLAY menu */
+
+/* EINDE van overlay */
+
+
+/* het CONTENT gedeelte */
+
+/* Het "Newest Arrivals" gedeelte, de slider */
+div#gap-container > div#slider {
+    height: 600px;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 46% 8% 46%;
+    grid-template-areas:
+        'latest-trends image'
+        'newest-arrivals image'
+        'shop-now image';
+    background-image: url(../images/slider-background.png);
+    background-color: #F5E6E0;
+    background-size: cover;
+}
+
+div#slider > h1 {
+    width: 218px;
+}
+
+div#slider > p:last-of-type {
+    display: none;
+}
+div#slider > p:first-of-type,
+div#slider > a {
+    font-weight: bold;
+}
+
+div#slider > a {
+    width: 78px;
+    padding: 8px 0;
+}
+
+div#gap-container > div#slider > img {
+    height: 93%;
+    object-fit: cover;
+    place-self: flex-end;
+}
+/* -EINDE van Newest Arrivals gedeelte- */
+
+/* -EINDE van content gedeelte- */

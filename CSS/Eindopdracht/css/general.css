@@ -30,7 +30,7 @@ h1, h2 {
     font-weight: normal;
 }
 h1 {
-    font-size: 3vw;
+    font-size: max(30px, 3vw);
 }
 h2 {
     font-size: max(20px, 1.5vw);
@@ -213,6 +213,43 @@ div.icons img {
 }
 /* -EINDE van de header- */
 
+/* header overlay menu */
+#menu-toggle {
+    display: none;
+}
+
+.menu-button, .menu-button::before, .menu-button::after {
+    display: block;
+    background-color: #222;
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu-button::before, .menu-button:after {
+    content: '';
+    width: 25px;
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    width: 25px;
+    margin-top: 8px;
+}
+
+.menu-button-container {
+    display: flex;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*  */
+
 
 /* het CONTENT gedeelte */
 div#container > section {
@@ -285,6 +322,7 @@ div#slider > img {
     width: 100%;
     height: auto;
 }
+/* -EINDE van Newest Arrivals gedeelte- */
 
 
 /* het "Shop By Category" gedeelte */
@@ -332,7 +370,6 @@ article#category figure:nth-of-type(4) div.category.img-border {
     width: 212px;
 }
 /* -einde van rand div- */
-
 
 article#category img {
     object-fit: cover;

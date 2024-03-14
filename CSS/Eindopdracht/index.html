@@ -8,6 +8,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <!-- link naar general stylesheet voor grotere schermen -->
         <link rel="stylesheet" href="css/general.css">
+        <!-- link naar stylesheet voor telefoons -->
+        <link rel="stylesheet" media="screen and (max-width: 576px)" href="css/mobile.css"> 
         <!-- koppeling met fontawesome -->
         <script src="https://kit.fontawesome.com/72b6362755.js" crossorigin="anonymous"></script>
         <!-- koppeling met google fonts -->
@@ -47,7 +49,10 @@
                         <a href="#" target="_self"><img src="images/002-user.svg" alt="profile"></a>
                         <a href="#" target="_self"><img src="images/004-heart_black.svg" alt="heart"></a>
                         <a href="#" target="_self"><img src="images/003-shopping_bag_black.svg" alt="shopping-cart"></a>
-                        <a href="#" target="_self"><img src="images/005-nav_icon.svg" alt="menu"></a>
+                        <input id="menu-toggle" type="checkbox">
+                        <label class='menu-button-container' for="menu-toggle">
+                            <div class='menu-button'></div>
+                        </label>
                     </div>
                 </div>
             </header>
