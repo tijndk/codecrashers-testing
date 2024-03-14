@@ -23,17 +23,6 @@ body {
     background-color: var(--background-color-one);
 }
 
-div#container {
-    max-width: 90vw;
-    margin: 0 auto;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-div#container > section {
-    width: 100%;
-}
 
 h1, h2 {
     font-family: "Lora", serif;
@@ -115,6 +104,17 @@ div#banner > div:last-child > div .underline.white::after {
     left: 85px;
 }
 
+
+/* container hele pagina */
+div#container {
+    max-width: 90vw;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* --------------------- */
 
 /* Het gedeelte van de header */
 div#container > header {
@@ -215,6 +215,11 @@ div.icons img {
 
 
 /* het CONTENT gedeelte */
+div#container > section {
+    width: 100%;
+    margin-bottom: 80px;
+}
+
 /* zorgt voor wat ruimte tussen de verschillende 'blokjes' */
 div#gap-container {
     display: flex;
@@ -722,19 +727,8 @@ div#promises p {
 /* Het gedeelte met de fotos en "#Uomostyle" */
 .instagram-gallery.row {
     padding: 0 4px;
-    margin-bottom: 80px;
     display: flex;
     justify-content: center;
-    position: relative;
-}
-.instagram-gallery:after {
-    content: '';
-    width: 110%;
-    height: 1px;
-    position: absolute;
-    bottom: -80px;
-    left: -5%;
-    background-color: #E4E4E4;
 }
 
 .instagram-gallery section {
@@ -774,11 +768,21 @@ div#promises p {
 /* -EINDE van content gedeelte- */
 
 
+div.line {
+    width: 98.9vw;
+    height: 1px;
+    align-self: center;
+    background-color: #E4E4E4;
+}
+
 /* alles van de footer */
 footer {
     margin-top: 60px;
+    display: flex;
+    flex-direction: column;
 }
 div#footer-content {
+    margin-bottom: 80px;
     display: grid;
     justify-items: center;
     row-gap: 60px;
@@ -815,7 +819,9 @@ footer #sign-up {
 footer #sign-up h2 {
     margin-bottom: 10px;
 }
-
+footer #sign-up input {
+    font-family: "Poppins", sans-serif;
+}
 footer #sign-up input[type="email"] {
     width: 528px;
     height: 58px;
@@ -845,10 +851,17 @@ footer #contact p {
 }
 footer #contact p.socials {
     max-width: 225px;
+    margin-top: 35px;
     display: flex;
     justify-content: space-between;
-    margin-top: 35px;
 }
+p.socials > a {
+    color: #767676;
+}
+p.socials > a:nth-child(2) {
+    color: var(--color-one);
+}
+
 
 footer #company {
     grid-area: company;
@@ -875,12 +888,31 @@ footer #mobile-app img:first-of-type {
 }
 
 
-
+/* laagste kleine gedeelte met Copyright, taal, en valuta */
 div#bottom-footer {
+    font-family: "Lora", serif;
+    height: 100px;
     display: grid;
-    grid-template-columns: 80% 15% 5%;      /* FIX DIT OFZO/ga verder */
+    grid-template-columns: minmax(100px, 100%) 190px 64px;
     grid-template-areas:
     'copyright language currency';
+    align-items: center;
+    column-gap: 25px;
+}
+
+div#bottom-footer select {
+    font-family: "Lora", serif;
+    font-size: 14px;
+    color: var(--color-one);
+    width: 100%;
+    
+    border: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: url(../images/012-back_top.svg);
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 50%;
 }
 /* -EINDE van de footer- */
 
