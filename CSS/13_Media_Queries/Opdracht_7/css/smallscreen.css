@@ -57,6 +57,7 @@ header {
 /* Het overlay menu */
 header:has(#menu-toggle:checked) {
     position: fixed;
+    width: calc(100% - 30px);
 }
 
 html:has(#menu-toggle:checked), body:has(#menu-toggle:checked) { /* zo kan je niet over heel de pagina scrollen terwijl je in de overlay zit */
