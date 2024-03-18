@@ -153,6 +153,18 @@ article#best-selling > div > div {
 
 /* -EINDE van content gedeelte- */
 
+/* de hele Footer */
+div#footer-content {                    /* VERANDER/VERWIJDER DIT/KIJK OF HET KLOPT */
+    display: flex;
+    flex-direction: column;
+}
+
+footer #sign-up input[type="email"] {     /* VERANDER/VERWIJDER DIT/KIJK OF HET KLOPT */
+    width: 94%;
+}
+/* -EINDE- van de footer */
+
+
 div#bottom-mobile-menu {
     text-align: center;
     width: 96vw;
