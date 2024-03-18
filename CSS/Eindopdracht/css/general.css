@@ -33,7 +33,7 @@ h1 {
     font-size: max(30px, 3vw);
 }
 h2 {
-    font-size: max(20px, 1.5vw);
+    font-size: max(26px, 1.5vw);
 }
 h3 {
     font-size: 20px;
@@ -196,7 +196,7 @@ header > div > nav > ul {
     font-weight: 500;
 
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -276,7 +276,6 @@ div#gap-container header p {
 div#slider {
     margin-top: 10px;
     display: grid;
-    align-items: center;
     grid-template-columns: 45% 55%;
     grid-template-rows: 35% 15% 15% 35%;
     grid-template-areas:
@@ -291,10 +290,10 @@ div#slider > p:first-of-type,
 div#slider > h1,
 div#slider > p:last-of-type,
 div#slider > a {
-    width: 75%;
+    width: 80%;
     position: relative;
     top: 0;
-    left: 15%;
+    left: 10%;
 }
 div#slider > p:first-of-type {
     text-transform: uppercase;
@@ -336,7 +335,7 @@ article#category {
 article#category > div {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     column-gap: 5px;
 }
@@ -363,10 +362,10 @@ article#category figure div.category.img-border {
 #category figure:last-of-type .category.img-border {
     width: 180px;
 }
-article#category figure:first-of-type div.category.img-border {
+#category figure:first-of-type .category.img-border {
     width: 176px;
 }
-article#category figure:nth-of-type(4) div.category.img-border {
+#category figure:nth-of-type(4) .category.img-border {
     width: 212px;
 }
 /* -einde van rand div- */
@@ -405,7 +404,7 @@ article#trendy > header > ul {
     margin-bottom: 40px;
     
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
 }
 
@@ -422,7 +421,7 @@ article#trendy > div,
 article#best-selling > div {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-around;
 
     position: relative;
@@ -953,6 +952,9 @@ div#bottom-footer select {
 }
 /* -EINDE van de footer- */
 
+div#bottom-mobile-menu {
+    display: none;
+}
 
 /* De "back to top" knop */
 #back-to-top {

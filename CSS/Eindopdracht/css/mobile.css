@@ -1,3 +1,21 @@
+body, header, h1, h2, h3, a, p {
+    font-family: "Poppins", sans-serif !important;
+}
+
+h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+div#gap-container {
+    row-gap: 50px;
+}
+
+div#gap-container header p {
+    display: none;
+}
+
 /* gedeelte van de header */        /* FIX DE HEADER LATER */
 div#container > header > div > nav.menu {
     display: none;
@@ -20,7 +38,7 @@ div.icons > a:nth-child(2) {
 div#gap-container > div#slider {
     height: 600px;
     grid-template-columns: 55% 45%;
-    grid-template-rows: 46% 8% 46%;
+    grid-template-rows: 44% 12% 44%;
     grid-template-areas:
         'latest-trends image'
         'newest-arrivals image'
@@ -31,7 +49,9 @@ div#gap-container > div#slider {
 }
 
 div#slider > h1 {
-    width: 218px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 35px;
 }
 
 div#slider > p:last-of-type {
@@ -54,4 +74,71 @@ div#gap-container > div#slider > img {
 }
 /* -EINDE van Newest Arrivals gedeelte- */
 
+
+/* het "Shop By Category" gedeelte */
+#category figure:first-of-type .category.img-border,
+#category figure:nth-of-type(2) .category.img-border,
+#category figure:nth-of-type(3) .category.img-border,
+#category figure:nth-of-type(4) .category.img-border,
+#category figure:nth-of-type(5) .category.img-border,
+#category figure:last-of-type .category.img-border {
+ width: 189px;
+}
+
+#category figure:nth-of-type(4) img {
+    width: 100%;
+}
+
+#category figcaption {
+    font-weight: 500;
+}
+/* -EINDE- Shop By Category gedeelte */
+
+
+/* Het "Trendy Item" gedeelte en het "Best Selling" gedeelte omdat ze 90% hetzelfde zijn */
+article#trendy > header,
+article#best-selling > header {
+    width: 100%;
+}
+
+article#trendy > div > div,
+article#best-selling > div > div {
+    display: none;
+}
+
+#trendy > div > figure {
+    margin-bottom: 20px;
+}
+
+#trendy .img-border div.item-overlay,
+#best-selling .img-border div.item-overlay {
+    display: none;
+}
+#trendy .img-border:hover div.item-overlay,
+#best-selling .img-border:hover div.item-overlay {
+    display: none;
+}
+
+#trendy p i.fa-star {
+    display: none;
+}
+/* -EINDE- Trendy Items/Best Selling gedeelte */
+
+
 /* -EINDE van content gedeelte- */
+
+div#bottom-mobile-menu {
+    text-align: center;
+    width: 96vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    background-color: white;
+}
