@@ -401,7 +401,7 @@ article#best-selling > header > p {
 
 article#trendy > header > ul {
     font-weight: 500;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     
     display: flex;
     flex-flow: row wrap;
@@ -457,7 +457,7 @@ article#best-selling img[alt="next"] {
 article#trendy figure div.trendy.img-border,
 article#best-selling figure div.best-selling.img-border {
     width: 22vw;
-    min-width: 260px;
+    min-width: 185px;
     max-width: 330px;
     aspect-ratio: 1 / 1;
     

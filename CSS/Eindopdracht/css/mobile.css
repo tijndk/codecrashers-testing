@@ -106,7 +106,9 @@ article#best-selling > div > div {
     display: none;
 }
 
-#trendy > div > figure {
+#trendy > div > figure,
+#best-selling > div >figure {
+    font-weight: 500;
     margin-bottom: 20px;
 }
 
@@ -119,7 +121,31 @@ article#best-selling > div > div {
     display: none;
 }
 
-#trendy p i.fa-star {
+
+#trendy figure:first-of-type img,
+#best-selling figure:first-of-type img {
+    width: 95%;
+    height: 71%;
+}
+#trendy figure:nth-of-type(2) img,
+#best-selling figure:nth-of-type(2) img {
+    width: 100%;
+    height: 100%;
+}
+#trendy figure:nth-of-type(3) img,
+#best-selling figure:nth-of-type(3) img {
+    width: 92%;
+    height: 92%;
+}
+#trendy figure:last-of-type img,
+#best-selling figure:last-of-type img {
+    width: 98%;
+    height: 74%;
+}
+
+
+#trendy p i.fa-star,
+#best-selling p i.fa-star {
     display: none;
 }
 /* -EINDE- Trendy Items/Best Selling gedeelte */
