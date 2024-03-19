@@ -153,6 +153,12 @@ article#best-selling figure div.best-selling.img-border {
     height: 74%;
 }
 
+#trendy figcaption > a,
+#trendy figcaption > p,
+#best-selling figcaption > a,
+#best-selling figcaption > p {
+    font-size: 14px;
+}
 
 #trendy p i.fa-star,
 #best-selling p i.fa-star {
