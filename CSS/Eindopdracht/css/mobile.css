@@ -2,15 +2,16 @@ body, header, h1, h2, h3, a, p {
     font-family: "Poppins", sans-serif !important;
 }
 
-h1 {
+h1, h2 {
     text-transform: uppercase;
+}
+h1 {
     font-weight: 500;
     line-height: 35px;
 }
 
 h2 {
     font-weight: bold;
-    text-transform: uppercase;
     margin-bottom: 10px;
 }
 
@@ -242,6 +243,66 @@ div#weekdeal > img {
     display: none;
 }
 /* -EINDE- weekdeal */
+
+
+/* Promises plaatjes */
+div#promises {
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+div#promises h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* -EINDE- promises */
+
+
+/* instagram gallery #uomostyle */
+.instagram-gallery {
+    grid-template-columns: 118px 118px 118px;
+    grid-template-rows: 60px 118px 118px 118px;
+    grid-template-areas:
+    'hashtag hashtag hashtag'
+    'pic1 pic2 pic3'
+    'pic4 pic5 pic6'
+    'pic7 pic8 pic9';
+}
+
+.instagram-gallery > section {
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+.instagram-gallery > section a::before {
+    content: '@UOMO | ';
+}
+.instagram-gallery > section a {
+    color: var(--color-one);
+}
+
+.instagram-gallery > section > p {
+    display: none;
+}
+
+.instagram-gallery > img {
+    max-width: 118px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+
+.instagram-gallery > img:nth-child(4) {
+    margin-top: 0;
+}
+
+.instagram-gallery > img:nth-child(7),
+.instagram-gallery > img:nth-child(8),
+.instagram-gallery > img:nth-child(9),
+.instagram-gallery > img:nth-child(10) {
+    display: block;
+}
+/* -EINDE- instagram gallery */
 
 
 /* -EINDE van content gedeelte- */

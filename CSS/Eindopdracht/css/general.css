@@ -760,25 +760,37 @@ div#promises p {
 
 
 /* Het gedeelte met de fotos en "#Uomostyle" */
-.instagram-gallery.row {
-    padding: 0 4px;
-    display: flex;
+.instagram-gallery {
+    max-width: 1411px;
+    height: auto;
+    display: grid;
+    place-self: center;
     justify-content: center;
+    grid-template-columns: minmax(33%, 465px) minmax(33%, 465px) minmax(33%, 465px);
+    grid-template-rows: 275px 124px 400px;
+    grid-template-areas:
+        'hashtag pic1 pic2'
+        'pic3 pic1 pic2'
+        'pic3 pic4 pic5';
+    gap: 8px;
 }
 
-.instagram-gallery section {
-    height: 276px;
-    margin-top: 8px;
+.instagram-gallery > section {
+    grid-area: hashtag;
+    max-width: 465px;
+    height: 275px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     color: white;
     background-color: var(--color-one);
 }
 
-.instagram-gallery h2, .instagram-gallery p {
-    padding: 0 10%;
-}
-.instagram-gallery h2 {
-    padding-top: 15%;
-    padding-bottom: 5%;
+.instagram-gallery > section > h2,
+.instagram-gallery > section > p {
+    padding: 0 34px;
 }
 
 .instagram-gallery h2 a {
@@ -786,17 +798,37 @@ div#promises p {
     text-transform: capitalize;
 }
 
-.column {
-    width: 33%;
+.instagram-gallery > img {
+    object-fit: cover;
     max-width: 465px;
-    padding: 0 4px;
+    max-height: 400px;
+    width: 100%;
 }
 
-.column img {
-    width: 100%;
+.instagram-gallery > img:nth-child(2) {
+    grid-area: pic1;
+}
+.instagram-gallery > img:nth-child(3) {
+    grid-area: pic2;
+}
+.instagram-gallery > img:nth-child(4) {
+    grid-area: pic3;
+    max-height: 524px;
     margin-top: 8px;
-    vertical-align: middle;
-    object-fit: cover;
+}
+.instagram-gallery > img:nth-child(5) {
+    grid-area: pic4;
+}
+.instagram-gallery > img:nth-child(6) {
+    grid-area: pic5;
+}
+
+/* extra afbeeldingen die wel te zien zijn op mobile */
+.instagram-gallery > img:nth-child(7),
+.instagram-gallery > img:nth-child(8),
+.instagram-gallery > img:nth-child(9),
+.instagram-gallery > img:nth-child(10) {
+    display: none;
 }
 /* EINDE van #Uomostyle */
 
