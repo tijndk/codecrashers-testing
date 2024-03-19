@@ -77,8 +77,10 @@ div#gap-container > div#slider > img {
 
 /* het "Shop By Category" gedeelte */
 article#category > div {
-    justify-content: space-between;
     column-gap: 0;
+}
+article#category figure {
+    margin-bottom: 15px;
 }
 
 #category figure:first-of-type .category.img-border,
@@ -86,11 +88,11 @@ article#category > div {
 #category figure:nth-of-type(3) .category.img-border,
 #category figure:nth-of-type(4) .category.img-border,
 #category figure:nth-of-type(5) .category.img-border,
-#category figure:last-of-type .category.img-border {
- width: 168px
+#category figure:last-of-type .category.img-border {            /* CHECK IF U CAN MAKE THIS BIGGER OR SMALLER */
+ width: 160px;
 }
 
-#category figure:nth-of-type(4) img {
+article#category img {
     width: 100%;
 }
 
@@ -118,8 +120,8 @@ article#best-selling > div > div {
 }
 
 article#trendy figure div.trendy.img-border,
-article#best-selling figure div.best-selling.img-border {
-    min-width: 165px;
+article#best-selling figure div.best-selling.img-border {           /* CHECK IF U CAN MAKE THIS BIGGER OR SMALLER */
+    min-width: 160px;
 }
 
 #trendy .img-border div.item-overlay,
@@ -153,6 +155,16 @@ article#best-selling figure div.best-selling.img-border {
     height: 74%;
 }
 
+#trendy p i.fa-star,
+#best-selling p i.fa-star {
+    display: none;
+}
+
+#trendy figcaption,
+#best-selling figcaption {
+    margin-top: 15px;
+}
+
 #trendy figcaption > a,
 #trendy figcaption > p,
 #best-selling figcaption > a,
@@ -160,11 +172,42 @@ article#best-selling figure div.best-selling.img-border {
     font-size: 14px;
 }
 
-#trendy p i.fa-star,
-#best-selling p i.fa-star {
+#trendy figcaption > a:has(span):after,
+#best-selling figcaption > a:has(span):after {
+    content: '...';
+}
+
+#trendy figcaption span,
+#best-selling figcaption span {
     display: none;
 }
 /* -EINDE- Trendy Items/Best Selling gedeelte */
+
+
+/* Alles voor de Banner "For Him" "For Her" "Promotions */
+div#banner {
+    flex-direction: column;
+}
+
+div#banner > div > div {
+    width: 108px;
+}
+
+div#banner > div > div > p {
+    font-weight: bold;
+}
+
+div#banner > div > div > a {
+    font-weight: 600;
+}
+
+div#banner > div:last-child > div {
+    width: 232px;
+}
+div#banner > div:last-child > div > p:first-of-type {
+    font-weight: 500;
+}
+/* -EINDE- van de Banner */
 
 
 /* -EINDE van content gedeelte- */

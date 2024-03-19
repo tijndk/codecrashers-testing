@@ -405,7 +405,7 @@ article#trendy > header > ul {
     
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 article#trendy > header > ul a {
@@ -422,7 +422,7 @@ article#best-selling > div {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
     position: relative;
 }
@@ -594,11 +594,10 @@ div#banner {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    column-gap: 6.45px;
+    gap: 30px;
 }
 div#banner > div {
-    max-width: 450px;
-    width: 33%;
+    width: 100%;
     aspect-ratio: 1 / 1;
 
     background-image: 
