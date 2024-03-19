@@ -76,13 +76,17 @@ div#gap-container > div#slider > img {
 
 
 /* het "Shop By Category" gedeelte */
+article#category > div {
+    justify-content: space-between;
+}
+
 #category figure:first-of-type .category.img-border,
 #category figure:nth-of-type(2) .category.img-border,
 #category figure:nth-of-type(3) .category.img-border,
 #category figure:nth-of-type(4) .category.img-border,
 #category figure:nth-of-type(5) .category.img-border,
 #category figure:last-of-type .category.img-border {
- width: 185px;
+ width: 42vw;
 }
 
 #category figure:nth-of-type(4) img {
@@ -114,7 +118,7 @@ article#best-selling > div > div {
 
 article#trendy figure div.trendy.img-border,
 article#best-selling figure div.best-selling.img-border {
-    min-width: 178px;
+    min-width: 42vw;
 }
 
 #trendy .img-border div.item-overlay,
