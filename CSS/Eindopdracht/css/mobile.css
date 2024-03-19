@@ -86,7 +86,7 @@ article#category > div {
 #category figure:nth-of-type(4) .category.img-border,
 #category figure:nth-of-type(5) .category.img-border,
 #category figure:last-of-type .category.img-border {
- width: 42vw;
+ width: 168px
 }
 
 #category figure:nth-of-type(4) img {
@@ -118,7 +118,7 @@ article#best-selling > div > div {
 
 article#trendy figure div.trendy.img-border,
 article#best-selling figure div.best-selling.img-border {
-    min-width: 42vw;
+    min-width: 165px;
 }
 
 #trendy .img-border div.item-overlay,
