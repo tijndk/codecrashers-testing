@@ -78,6 +78,7 @@ div#gap-container > div#slider > img {
 /* het "Shop By Category" gedeelte */
 article#category > div {
     justify-content: space-between;
+    column-gap: 0;
 }
 
 #category figure:first-of-type .category.img-border,
