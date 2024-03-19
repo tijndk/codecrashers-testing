@@ -2,6 +2,12 @@ body, header, h1, h2, h3, a, p {
     font-family: "Poppins", sans-serif !important;
 }
 
+h1 {
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 35px;
+}
+
 h2 {
     font-weight: bold;
     text-transform: uppercase;
@@ -208,6 +214,34 @@ div#banner > div:last-child > div > p:first-of-type {
     font-weight: 500;
 }
 /* -EINDE- van de Banner */
+
+
+/* gedeelte "WEEKDEAL" */
+div#weekdeal {
+    height: 450px;
+
+    grid-template-rows: 37% 18% 8% 37%;
+}
+
+div#weekdeal > p:first-of-type,
+div#weekdeal > a {
+    font-weight: bold;
+    width: 175px;
+}
+
+div#weekdeal > a {
+    width: 78px;
+    align-self: start;
+}
+
+div#weekdeal > p#timer {
+    font-size: 20px;
+}
+
+div#weekdeal > img {
+    display: none;
+}
+/* -EINDE- weekdeal */
 
 
 /* -EINDE van content gedeelte- */

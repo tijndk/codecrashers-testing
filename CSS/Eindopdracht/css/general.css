@@ -658,7 +658,7 @@ div#weekdeal {
     'timer image';
 
     background-image: linear-gradient(#EBEBEB 0% 100%), url(../images/image-background.png);
-    background-size: contain;
+    background-size: cover;
     background-blend-mode: color;
 }
 
