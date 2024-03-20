@@ -119,7 +119,7 @@ div#container {
 
 /* Het gedeelte van de header */
 div#container > header {
-    width: 100vw;
+    width: 99vw;
     height: 90px;
     
     place-self: center;
