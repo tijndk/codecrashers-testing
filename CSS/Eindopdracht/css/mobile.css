@@ -108,7 +108,7 @@ article#category figure {
 #category figure:nth-of-type(3) .category.img-border,
 #category figure:nth-of-type(4) .category.img-border,
 #category figure:nth-of-type(5) .category.img-border,
-#category figure:last-of-type .category.img-border {            /* CHECK IF U CAN MAKE THIS BIGGER OR SMALLER */
+#category figure:last-of-type .category.img-border {
  width: 160px;
 }
 
@@ -140,7 +140,7 @@ article#best-selling > div > div {
 }
 
 article#trendy figure div.trendy.img-border,
-article#best-selling figure div.best-selling.img-border {           /* CHECK IF U CAN MAKE THIS BIGGER OR SMALLER */
+article#best-selling figure div.best-selling.img-border {
     min-width: 160px;
 }
 
@@ -333,7 +333,7 @@ footer {
     background-color: #E4E4E4;
 }
 
-div#footer-content {                    /* VERANDER/VERWIJDER DIT/KIJK OF HET KLOPT */
+div#footer-content {
     text-align: center;
     margin-bottom: 60px;
     grid-template-columns: 100%;
@@ -365,7 +365,7 @@ div#footer-content label {
 footer #sign-up {
     font-family: "Poppins", sans-serif;
 }
-footer #sign-up input[type="email"] {     /* VERANDER/VERWIJDER DIT/KIJK OF HET KLOPT */
+footer #sign-up input[type="email"] {
     width: 60%;
     margin-right: 0;
 }
