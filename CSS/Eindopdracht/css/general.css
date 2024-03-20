@@ -13,6 +13,7 @@ html {
     --color-one: #222222;
     --color-two: #B9A16B;
     --color-three: #808080;
+    --color-four: #767676;
 }
 
 /* font voor de hele pagina */
@@ -118,7 +119,7 @@ div#container {
 
 /* Het gedeelte van de header */
 div#container > header {
-    width: 96vw;
+    width: 100vw;
     height: 90px;
     
     place-self: center;
@@ -130,29 +131,30 @@ div#container > header {
     background-color: var(--background-color-one);
 }
 div#container > header > div {
-    width: 94%;
+    width: 90%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    align-items: center;
+    grid-template-columns: minmax(160px, 175px) 30% minmax(402px, 54%) 128px 50px;
+    grid-template-areas:
+    'logo searchbar menu icons nav-button';
 
     position: relative;
     top: 25%;
 }
-div#container > header > div > nav {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+
+div#container > header > div > img {
+    grid-area: logo;
 }
 
-nav.menu > form {
+form.searchbar {
+    grid-area: searchbar;
     display: flex;
 
     background-color: var(--background-color-one);
 }
 
-nav.menu button:first-of-type {
+form.searchbar button:first-of-type {
     font-size: 20px;
     width: 50px;
 
@@ -164,13 +166,13 @@ nav.menu button:first-of-type {
     border-bottom-left-radius: 4px;
     background-color: var(--background-color-one);
 }
-nav.menu input[name="search"]:active {
+form.searchbar input[name="search"]:active {
     border: none;
 }
-nav.menu input[name="search"] {
+form.searchbar input[name="search"] {
     font-family: "Poppins", sans-serif;
+    width: 100%;
     height: 48px;
-    width: 11vw;
     padding-left: 10px;
 
     border: var(--searchbar-border);
@@ -179,7 +181,7 @@ nav.menu input[name="search"] {
     
     background-color: var(--background-color-one);
 }
-nav.menu select[name="categories"] {
+form.searchbar select[name="categories"] {
     font-family: "Poppins", sans-serif;
     height: 50px;
 
@@ -191,18 +193,20 @@ nav.menu select[name="categories"] {
     background-color: var(--background-color-one);
 }
 
-header > div > nav > ul {
-    width: 50%;
+header > div > ul.menu {
+    grid-area: menu;
     font-weight: 500;
+    padding: 0 50px;
 
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
+    column-gap: 20px 
 }
 
 div.icons {
-    width: 13%;
+    grid-area: icons;
 
     display: flex;
     justify-content: space-between;
@@ -213,7 +217,7 @@ div.icons img {
 }
 /* -EINDE van de header- */
 
-/* header overlay menu */
+/* header overlay menu */                   /* REMINDER MAAK DIT EEN KEER */
 #menu-toggle {
     display: none;
 }
@@ -240,6 +244,7 @@ div.icons img {
 }
 
 .menu-button-container {
+    grid-area: nav-button;
     display: flex;
     height: 100%;
     width: 30px;
@@ -247,6 +252,7 @@ div.icons img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    place-self: flex-end;
 }
 /*  */
 
@@ -703,7 +709,7 @@ p#timer span {
 p#timer span::after {
     font-size: 16px;
     text-transform: uppercase;
-    color: #767676;
+    color: var(--color-four);
 
     position: absolute;
     left: 0;
@@ -844,7 +850,7 @@ div.line {
 
 /* alles van de footer */
 footer {
-    margin-top: 60px;
+    padding-top: 60px;
     display: flex;
     flex-direction: column;
 }
@@ -895,7 +901,7 @@ footer #sign-up input[type="email"] {
     margin: 20px 15px 0 0;
     padding-left: 20px;
 
-    color: #767676;
+    color: var(--color-four);
     border: var(--searchbar-border);
 }
 
@@ -923,7 +929,7 @@ footer #contact p.socials {
     justify-content: space-between;
 }
 p.socials > a {
-    color: #767676;
+    color: var(--color-four);
 }
 p.socials > a:nth-child(2) {
     color: var(--color-one);
@@ -996,7 +1002,7 @@ div#bottom-mobile-menu {
     bottom: 10%;
     right: 1%;
 
-    border: 1px solid #767676;
+    border: 1px solid var(--color-four);
     border-radius: 50%;
     background-color: #ffffff;
 }

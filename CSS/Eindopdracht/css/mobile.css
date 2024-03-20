@@ -23,8 +23,21 @@ div#gap-container header p {
     display: none;
 }
 
-/* gedeelte van de header */        /* FIX DE HEADER LATER */
-div#container > header > div > nav.menu {
+/* gedeelte van de header */
+div#container > header {
+    height: 60px;
+}
+
+div#container > header > div  {
+    justify-items: center;
+    grid-template-columns: 30px minmax(10%, 100%) 30px;
+    grid-template-areas: 
+    'nav-button logo icons';
+}
+
+
+div#container > header > div > form,
+div#container > header > div > ul {
     display: none;
 }
 
@@ -35,7 +48,7 @@ div.icons > a:nth-child(2) {
 /* -EINDE van de header- */
 
 /* OVERLAY menu */
-
+                                    /* REMINDER MAAK DIT EEN KEER OFZO!!!! */
 /* EINDE van overlay */
 
 
@@ -307,26 +320,118 @@ div#promises h3 {
 
 /* -EINDE van content gedeelte- */
 
-/* de hele Footer */
-div#footer-content {                    /* VERANDER/VERWIJDER DIT/KIJK OF HET KLOPT */
-    display: flex;
-    flex-direction: column;
+
+div#container > div.line {
+    display: none;
 }
 
+
+/* de hele Footer */
+footer {
+    width: 100vw;
+    place-self: center;
+    background-color: #E4E4E4;
+}
+
+div#footer-content {                    /* VERANDER/VERWIJDER DIT/KIJK OF HET KLOPT */
+    text-align: center;
+    margin-bottom: 60px;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    'contact'
+    'company'
+    'shop'
+    'help'
+    'sign-up'
+    'mobile-app';
+}
+
+p.socials {
+    margin: 0 auto;
+    margin-top: 35px;
+}
+
+div#footer-content h3 {
+    font-weight: bold;
+    font-size: max(20px, 4.5vw);
+}
+
+div#footer-content p,
+div#footer-content ul,
+div#footer-content label {
+    font-size: max(14px, 3vw);
+}
+
+footer #sign-up {
+    font-family: "Poppins", sans-serif;
+}
 footer #sign-up input[type="email"] {     /* VERANDER/VERWIJDER DIT/KIJK OF HET KLOPT */
-    width: 94%;
+    width: 60%;
+    margin-right: 0;
+}
+footer #sign-up input[type="submit"] {
+    width: 30%;
+}
+
+footer #mobile-app {
+    margin-left: 0;
+}
+
+div.line {
+    background-color: #CFCDCD;
+}
+
+div#bottom-footer {
+    height: 140px;
+    margin-bottom: 55px;
+    margin-left: 15px;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    'copyright'
+    'language'
+    'currency';
+}
+
+div.language,
+div.currency {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+div.language::before {
+    content: 'Language';
+    color: var(--color-four);
+}
+div.currency::before {
+    content: 'Currency';
+    color: var(--color-four);
+}
+
+div#bottom-footer select {
+    font-family: "Poppins", sans-serif;
+    margin-left: 20px;
+}
+
+div#bottom-footer select[name="language"] {
+    width: 195px;
+}
+div#bottom-footer select[name="currency"] {
+    width: 65px;
 }
 /* -EINDE- van de footer */
 
 
+/* sticky menu aan de onderkant */
 div#bottom-mobile-menu {
     text-align: center;
-    width: 96vw;
+    width: 100vw;
+    height: 55px;
 
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: baseline;
+    align-items: center;
     
     position: fixed;
     bottom: 0;
@@ -334,3 +439,19 @@ div#bottom-mobile-menu {
 
     background-color: white;
 }
+
+div#bottom-mobile-menu a {
+    text-transform: capitalize;
+}
+/* -EINDE- sticky menu */
+
+
+/* Back To Top knop */
+#back-to-top {
+    bottom: 55px;
+    right: 0;
+    border: none;
+    border-radius: 0;
+    background-color: #EEEEEE;
+}
+/* -EINDE- back to top */

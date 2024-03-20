@@ -23,38 +23,36 @@
             <header>
                 <div>
                     <img src="images/001-logo_black.svg" alt="logo">
-                    <nav class="menu">
-                        <form action="index.html">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                            <input type="text" name="search" placeholder="Search products...">
-                            <select name="categories" id="search-categories">
-                                <option>All Categories</option>
-                                <option>Bracelets</option>
-                                <option>Earrings</option>
-                                <option>Rings</option>
-                                <option>Charms</option>
-                                <option>Necklaces</option>
-                                <option>Brooches</option>
-                            </select>
-                        </form>
-                        <ul>
-                            <li><a href="#" target="_self">home</a></li>
-                            <li><a href="#" target="_self">shop</a></li>
-                            <li><a href="#" target="_self">collection</a></li>
-                            <li><a href="#" target="_self">journal</a></li>
-                            <li><a href="#" target="_self">lookbook</a></li>
-                            <li class="underline"><a href="#" target="_self">pages</a></li>
-                        </ul>
-                    </nav>
+                    <form action="index.html" class="searchbar">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                        <input type="text" name="search" placeholder="Search products...">
+                        <select name="categories" id="search-categories">
+                            <option>All Categories</option>
+                            <option>Bracelets</option>
+                            <option>Earrings</option>
+                            <option>Rings</option>
+                            <option>Charms</option>
+                            <option>Necklaces</option>
+                            <option>Brooches</option>
+                        </select>
+                    </form>
+                    <ul class="menu">
+                        <li><a href="#" target="_self">home</a></li>
+                        <li><a href="#" target="_self">shop</a></li>
+                        <li><a href="#" target="_self">collection</a></li>
+                        <li><a href="#" target="_self">journal</a></li>
+                        <li><a href="#" target="_self">lookbook</a></li>
+                        <li class="underline"><a href="#" target="_self">pages</a></li>
+                    </ul>
                     <div class="icons">
                         <a href="#" target="_self"><img src="images/002-user.svg" alt="profile"></a>
                         <a href="#" target="_self"><img src="images/004-heart_black.svg" alt="heart"></a>
                         <a href="#" target="_self"><img src="images/003-shopping_bag_black.svg" alt="shopping-cart"></a>
                         <input id="menu-toggle" type="checkbox">
-                        <label class='menu-button-container' for="menu-toggle">
-                            <div class='menu-button'></div>
-                        </label>
                     </div>
+                    <label class='menu-button-container' for="menu-toggle">
+                        <div class='menu-button'></div>
+                    </label>
                 </div>
             </header>
             <section>
@@ -619,20 +617,28 @@
             </footer>
             <div id="bottom-mobile-menu">
                 <figure>
-                    <img src="images/013-home.svg" alt="home">
-                    <figcaption>home</figcaption>
+                    <a href="#" target="_self">
+                        <img src="images/013-home.svg" alt="home">
+                        <figcaption>home</figcaption>
+                    </a>
                 </figure>
                 <figure>
-                    <img src="images/014-hanger.svg" alt="shop">
-                    <figcaption>shop</figcaption>
+                    <a href="#" target="_self">
+                        <img src="images/014-hanger.svg" alt="shop">
+                        <figcaption>shop</figcaption>
+                    </a>
                 </figure>
                 <figure>
-                    <img src="images/004-heart_black.svg" alt="wishlist">
-                    <figcaption>wishlist</figcaption>
+                    <a href="#" target="_self">
+                        <img src="images/004-heart_black.svg" alt="wishlist">
+                        <figcaption>wishlist</figcaption>
+                    </a>
                 </figure>
                 <figure>
-                    <img src="images/003-shopping_bag_black.svg" alt="cart">
-                    <figcaption>cart</figcaption>
+                    <a href="#" target="_self">
+                        <img src="images/003-shopping_bag_black.svg" alt="cart">
+                        <figcaption>cart</figcaption>
+                    </a>
                 </figure>
             </div>
             <div id="back-to-top">
