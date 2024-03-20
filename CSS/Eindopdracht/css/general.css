@@ -516,6 +516,9 @@ article#best-selling figure div.best-selling.img-border {
     font-size: 12px;
 }
 
+del {
+    color: #D6001C;
+}
 /* De soort overlays in "Trendy Items" en "Best Selling" in de tweede en derde afbeelingen; met het mandje, oog, en hartje, en met de -67% en HOT */
 .img-border div.item-overlay {
     display: none;
@@ -554,6 +557,10 @@ figure:nth-of-type(2) .item-overlay {
 
     background-color: rgba(255, 255, 255, 0.9);
 }
+ figure:nth-of-type(2) .img-border:hover .item-overlay {
+    display: none;
+}
+
 div.item-overlay div {
     width: 50px;
     height: 50px;
