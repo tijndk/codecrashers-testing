@@ -612,6 +612,9 @@ div#banner {
 div#banner > div {
     width: 100%;
     aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background-image: 
     linear-gradient(to bottom, rgba(34, 34, 34, 0.3) 0% 100%),
@@ -624,8 +627,6 @@ div#banner > div {
 div#banner > div > div {
     width: 106px;
     position: relative;
-    top: calc(50% - 30px);
-    left: calc(50% - 53px);
 }
 
 div#banner > div > div > p,
@@ -647,8 +648,6 @@ div#banner > div:last-child {
 }
 div#banner > div:last-child > div {
     width: 230px;
-    top: calc(50% - 60px);
-    left: calc(50% - 115px);
 }
 div#banner > div:last-child > div > p:first-of-type {
     font-size: 14px;
