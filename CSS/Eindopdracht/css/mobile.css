@@ -90,6 +90,7 @@ div#slider > a {
 div#gap-container > div#slider > img {
     height: 93%;
     object-fit: cover;
+    object-position: 75% 0;
     place-self: flex-end;
 }
 /* -EINDE van Newest Arrivals gedeelte- */
