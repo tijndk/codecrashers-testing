@@ -316,6 +316,10 @@ div#promises h3 {
 .instagram-gallery > img:nth-child(10) {
     display: block;
 }
+
+.instagram-gallery > img:nth-child(8) {
+    object-position: 0 66%;
+}
 /* -EINDE- instagram gallery */
 
 

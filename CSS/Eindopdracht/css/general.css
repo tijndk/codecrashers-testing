@@ -790,7 +790,7 @@ div#promises p {
         'hashtag pic1 pic2'
         'pic3 pic1 pic2'
         'pic3 pic4 pic5';
-    gap: 8px;
+    gap: 4px 8px;
 }
 
 .instagram-gallery > section {
@@ -814,6 +814,9 @@ div#promises p {
 .instagram-gallery h2 a {
     color: white;
     text-transform: capitalize;
+}
+.instagram-gallery h2 a:hover {
+    text-decoration: underline;
 }
 
 .instagram-gallery > img {
