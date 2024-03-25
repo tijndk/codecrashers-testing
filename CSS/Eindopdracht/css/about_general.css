@@ -1,5 +1,189 @@
+h1, h2, div#promises h3, footer #sign-up {
+    font-family: "Poppins", sans-serif;
+}
+
+p {
+    font-size: max(14px, 0.85vw);
+}
+
+/* searchbar in de header */
 form.searchbar input[name="search"] {
     border-right: var(--searchbar-border);
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+}
+/*  */
+
+
+/* het CONTENT gedeelte */
+div#container > section {
+    margin: 0 auto;
+    margin-top: 30px;
+
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-areas:
+    'fill-1 about about fill-2'
+    'image-one image-one image-one image-one'
+    'fill-3 story story fill-4'
+    'fill-3 image-two company fill-4'
+    'fill-3 promises promises fill-4'
+    'logos logos logos logos';
+    row-gap: 50px;
+}
+
+/* "ABOUT UOMO" titel */
+section > h1 {
+    grid-area: about;
+    font-size: max(30px, 1.75vw);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* de eerste grote afbeelding */
+section > h1 + img {
+    grid-area: image-one;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 141 / 55;
+    object-fit: cover;
+}
+
+/* "OUR STORY" tekst gedeelte */
+section > div:first-of-type {
+    grid-area: story;
+    margin: 0 8%;
+    display: grid;
+    grid-template-areas:
+    'story story'
+    'mission vision';
+}
+
+section > div:first-of-type h2 {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+section > div:first-of-type p {
+    line-height: 3.5vh;
+    margin-top: 20px;
+}
+
+section > div:first-of-type > div:first-child {
+    grid-area: story;
+    margin-bottom: 20px;
+}
+
+section > div:first-of-type > div:first-child > p:first-of-type {
+    font-size: max(16px, 0.9vw);
+    font-weight: 500;
+}
+
+section > div:first-of-type > div:nth-child(2) > p:first-child,
+section > div:first-of-type > div:last-child > p:first-child {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: max(16px, 0.9vw);
+}
+section > div:first-of-type > div:nth-child(2) {
+    grid-area: mission;
+}
+section > div:first-of-type > div:last-child {
+    grid-area: vision;
+
+}
+/* -- */
+
+/* tweede afbeelding */
+section > img:nth-of-type(2) {
+    grid-area: image-two;
+    object-fit: cover;
+
+    width: 95%;
+    height: auto;
+    aspect-ratio: 57 / 65;
+}
+
+/* "the company" tekst gedeelte */
+section > div:nth-of-type(2) {
+    grid-area: company;
+    line-height: 3.5vh;
+    margin-left: 25px;
+    align-self: center;
+}
+
+section > div:nth-of-type(2) > p:first-child {
+    font-size: max(16px, 0.9vw);
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-four);
+    
+}
+
+section > div:nth-of-type(2) > p:nth-child(2),
+section > div:nth-of-type(2) > p:last-child {
+    margin-top: 40px;
+}
+/* gedeelte met de 3 afbeeldingen en tekst; de promises */
+section > div#promises {
+    grid-area: promises;
+    text-align: left;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+section > div#promises > figure {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+section > div#promises h3 {
+    font-weight: 500;
+}
+/* de merk logos */
+section > div:last-of-type {
+    grid-area: logos;
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0;
+
+}
+/* -EINDE- content gedeelte */
+
+
+/* het FOOTER gedeelte */
+
+/* de linkjes in de footer */
+div#footer-content ul a {
+    font-size: max(14px, 0.85vw);
+}
+/* -EINDE- footer */
+
+
+@media (max-width: 576px) {
+    div#container > section {
+        grid-template-columns: 10% 80% 10%;
+        grid-template-areas:
+        'fill-1 about fill-2'
+        'image-one image-one image-one'
+        'fill-3 story fill-4'
+        'fill-3 company fill-4'
+        'fill-3 promises fill-4'
+        'fill-3 logos fill-4';
+    }
+
+    section > div:first-of-type {
+        margin: 0;
+    }
+
+    section > img:nth-of-type(2) {
+        display: none;
+    }
+
+    section > div#promises {
+        text-align: center;
+    }
 }
