@@ -43,10 +43,11 @@ section > h1 {
 /* de eerste grote afbeelding */
 section > h1 + img {
     grid-area: image-one;
-    width: 100%;
+    width: 85%;
     height: auto;
     aspect-ratio: 141 / 55;
     object-fit: cover;
+    place-self: center;
 }
 
 /* "OUR STORY" tekst gedeelte */
@@ -84,9 +85,11 @@ section > div:first-of-type > div:last-child > p:first-child {
     text-transform: capitalize;
     font-weight: 500;
     font-size: max(16px, 0.9vw);
+    margin-top: 40px;
 }
 section > div:first-of-type > div:nth-child(2) {
     grid-area: mission;
+    margin-right: 15%;
 }
 section > div:first-of-type > div:last-child {
     grid-area: vision;
@@ -97,11 +100,12 @@ section > div:first-of-type > div:last-child {
 /* tweede afbeelding */
 section > img:nth-of-type(2) {
     grid-area: image-two;
-    object-fit: cover;
 
     width: 95%;
     height: auto;
     aspect-ratio: 57 / 65;
+    object-fit: cover;
+    object-position: 0% 30%;
 }
 
 /* "the company" tekst gedeelte */
@@ -180,6 +184,10 @@ div#footer-content ul a {
 
     section > div:first-of-type {
         margin: 0;
+        grid-template-areas:
+        'story'
+        'mission'
+        'vision';
     }
 
     section > img:nth-of-type(2) {
