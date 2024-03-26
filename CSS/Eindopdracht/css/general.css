@@ -158,6 +158,7 @@ form.searchbar {
 form.searchbar button:first-of-type {
     font-size: 20px;
     width: 50px;
+    padding: 0 15px;
 
     cursor: pointer;
 
@@ -875,6 +876,13 @@ div#footer-content h3 a {
 div#footer-content p,
 div#footer-content a {
     font-family: "Lora", serif;
+    
+}
+
+div#footer-content ul a,
+footer #contact p,
+footer #mobile-app p {
+    font-size: max(14px, 0.85vw);
 }
 
 div#footer-content ul a {
@@ -999,7 +1007,7 @@ div#bottom-mobile-menu {
     height: 45px;
 
     position: fixed;
-    bottom: 10%;
+    bottom: 15%;
     right: 1%;
 
     border: 1px solid var(--color-four);

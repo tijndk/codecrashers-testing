@@ -1,0 +1,119 @@
+h1, h2, form textarea, form input[type="submit"], footer #sign-up {
+    font-family: "Poppins", sans-serif;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+p {
+    font-size: max(14px, 0.85vw);
+}
+
+/* content gedeelte */
+div#container > section {
+    width: 80%;
+    display: grid;
+    grid-template-areas:
+    'title title'
+    'maps maps'
+    'utrecht london'
+    'form form';
+    place-self: center;
+}
+
+/* "Contact Us" titel */
+div#container > section > h1 {
+    grid-area: title;
+}
+
+/* Google Maps gedeelte */
+div#container > section > div:first-of-type {
+    grid-area: maps;
+}
+
+/* "Store in Utrecht" gedeelte */
+div#container > section > div:nth-of-type(2) {
+    grid-area: utrecht;
+}
+/* "Store in London" gedeelte */
+div#container > section > div:nth-of-type(3) {
+    grid-area: london;
+}
+
+
+/* het formulier */
+div#container > section > form {
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+/* alle labels */
+div#container > section > form label {
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: 0 5px;
+    display: none;
+    position: relative;
+    top: 13px;
+    left: 15px;
+    background-color: white;
+}
+
+/* eerste label "name" */
+div#container > section > form label:first-of-type {
+    width: 54px;
+}
+/* tweede label "email address" */
+div#container > section > form label:nth-of-type(2) {
+    width: 111px;
+}
+/* derde label "your review" */
+div#container > section > form label:nth-of-type(3) {
+    width: 85px;
+}
+
+/* alle inputs */
+div#container > section > form input {
+    height: 51px;
+    padding: 0 15px;
+    border: 2px solid #E4E4E4;
+}
+
+/* de labels wanneer de input of textarea focus heeft */
+div#container > section > form:has(input:first-of-type:focus) label:first-of-type,
+div#container > section > form:has(input:nth-of-type(2):focus) label:nth-of-type(2),
+div#container > section > form:has(textarea:focus) label:nth-of-type(3) {
+    display: block;
+}
+
+/* het "required" sterretje achter name en email address labels */
+div#container > section > form label:first-of-type::after,
+div#container > section > form label:nth-of-type(2)::after {
+    content: " *";
+}
+
+/* de textarea "Your Review" */
+div#container > section > form textarea {
+    height: 213px;
+    padding: 20px 15px;
+    border: 2px solid #E4E4E4;
+}
+
+form input,
+form textarea {
+    font-size: max(14px, 0.85vw);
+}
+
+/* de "submit" knop */
+div#container > section > form input[type="submit"] {
+    text-transform: uppercase;
+    width: 200px;
+    height: 60px;
+    color: white;
+    background-color: var(--color-one);
+    border: none;
+    cursor: pointer;
+}

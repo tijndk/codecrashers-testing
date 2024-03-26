@@ -35,7 +35,7 @@ div#container > section {
 /* "ABOUT UOMO" titel */
 section > h1 {
     grid-area: about;
-    font-size: max(30px, 1.75vw);
+    font-size: max(35px, 1.75vw);
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -161,15 +161,7 @@ section > div:last-of-type {
 /* -EINDE- content gedeelte */
 
 
-/* het FOOTER gedeelte */
-
-/* de linkjes in de footer */
-div#footer-content ul a {
-    font-size: max(14px, 0.85vw);
-}
-/* -EINDE- footer */
-
-
+/* een paar kleine dingen om de pagina responsive te maken op mobiel */
 @media (max-width: 576px) {
     div#container > section {
         grid-template-columns: 10% 80% 10%;
