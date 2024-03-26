@@ -378,6 +378,14 @@ footer #sign-up input[type="submit"] {
     width: 30%;
 }
 
+div#footer-content ul a:hover::after {
+    display: none;
+}
+div#footer-content ul a:hover {
+    text-decoration: underline;
+    text-underline-offset: 9px;
+}
+
 footer #mobile-app {
     margin-left: 0;
 }

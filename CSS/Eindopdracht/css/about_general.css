@@ -117,7 +117,7 @@ section > div:nth-of-type(2) > p:first-child {
     font-weight: 500;
     text-transform: uppercase;
     color: var(--color-four);
-    
+    margin-top: 20px;
 }
 
 section > div:nth-of-type(2) > p:nth-child(2),
@@ -143,12 +143,15 @@ section > div#promises > figure {
 section > div#promises h3 {
     font-weight: 500;
 }
+
 /* de merk logos */
 section > div:last-of-type {
     grid-area: logos;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     margin: 60px 0;
+    row-gap: 24px;
 
 }
 /* -EINDE- content gedeelte */
@@ -181,6 +184,10 @@ div#footer-content ul a {
 
     section > img:nth-of-type(2) {
         display: none;
+    }
+
+    section > div:nth-of-type(2) {
+        margin-left: 0;
     }
 
     section > div#promises {
