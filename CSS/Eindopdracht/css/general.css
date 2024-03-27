@@ -31,10 +31,10 @@ h1, h2 {
     font-weight: normal;
 }
 h1 {
-    font-size: max(30px, 3vw);
+    font-size: max(30px, 2.25vw);
 }
 h2 {
-    font-size: max(26px, 1.5vw);
+    font-size: max(26px, 1.35vw);
 }
 h3 {
     font-size: max(20px, 1.25vw);
@@ -168,9 +168,7 @@ form.searchbar button:first-of-type {
     border-bottom-left-radius: 4px;
     background-color: var(--background-color-one);
 }
-form.searchbar input[name="search"]:active {
-    border: none;
-}
+
 form.searchbar input[name="search"] {
     font-family: "Poppins", sans-serif;
     width: 100%;

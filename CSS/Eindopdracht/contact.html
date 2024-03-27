@@ -25,13 +25,13 @@
             <header>
                 <div>
                     <img src="images/001-logo_black.svg" alt="logo">
-                    <form action="about.html" class="searchbar">
+                    <form action="contact.html" class="searchbar">
                         <button type="submit" name="search"><i class="fa fa-search"></i></button>
                         <input type="text" name="search" placeholder="Search...">
                     </form>
                     <ul class="menu">
-                        <li><a href="shop.html" target="_self">home</a></li>
-                        <li><a href="shop.html" target="_self">shop</a></li>
+                        <li><a href="homepage.html" target="_self">home</a></li>
+                        <li><a href="homepage.html" target="_self">shop</a></li>
                         <li><a href="#" target="_self">collection</a></li>
                         <li><a href="#" target="_self">journal</a></li>
                         <li><a href="#" target="_self">lookbook</a></li>
@@ -50,7 +50,7 @@
             </header>
             <section>
                 <h1>contact us</h1>
-                <div>google maps</div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.3887068837817!2d5.114168332890059!3d52.09085698035862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c66f5d220406ad%3A0xd8d238a33c06a6bb!2sHoog%20Catharijne!5e0!3m2!1snl!2snl!4v1711534764344!5m2!1snl!2snl" width="600" height="450" allowfullscreen></iframe>
                 <div>
                     <h2>Store in Utrecht</h2>
                     <p>
@@ -73,12 +73,18 @@
                 </div>
                 <form action="contact.html" method="post">
                     <h2>get in touch</h2>
-                    <label for="name">name</label>
-                    <input type="text" name="name" id="name" placeholder="Name *" required>
-                    <label for="email-address">email address </label>
-                    <input type="email" name="email-address" id="email-address" placeholder="Email Address *" required>
-                    <label for="review">your review</label>
-                    <textarea name="review" id="review" placeholder="Your Review"></textarea>
+                    <div>
+                        <label for="name">name</label>
+                        <input type="text" name="name" id="name" placeholder="Name *" required>
+                    </div>
+                    <div>
+                        <label for="email-address">email address </label>
+                        <input type="email" name="email-address" id="email-address" placeholder="Email Address *" required>
+                    </div>
+                    <div>
+                        <label for="review">your review</label>
+                        <textarea name="review" id="review" placeholder="Your Review"></textarea>
+                    </div>
                     <input type="submit" value="submit" name="contact">
                 </form>
             </section>
@@ -87,7 +93,7 @@
                 <div id="footer-content">
                     <div id="sign-up">
                         <h3>subscribe</h3>
-                        <form action="about.html" method="post">
+                        <form action="contact.html" method="post">
                             <label for="emailaddress">Be the first to get the latest news about trends, promotions, and much more!</label><br>
                             <input type="email" name="emailaddress" id="emailaddress" placeholder="Your email address">
                             <input type="submit" value="JOIN" id="join" name="sign-up">
@@ -117,18 +123,18 @@
                             <li><a href="#" target="_self">Careers</a></li>
                             <li><a href="#" target="_self">Affiliates</a></li>
                             <li><a href="#" target="_self">Blog</a></li>
-                            <li><a href="#" target="_self">Contact Us</a></li>
+                            <li><a href="contact.html" target="_self">Contact Us</a></li>
                         </ul>
                     </nav>
                     <nav class="Shop">
-                        <h3><a href="shop.html" target="_self">shop</a></h3>
+                        <h3><a href="homepage.html" target="_self">shop</a></h3>
                         <ul>
-                            <li><a href="shop.html" target="_self">New Arrivals</a></li>
+                            <li><a href="homepage.html" target="_self">New Arrivals</a></li>
                             <li><a href="#" target="_self">Accessories</a></li>
-                            <li><a href="shop.html#banner" target="_self">Men</a></li>
-                            <li><a href="shop.html#banner" target="_self">Women</a></li>
+                            <li><a href="homepage.html#banner" target="_self">Men</a></li>
+                            <li><a href="homepage.html#banner" target="_self">Women</a></li>
                             <li><a href="https://tinyurl.com/yc5pkecy" target="_blank">Unisex</a></li>
-                            <li><a href="shop.html" target="_self">Shop All</a></li>
+                            <li><a href="homepage.html" target="_self">Shop All</a></li>
                         </ul>
                     </nav>
                     <nav class="Help">
@@ -136,9 +142,9 @@
                         <ul>
                             <li><a href="#" target="_self">Customer Service</a></li>
                             <li><a href="#" target="_self">My Account</a></li>
-                            <li><a href="#" target="_self">Find a Store</a></li>
+                            <li><a href="contact.html" target="_self">Find a Store</a></li>
                             <li><a href="#" target="_self">Legal & Privacy</a></li>
-                            <li><a href="#" target="_self">Contact</a></li>
+                            <li><a href="contact.html" target="_self">Contact</a></li>
                             <li><a href="#" target="_self">Gift Card</a></li>
                         </ul>
                     </nav>
@@ -178,10 +184,10 @@
                     <a href="#" target="_self">
                         <img src="images/013-home.svg" alt="home">
                     </a>
-                    <figcaption><a href="shop.html" target="_self">home</a></figcaption>
+                    <figcaption><a href="homepage.html" target="_self">home</a></figcaption>
                 </figure>
                 <figure>
-                    <a href="shop.html" target="_self">
+                    <a href="homepage.html" target="_self">
                         <img src="images/014-hanger.svg" alt="shop">
                     </a>
                     <figcaption><a href="#" target="_self">shop</a></figcaption>

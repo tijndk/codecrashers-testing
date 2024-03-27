@@ -10,9 +10,19 @@ p {
     font-size: max(14px, 0.85vw);
 }
 
+/* searchbar in header */
+form.searchbar input[name="search"] {
+    border-right: var(--searchbar-border);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+/*  */
+
+
 /* content gedeelte */
 div#container > section {
     width: 80%;
+    margin-top: 80px;
     display: grid;
     grid-template-areas:
     'title title'
@@ -20,24 +30,30 @@ div#container > section {
     'utrecht london'
     'form form';
     place-self: center;
+    row-gap: 50px;
 }
 
 /* "Contact Us" titel */
 div#container > section > h1 {
     grid-area: title;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 /* Google Maps gedeelte */
-div#container > section > div:first-of-type {
+div#container > section > iframe {
     grid-area: maps;
+    width: 100%;
+    height: 550px;
+    border: 0;
 }
 
 /* "Store in Utrecht" gedeelte */
-div#container > section > div:nth-of-type(2) {
+div#container > section > div:first-of-type{
     grid-area: utrecht;
 }
 /* "Store in London" gedeelte */
-div#container > section > div:nth-of-type(3) {
+div#container > section > div:nth-of-type(2) {
     grid-area: london;
 }
 
@@ -50,53 +66,59 @@ div#container > section > form {
     row-gap: 30px;
 }
 
+div#container > section > form > div {
+    position: relative;
+}
+
 /* alle labels */
 div#container > section > form label {
     text-transform: capitalize;
     font-weight: 500;
     padding: 0 5px;
     display: none;
-    position: relative;
-    top: 13px;
+    position: absolute;
+    top: -8px;
     left: 15px;
     background-color: white;
 }
 
 /* eerste label "name" */
-div#container > section > form label:first-of-type {
+div#container > section > form > div:first-of-type > label {
     width: 54px;
 }
 /* tweede label "email address" */
-div#container > section > form label:nth-of-type(2) {
+div#container > section > form > div:nth-of-type(2) > label {
     width: 111px;
 }
 /* derde label "your review" */
-div#container > section > form label:nth-of-type(3) {
+div#container > section > form > div:nth-of-type(3) label {
     width: 85px;
 }
 
 /* alle inputs */
 div#container > section > form input {
+    width: calc(100% - 35px);
     height: 51px;
     padding: 0 15px;
     border: 2px solid #E4E4E4;
 }
 
 /* de labels wanneer de input of textarea focus heeft */
-div#container > section > form:has(input:first-of-type:focus) label:first-of-type,
-div#container > section > form:has(input:nth-of-type(2):focus) label:nth-of-type(2),
-div#container > section > form:has(textarea:focus) label:nth-of-type(3) {
+div#container > section > form:has(div:first-of-type input:focus) div:first-of-type label,
+div#container > section > form:has(div:nth-of-type(2) input:focus) div:nth-of-type(2) label,
+div#container > section > form:has(textarea:focus) div:nth-of-type(3) label {
     display: block;
 }
 
 /* het "required" sterretje achter name en email address labels */
-div#container > section > form label:first-of-type::after,
-div#container > section > form label:nth-of-type(2)::after {
+div#container > section > form div:first-of-type label::after,
+div#container > section > form div:nth-of-type(2) label::after {
     content: " *";
 }
 
 /* de textarea "Your Review" */
 div#container > section > form textarea {
+    width: calc(100% - 35px);
     height: 213px;
     padding: 20px 15px;
     border: 2px solid #E4E4E4;
@@ -116,4 +138,17 @@ div#container > section > form input[type="submit"] {
     background-color: var(--color-one);
     border: none;
     cursor: pointer;
+}
+
+
+
+@media (max-width: 576px) {
+    div#container > section {
+        grid-template-areas:
+        'title'
+        'maps'
+        'utrecht'
+        'london'
+        'form';
+    }
 }
