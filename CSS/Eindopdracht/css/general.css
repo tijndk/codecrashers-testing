@@ -102,6 +102,9 @@ figcaption div > a:hover::after {
     background-color: var(--background-color-one);
     left: 17px;
 }
+div#banner > div:nth-child(3) > div .underline.white::after {
+    left: 28px;
+}
 div#banner > div:last-child > div .underline.white::after {
     left: 85px;
 }
@@ -611,11 +614,21 @@ div#banner > div:nth-child(2) {
     linear-gradient(to bottom, rgba(34, 34, 34, 0.3) 0% 100%),
     url(https://www.proclamationjewelry.com/cdn/shop/products/mens_gold_bracelet_5mm_diamond_cut_franco_14k_2048x.jpg?v=1679522834);
 }
+
+div#banner > div:nth-child(3) {
+    background-image:
+    linear-gradient(to bottom, rgba(34, 34, 34, 0.3) 0% 100%),
+    url(../images/for_them.jpg);
+}
+
 div#banner > div > div {
     width: 106px;
     position: relative;
 }
 
+div#banner > div:nth-child(3) > div {
+    width: 127px;
+}
 div#banner > div > div > p,
 div#banner > div > div > a {
     color: white;
