@@ -19,7 +19,7 @@ html {
 /* font voor de hele pagina */
 body {
     font-family: "Poppins", sans-serif;     /* Poppins ipv. Sofia Pro */
-    font-size: 14px;
+    font-size: max(14px, 0.75vw);
     color: #222222;
     background-color: var(--background-color-one);
 }
@@ -31,7 +31,7 @@ h1, h2 {
     font-weight: normal;
 }
 h1 {
-    font-size: max(30px, 2.25vw);
+    font-size: max(35px, 1.75vw);
 }
 h2 {
     font-size: max(26px, 1.35vw);
@@ -193,7 +193,8 @@ form.searchbar select[name="categories"] {
     background-color: var(--background-color-one);
 }
 
-header > div > ul.menu {
+/* menu in de header */
+ul.menu {
     grid-area: menu;
     font-weight: 500;
     padding: 0 50px;
@@ -877,11 +878,6 @@ div#footer-content a {
     
 }
 
-div#footer-content ul a,
-footer #contact p,
-footer #mobile-app p {
-    font-size: max(14px, 0.85vw);
-}
 
 div#footer-content ul a {
     text-transform: capitalize;

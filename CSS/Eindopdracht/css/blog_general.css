@@ -1,0 +1,55 @@
+/* Searchbar in de header */
+form.searchbar input[name="search"] {
+    border-right: var(--searchbar-border);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+/*  */
+
+
+/* het section gedeelte met de content */
+div#container > section {
+    width: 80%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    'title fill fill'
+    'nav nav fill-2'
+    'gallery gallery gallery'
+    'fill-3 showing fill-4';
+    place-self: center;
+    row-gap: 20px;
+}
+
+section > h1 {
+    grid-area: title;
+    font-size: max(35px, 1.75vw);
+    text-transform: uppercase;
+    font-weight: bold;
+
+    font-family: "Poppins", sans-serif;
+}
+
+section > nav {
+    grid-area: nav;
+}
+section > nav > ul.menu {
+    padding: 0;
+    justify-content: space-between;
+}
+
+section > div:first-of-type {
+    grid-area: gallery;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    place-self: center;
+}
+section > div:first-of-type > figure {
+    max-width: 450px;
+}
+
+section > div:nth-of-type(2) {
+    grid-area: showing;
+}
