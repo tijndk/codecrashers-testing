@@ -1,4 +1,4 @@
-h1, h2, form textarea, form input[type="submit"], footer #sign-up {
+h1, h2, form textarea, form button[type="button"], footer #sign-up {
     font-family: "Poppins", sans-serif;
 }
 
@@ -95,11 +95,25 @@ div#container > section > form > div:nth-of-type(3) label {
     width: 85px;
 }
 
+form input,
+form textarea,
+form button {
+    font-size: max(14px, 0.85vw);
+}
+
 /* alle inputs */
 div#container > section > form input {
     width: calc(100% - 35px);
     height: 51px;
     padding: 0 15px;
+    border: 2px solid #E4E4E4;
+}
+
+/* de textarea "Your Review" */
+div#container > section > form textarea {
+    width: calc(100% - 35px);
+    height: 213px;
+    padding: 20px 15px;
     border: 2px solid #E4E4E4;
 }
 
@@ -116,21 +130,8 @@ div#container > section > form div:nth-of-type(2) label::after {
     content: " *";
 }
 
-/* de textarea "Your Review" */
-div#container > section > form textarea {
-    width: calc(100% - 35px);
-    height: 213px;
-    padding: 20px 15px;
-    border: 2px solid #E4E4E4;
-}
-
-form input,
-form textarea {
-    font-size: max(14px, 0.85vw);
-}
-
 /* de "submit" knop */
-div#container > section > form input[type="submit"] {
+div#container > section > form button[type="button"] {
     text-transform: uppercase;
     width: 200px;
     height: 60px;
@@ -140,6 +141,12 @@ div#container > section > form input[type="submit"] {
     cursor: pointer;
 }
 
+div#container > section > form button[type="button"]:hover {
+    background-color: var(--color-two);
+}
+div#container > section > form button[type="button"]:active {
+    background-color: var(--color-one);
+}
 
 
 @media (max-width: 576px) {

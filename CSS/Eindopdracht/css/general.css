@@ -9,18 +9,19 @@ html {
 /* variabelen */
 :root {
     --searchbar-border: 1px solid #E4E4E4;
-    --background-color-one: #ffffff;
+    --background-color-one: white;
     --color-one: #222222;
     --color-two: #B9A16B;
     --color-three: #808080;
     --color-four: #767676;
+    --color-five: #FFFFFF;
 }
 
 /* font voor de hele pagina */
 body {
     font-family: "Poppins", sans-serif;     /* Poppins ipv. Sofia Pro */
     font-size: max(14px, 0.75vw);
-    color: #222222;
+    color: var(--color-one);
     background-color: var(--background-color-one);
 }
 
@@ -48,7 +49,7 @@ ul {
 a {
     text-decoration: none;
     text-transform: uppercase;
-    color: #222222;
+    color: var(--color-one);
 }
 
 
@@ -74,11 +75,17 @@ div#slider > p:first-of-type::before, div#weekdeal > p:first-of-type::before {
     background-color: var(--color-one);
 }
 
+.active {
+    border-bottom: 2px solid var(--color-one);
+}
+
 ul a {
     transition: 250ms;
 }
 h3 a:hover::after,
-ul a:hover::after {
+ul a:hover::after,
+div#slider a:hover::after,
+div#weekdeal a:hover::after {
     content: '';
     height: 2px;
     width: 30px;
@@ -97,15 +104,21 @@ figcaption div > a:hover::after {
     background-color: var(--color-three);
 }
 
-.underline.white::after {
+div#banner a:hover::after {
+    content: '';
+    height: 2px;
     width: 50px;
-    background-color: var(--background-color-one);
     left: 17px;
+
+    display: block;
+    position: absolute;
+    background-color: var(--background-color-one);
 }
-div#banner > div:nth-child(3) > div .underline.white::after {
+
+div#banner > div:nth-child(3) > div a:hover::after {
     left: 28px;
 }
-div#banner > div:last-child > div .underline.white::after {
+div#banner > div:last-child > div a:hover::after {
     left: 85px;
 }
 
@@ -170,6 +183,13 @@ form.searchbar button:first-of-type {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
     background-color: var(--background-color-one);
+}
+
+form.searchbar button:first-of-type:hover {
+    background-color: #e4e4e4;
+}
+form.searchbar button:first-of-type:active i {
+    scale: 1.15;
 }
 
 form.searchbar input[name="search"] {
@@ -569,7 +589,7 @@ div.sale > p {
     font-size: 12px;
     text-align: center;
     line-height: 25px;
-    color: white;
+    color: var(--color-five);
     width: 50px;
     height: 25px;
     
@@ -631,7 +651,7 @@ div#banner > div:nth-child(3) > div {
 }
 div#banner > div > div > p,
 div#banner > div > div > a {
-    color: white;
+    color: var(--color-five);
 }
 
 div#banner > div > div > p {
@@ -796,7 +816,7 @@ div#promises p {
     flex-direction: column;
     justify-content: center;
 
-    color: white;
+    color: var(--color-five);
     background-color: var(--color-one);
 }
 
@@ -806,7 +826,7 @@ div#promises p {
 }
 
 .instagram-gallery h2 a {
-    color: white;
+    color: var(--color-five);
     text-transform: capitalize;
 }
 .instagram-gallery h2 a:hover {
@@ -907,7 +927,8 @@ footer #sign-up {
 footer #sign-up h2 {
     margin-bottom: 10px;
 }
-footer #sign-up input {
+footer #sign-up input,
+footer #sign-up button {
     font-family: "Poppins", sans-serif;
 }
 footer #sign-up input[type="email"] {
@@ -920,15 +941,25 @@ footer #sign-up input[type="email"] {
     border: var(--searchbar-border);
 }
 
-footer #sign-up input[type="submit"] {
+footer #sign-up button[type="button"] {
+    font-size: max(14px, 0.75vw);
+    text-transform: uppercase;
     width: 150px;
     height: 60px;
 
     border: none;
-    color: white;
+    color: var(--color-five);
     background-color: var(--color-one);
+
+    cursor: pointer;
 }
 
+footer #sign-up button[type="button"]:hover {
+    background-color: var(--color-two);
+}
+footer #sign-up button[type="button"]:active {
+    background-color: var(--color-one);
+}
 
 footer #contact {
     grid-area: contact;
@@ -1019,7 +1050,7 @@ div#bottom-mobile-menu {
 
     border: 1px solid var(--color-four);
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: var(--background-color-one);
 }
 
 #back-to-top img[alt="back-to-top"] {

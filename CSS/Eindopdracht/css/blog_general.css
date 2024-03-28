@@ -9,7 +9,7 @@ form.searchbar input[name="search"] {
 
 /* het section gedeelte met de content */
 div#container > section {
-    width: 80%;
+    max-width: 1410px;
     margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -19,9 +19,11 @@ div#container > section {
     'gallery gallery gallery'
     'fill-3 showing fill-4';
     place-self: center;
-    row-gap: 20px;
+    gap: 30px;
 }
 
+
+/* de titel "the blog" */
 section > h1 {
     grid-area: title;
     font-size: max(35px, 1.75vw);
@@ -30,26 +32,120 @@ section > h1 {
 
     font-family: "Poppins", sans-serif;
 }
+/* -EINDE- titel */
 
+
+/* navigatie menu in het section gedeelte */
 section > nav {
     grid-area: nav;
+    max-width: 506px;
 }
+
 section > nav > ul.menu {
     padding: 0;
     justify-content: space-between;
 }
 
+section > nav > ul.menu .underline::after {
+    width: 40px;
+}
+/* -EINDE- navigatie menu */
+
+
+/* de blog posts met afbeeldingen */
 section > div:first-of-type {
     grid-area: gallery;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     place-self: center;
+    gap: 30px;
 }
 section > div:first-of-type > figure {
     max-width: 450px;
 }
 
+section > div:first-of-type > figure > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+section > div:first-of-type > figure > figcaption > p {
+    margin: 10px 0;
+}
+
+section > div:first-of-type > figure > figcaption > p:first-of-type {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--color-four);
+}
+
+section > div:first-of-type > figure > figcaption > h4 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+section > div:first-of-type > figure > figcaption > a {
+    font-weight: 500;
+}
+
+section > div:first-of-type > figure > figcaption a:hover::after {
+    content: '';
+    height: 2px;
+    width: 96px;
+
+    display: block;
+    position: absolute;
+    background-color: var(--color-one);
+}
+/* -EINDE- blog posts */
+
+
+/* klein stukje met "showing x of y items", balk, en "show more" */
 section > div:nth-of-type(2) {
     grid-area: showing;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+section > div:nth-of-type(2) > div {
+    width: 300px;
+    height: 6px;
+    margin: 5px auto 10px;
+    border-radius: 10px;
+    background-color: #E4E4E4;
+}
+
+section > div:nth-of-type(2) > div > div {
+    width: 119px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: var(--color-one);
+}
+
+section > div:nth-of-type(2) a {
+    margin-top: 10px;
+    position: relative;
+}
+
+section > div:nth-of-type(2) a:hover::after {
+    content: '';
+    height: 2px;
+    width: 60px;
+    left: 0;
+    bottom: -3px;
+
+    display: block;
+    position: absolute;
+    background-color: var(--color-one);
+}
+/* -EINDE- show more */
+
+
+@media (max-width: 576px) {
+    div#container > section,
+    section > div:first-of-type {
+        display: flex;
+        flex-direction: column;
+    }
 }

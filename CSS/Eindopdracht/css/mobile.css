@@ -374,7 +374,7 @@ footer #sign-up input[type="email"] {
     width: 60%;
     margin-right: 0;
 }
-footer #sign-up input[type="submit"] {
+footer #sign-up button[type="button"] {
     width: 30%;
 }
 
