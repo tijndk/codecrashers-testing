@@ -1,0 +1,311 @@
+h1, h2, input, select, button {
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    line-height: 30px;
+}
+
+/* gedeelte met alle content */
+section.content {
+    max-width: 1420px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 68.4% 31.6%;
+    grid-template-areas:
+        'gallery info'
+        'gallery description'
+        'related-products related-products';
+}
+
+
+/* De grote afbeelding en de 4 kleine afbeeldingen aan de linker kant */
+div#gallery {
+    grid-area: gallery;
+    max-width: 806px;
+    padding: 0 15px 40px;
+    padding-right: 0;
+    padding-bottom: 0;
+
+    position: relative;
+}
+
+/* grote afbeelding */
+div#gallery div#big-image {
+    max-width: 700px;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 106px;
+}
+
+#gallery #big-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: 0 43%;
+}
+
+/* de pijltjes naar links en rechts */
+#big-image #prev-next-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+}
+#big-image #prev-next-item img {
+    width: 65px;
+    height: 65px;
+}
+
+/* afbeelding vergroten */
+#big-image #zoom-item {
+    margin-right: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+/*  */
+
+/* kleine afbeeldingen links */
+div#gallery div#small-images {
+    max-height: 700px;
+    width: 90px;
+    margin: 8px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    row-gap: 8px;
+    column-gap: 2px;
+
+    position: absolute;
+    top: 0;
+    left: 0;    
+}
+#gallery #small-images img {
+    opacity: 50%;
+    object-fit: contain;
+}
+#gallery #small-images img.active {
+    opacity: 100%;
+    border: 0;
+}
+/*  */
+
+
+/* gedeelte met de naam van product en info t/m "TAGS" */
+section#info {
+    grid-area: info;
+    padding: 0 10px 45px;
+    padding-bottom: 10px;
+}
+
+/* home/shop   <prev next> */
+section#info>div:first-of-type {
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* <prev next> */
+section#info>div:first-of-type>div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+}
+
+/* naam product */
+section#info h2 {
+    line-height: 50px;
+    font-weight: normal;
+}
+section#info h2 em {
+    font-size: 22px;
+}
+
+/* info tekst onder naam product */
+section#info > p:first-of-type {
+    padding: 15px 0 35px;
+}
+
+/* nummer van "add to cart"*/
+section#info div.add-quantity {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    column-gap: 20px;
+}
+
+section#info input[type="number"] {
+    width: 105px;
+}
+
+section#info input[type="number"] {
+    text-align: center;
+    width: 116px;
+    height: 56px;
+    margin-bottom: 5px;
+    border: 2px solid #E4E4E4;
+}
+
+/* "add to cart" */
+section#info button {
+    color: var(--color-five);
+    width: 230px;
+    height: 60px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: none;
+    background-color: var(--color-one);
+}
+
+/* add to wishlist/share */
+section#info > p:nth-of-type(2),
+section#info > p:nth-of-type(3) {
+    text-transform: uppercase;
+    font-style: italic;
+    padding-right: 30px;
+    display: inline;
+}
+
+section#info > p:nth-of-type(2).active,
+section#info i.fa-heart.active {
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 2px;
+
+    border: 0;
+}
+
+p::before {
+    text-transform: uppercase;
+    color: #767676;
+}
+
+/* SKU, CATEGORIES, en TAGS */
+section#info > p:nth-of-type(4),
+section#info > p:nth-of-type(5),
+section#info > p:nth-of-type(6) {
+    font-size: 13px;
+    line-height: 25px;
+}
+
+/* SKU */
+section#info > p:nth-of-type(4)::before {
+    content: "sku: ";
+}
+section#info > p:nth-of-type(4) {
+    padding-top: 32px;
+}
+
+/* CATEGORIES */
+section#info > p:nth-of-type(5)::before {
+    content: "categories: ";
+}
+
+/* TAGS */
+section#info > p:nth-of-type(6)::before {
+    content: "tags: ";
+}
+/* -EINDE- product info */
+
+
+/* gedeelte met "description", "additional information", en "reviews" */
+section#description {
+    grid-area: description;
+    padding: 0 10px 54px;
+}
+section#description .active {
+    text-decoration: none;
+}
+
+
+section#description > ul:first-of-type {
+    font-style: normal;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+#description > ul:first-of-type li {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #767676;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: var(--searchbar-border);
+}
+#description ul:first-of-type li.active {
+    color: #222222;
+}
+
+#description > ul:first-of-type > li p {
+    color: #222222;
+    font-size: 18px;
+}
+
+#description > ul:first-of-type > p {
+    margin-top: 10px;
+}
+
+section#description > h3,
+section#description > p,
+#description > ul,
+section#description > ol {
+    display: none;
+}
+/* -EINDE- informatie gedeelte */
+
+
+/* gedeelte met "related products" */
+#container > section.content > section:last-child {
+    grid-area: related-products;
+    padding: 0 10px;
+}
+
+#container > section.content > section:last-child h2 {
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+#container > section.content > section:last-child h2 span {
+    font-weight: bold;
+}
+
+#container > section.content > section:last-child div {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 95px;
+}
+
+#container > section.content > section:last-child figure {
+    width: 280px;
+    height: auto;
+}
+
+#container > section.content > section:last-child figure img {
+    width: 100%;
+    height: 340px;
+    object-fit: contain;
+}
+
+#container > section.content > section:last-child figure p:first-child,
+figure del {
+    color: var(--color-four);
+}
+
+#container > section.content > section:last-child figure p:nth-child(2),
+#container > section.content > section:last-child figure p:nth-child(3) {
+    font-size: max(16px, 0.75vw);
+}
+
+figure ins {
+    text-decoration: none;
+}

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>Uomo Shop | Lightweight Puffer Jacket With a Hood</title>
+        <meta name="description" content="">
+        <!-- responsive -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!-- link naar general stylesheet voor grotere schermen -->
+        <link rel="stylesheet" href="css/general.css">
+        <!-- link naar PRODUCT general stylesheet voor grotere schermen -->
+        <link rel="stylesheet" href="css/product_general.css">
+        <!-- link naar stylesheet voor telefoons -->
+        <link rel="stylesheet" media="screen and (max-width: 576px)" href="css/mobile.css"> 
+        <!-- koppeling met fontawesome -->
+        <script src="https://kit.fontawesome.com/72b6362755.js" crossorigin="anonymous"></script>
+        <!-- koppeling met google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <div>
+                    <img src="images/001-logo_black.svg" alt="logo">
+                    <form action="homepage.html" class="searchbar" id="searchbar">
+                        <button type="button" name="search" form="searchbar"><i class="fa fa-search"></i></button>
+                        <input type="text" name="search" placeholder="Search products...">
+                        <select name="categories" id="search-categories">
+                            <option>All Categories</option>
+                            <option>Bracelets</option>
+                            <option>Earrings</option>
+                            <option>Rings</option>
+                            <option>Charms</option>
+                            <option>Necklaces</option>
+                            <option>Brooches</option>
+                        </select>
+                    </form>
+                    <ul class="menu">
+                        <li><a href="homepage.html" target="_self">home</a></li>
+                        <li class="underline"><a href="#" target="_self">shop</a></li>
+                        <li><a href="#" target="_self">collection</a></li>
+                        <li><a href="#" target="_self">journal</a></li>
+                        <li><a href="#" target="_self">lookbook</a></li>
+                        <li><a href="about.html" target="_self">pages</a></li>
+                    </ul>
+                    <div class="icons">
+                        <a href="#" target="_self"><img src="images/002-user.svg" alt="profile"></a>
+                        <a href="#" target="_self"><img src="images/004-heart_black.svg" alt="heart"></a>
+                        <a href="#" target="_self"><img src="images/003-shopping_bag_black.svg" alt="shopping-cart"></a>
+                        <input id="menu-toggle" type="checkbox">
+                    </div>
+                    <label class='menu-button-container' for="menu-toggle">
+                        <div class='menu-button'></div>
+                    </label>
+                </div>
+            </header>
+            <section class="content">
+                <div id="gallery">
+                    <div id="big-image">
+                        <img src="images/stainless_steel_ring_1.png" width="700" height="700" alt="big-image">
+                        <div id="prev-next-item">
+                            <img src="images/016-prev-photo_icon.svg" width="65" height="65" alt="previous">
+                            <img src="images/017-next-photo_icon.svg" width="65" height="65" alt="next">
+                        </div>
+                        <div id="zoom-item">
+                            <img src="images/015-zoom_icon.svg" width="65" height="65" alt="zoom">
+                        </div>
+                    </div>
+                    <div id="small-images">
+                        <img src="images/stainless_steel_ring_2.png" width="90" height="90" alt="small-image-1">
+                        <img src="images/stainless_steel_ring_3.png" width="90" height="90" alt="small-image-2">
+                        <img class="active" src="images/stainless_steel_ring_1.png" width="90" height="90" alt="small-image-3">
+                        <img src="images/stainless_steel_ring_4.png" width="90" height="90" alt="small-image-4">
+                    </div>
+                </div>
+                <section id="info">
+                    <div>
+                        <p>home / the shop</p>
+                        <div>
+                            <p>&lt; prev</p>
+                            <p>next &gt; </p>
+                        </div>
+                    </div>
+                    <h2>stainless steel ring</h2>
+                    <h2><em>$10.99</em></h2>
+                    <p>Always reliable, our stainless steel collection is an excellent choice for those seeking affordable yet durable wedding bands and fashion rings.</p>
+                    <div class="add-quantity">
+                        <input type="number" name="amount" id="amount" value="1" min="0" max="99" step="1"><button type="button">add to cart</button>
+                    </div><br>
+                    <p class="active"><i class="fa-regular fa-heart active"></i> add to wishlist</p>
+                    <p><i class="fa-solid fa-share-nodes"></i> share</p>
+                    <p>N/A</p>
+                    <p>Jewellery, Rings, Men</p>
+                    <p>black, stainless steel, simple, minimalist</p>
+                </section>
+                <section id="description">
+                    <ul>
+                        <li class="active">description <p>-</p></li>
+                        <p>This ring is made from the highest quality hypoallergenic 316L surgical steel. Offering a variety of styles and designs, our stainless steel rings are built to last yet easy to maintain.</p>
+                        <li>additional information <p>+</p></li>
+                        <li>reviews (3) <p>+</p></li>
+                    </ul>
+                    <h3>Sed do eiusmod tempor incididunt ut labore</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    </p>
+                    <h3>Why choose product?</h3>
+                    <ul>
+                        <li>Created with soft and smooth cotton fabric</li>
+                        <li>Simple, Configurable (e.g. size, color, etc.), bundled</li>
+                        <li>Downloadable/Digital Products, Virtual Products</li>
+                    </ul>
+                    <h3>Sample Number List</h3>
+                    <ol>
+                        <li>Create Store-specific attributes on the fly</li>
+                        <li>Simple, Configurable (e.g. size, color, etc.), bundled</li>
+                        <li>Downloadable/Digital Products, Virtual Products</li>
+                    </ol>
+                    <h3>Lining</h3>
+                    <p>100% Polyester, Main: 100% Polyester</p>
+                </section>
+                <section>
+                    <h2>related <span>products</span></h2>
+                    <div>
+                        <figure>
+                            <div class="related img-border">
+                                <div class="item-overlay">
+                                    <a href="#" target="_self">
+                                        <div>
+                                            <img src="images/003-shopping_bag_white.svg" width="16" height="18" alt="shopping-cart">
+                                        </div>
+                                    </a>
+                                    <a href="#" target="_self">
+                                        <div>
+                                            <img src="images/006-eye_white.svg" width="20" height="12" alt="view">
+                                        </div>
+                                    </a>
+                                    <a href="#" target="_self">
+                                        <div>
+                                            <img src="images/004-heart_white.svg" width="18" height="15" alt="heart">
+                                        </div>
+                                    </a>
+                                </div>
+                                <img src="https://i.etsystatic.com/22482219/r/il/8f8b4a/2633501392/il_570xN.2633501392_67no.jpg" width="260" height="260" alt="sphere ring">
+                            </div>
+                            <figcaption>
+                                <div>
+                                    <a href="#" target="_self">Rings</a>
+                                    <p>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </p>
+                                </div>
+                                <a href="#" target="_self">sphere sterling</a>
+                                <p>$45</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://img01.ztat.net/article/spp-media-p1/53131e49fdc442c98259f7719cb5b08b/cc3b9fd58dee442384c2b940541c0829.jpg?imwidth=1800" alt="Calvin Shorts">
+                            <figcaption>
+                                <p>Dresses</p>
+                                <p>Calvin Shorts</p>
+                                <p>$62</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://media.gamestop.com/i/gamestop/11203419/Kirby-Box-Art-Logo-Long-Sleeve-Black-T-Shirt" alt="Kirby T-Shirt">
+                            <figcaption>
+                                <p>Dresses</p>
+                                <p>Kirby T-Shirt</p>
+                                <p>$17</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://arancrafts.com/wp-content/uploads/2018/11/1473-CHUNKY-CABLE-KNIT-SCARF-X4855-scaled.jpg" alt="Cableknit Shawl">
+                            <figcaption>
+                                <p>Dresses</p>
+                                <p>Cableknit Shawl</p>
+                                <p><del>$129</del> <ins>$99</ins></p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </section>
+            </section>
+            <div class="line"></div>
+            <footer>
+                <div id="footer-content">
+                    <div id="sign-up">
+                        <h2>sign up now & get 10% off</h2>
+                        <form action="homepage.html" method="post" id="join">
+                            <label for="emailaddress">Be the first to get the latest news about trends, promotions, and much more!</label><br>
+                            <input type="email" name="emailaddress" id="emailaddress" placeholder="Your email address">
+                            <button type="button" name="join" form="join">join</button>
+                        </form>
+                    </div>
+                    <div id="contact">
+                        <img src="images/001-logo_red.svg" alt="logo">
+                        <p>
+                            1418 River Drive, Suite 35 Cottonhall, CA 9622<br> 
+                            United States<br>
+                            <br>
+                            sale@uomo.com<br>
+                            +1 246-345-0695
+                        </p>
+                        <p class="socials">
+                            <a href="https://www.facebook.com/search_results/?q=UOMO" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.twitter.com/search?q=UOMO" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/results?search_query=UOMO" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://www.pinterest.com/search/pins/?q=UOMO" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+                        </p>
+                    </div>
+                    <nav class="Company">
+                        <h3><a href="#footer-content" target="_self">company</a></h3>
+                        <ul>
+                            <li><a href="about.html" target="_self">About Us</a></li>
+                            <li><a href="#footer-content" target="_self">Careers</a></li>
+                            <li><a href="#footer-content" target="_self">Affiliates</a></li>
+                            <li><a href="blog.html" target="_self">Blog</a></li>
+                            <li><a href="contact.html" target="_self">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="Shop">
+                        <h3><a href="homepage.html" target="_self">shop</a></h3>
+                        <ul>
+                            <li><a href="homepage.html" target="_self">New Arrivals</a></li>
+                            <li><a href="#footer-content" target="_self">Accessories</a></li>
+                            <li><a href="homepage.html#banner" target="_self">Men</a></li>
+                            <li><a href="homepage.html#banner" target="_self">Women</a></li>
+                            <li><a href="images/easter_egg.png" target="_blank">Unisex</a></li>
+                            <li><a href="homepage.html" target="_self">Shop All</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="Help">
+                        <h3><a href="#footer-content" target="_self">help</a></h3>
+                        <ul>
+                            <li><a href="#footer-content" target="_self">Customer Service</a></li>
+                            <li><a href="#footer-content" target="_self">My Account</a></li>
+                            <li><a href="contact.html" target="_self">Find a Store</a></li>
+                            <li><a href="#footer-content" target="_self">Legal & Privacy</a></li>
+                            <li><a href="contact.html" target="_self">Contact</a></li>
+                            <li><a href="#footer-content" target="_self">Gift Card</a></li>
+                        </ul>
+                    </nav>
+                    <div id="mobile-app">
+                        <h3>mobile app</h3>
+                        <p>Click and Get started in seconds</p>
+                        <a href="https://apps.apple.com/gb/charts/iphone/shopping-apps/6024" target="_blank">
+                            <img src="images/010-app_store_button.svg" alt="apple-app-store">
+                        </a>
+                        <a href="https://play.google.com/store/apps/category/SHOPPING" target="_blank">
+                            <img src="images/011-play_store_button.svg" alt="google-play-store">
+                        </a>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div id="bottom-footer">
+                    <p>&#169;2020 Uomo</p>
+                    <div class="language">
+                        <select name="language" id="language">
+                            <option>United Kingdom | English</option>
+                            <option>Netherlands | Dutch</option>
+                            <option>Mexico | Spanish</option>
+                            <option>Canada | French</option>
+                        </select>
+                        </div>
+                    <div class="currency">
+                        <select name="currency" id="currency">
+                            <option>&#36; USD</option>
+                            <option>&#163; GBP</option>
+                            <option>&#8364; EUR</option>
+                        </select>
+                    </div>
+                </div>
+            </footer>
+            <div id="bottom-mobile-menu">
+                <figure>
+                    <a href="homepage.html" target="_self">
+                        <img src="images/013-home.svg" alt="home">
+                    </a>
+                    <figcaption><a href="homepage.html" target="_self">home</a></figcaption>
+                </figure>
+                <figure>
+                    <a href="homepage.html" target="_self">
+                        <img src="images/014-hanger.svg" alt="shop">
+                    </a>
+                    <figcaption><a href="homepage.html" target="_self">shop</a></figcaption>
+                </figure>
+                <figure>
+                    <a href="#" target="_self">
+                        <img src="images/004-heart_black.svg" alt="wishlist">
+                    </a>
+                    <figcaption><a href="#" target="_self">wishlist</a></figcaption>
+                </figure>
+                <figure>
+                    <a href="#" target="_self">
+                        <img src="images/003-shopping_bag_black.svg" alt="cart">
+                    </a>
+                    <figcaption><a href="#" target="_self">cart</a></figcaption>
+                </figure>
+            </div>
+            <div id="back-to-top">
+                <a href="#container">
+                    <img src="images/012-back_top.svg" alt="back-to-top" width="14" height="14">
+                </a>
+            </div>
+        </div>
+    </body>
+</html>
