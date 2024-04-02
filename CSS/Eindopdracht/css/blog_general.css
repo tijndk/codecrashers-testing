@@ -69,6 +69,10 @@ section > div:first-of-type > figure > img {
     object-fit: cover;
 }
 
+section > div:first-of-type > figure:nth-child(4) > img {
+    object-position: 0 75%;
+}
+
 section > div:first-of-type > figure > figcaption > p {
     margin: 10px 0;
 }
