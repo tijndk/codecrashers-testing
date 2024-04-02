@@ -422,6 +422,7 @@ article#best-selling {
 
 article#trendy > header, 
 article#best-selling > header {
+    width: 387px;
     text-align: center;
 }
 
@@ -431,7 +432,6 @@ article#best-selling > header > p {
 
 article#trendy > header > ul {
     font-weight: 500;
-    width: 387px;
     margin-bottom: 25px;
     
     display: flex;
