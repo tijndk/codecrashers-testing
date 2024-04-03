@@ -1,0 +1,15 @@
+section.content {
+    grid-template-columns: 53% 46%;
+    grid-template-areas:
+        'gallery gallery' 
+        'info description' 
+        'related-products related-products';
+}
+
+div#gallery {
+    margin-bottom: 10px;
+}
+
+div#gallery div#big-image {
+    width: 80%;
+}

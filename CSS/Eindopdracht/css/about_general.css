@@ -192,3 +192,23 @@ section > div:last-of-type {
         text-align: center;
     }
 }
+
+
+
+
+@media (max-width: 992px) {
+    div#container > section {
+        grid-template-areas:
+            'fill-1 about about fill-2'
+            'image-one image-one image-one image-one'
+            'fill-3 story story fill-4'
+            'fill-3 image-two image-two fill-4'
+            'fill-3 company company fill-4'
+            'fill-3 promises promises fill-4'
+            'logos logos logos logos';
+    }
+
+    section > div:nth-of-type(2) {
+        margin-left: 0;
+    }
+}
