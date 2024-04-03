@@ -1,0 +1,44 @@
+section.content {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+div#gallery {
+    padding: 0;
+    margin: 10px 0 40px 0;
+}
+
+div#gallery div#big-image {
+    width: 100%;
+    left: 0;
+}
+
+div#gallery div#small-images {
+    max-height: 90px;
+    width: 100%;
+    margin: 8px 0 0 0;
+    flex-direction: row;
+    position: relative;
+    column-gap: 2px;
+}
+
+section#info>div:first-of-type {
+    display: none;
+}
+
+
+section#info div.add-quantity {
+    justify-content: center;
+}
+
+section#info input[type="number"] {
+    width: 20%;
+    margin-bottom: 5px;
+    text-align: center;
+    border: 2px solid #E4E4E4;
+}
+
+section#info button {
+    width: 70%;
+}

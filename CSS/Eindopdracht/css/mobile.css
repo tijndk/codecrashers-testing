@@ -135,22 +135,21 @@ article#best-selling > div > div {
 }
 
 #trendy > div > figure,
-#best-selling > div >figure {
+#best-selling > div > figure,
+.content > section:last-child > div > figure {
     font-weight: 500;
     margin-bottom: 20px;
 }
 
 article#trendy figure div.trendy.img-border,
-article#best-selling figure div.best-selling.img-border {
+article#best-selling figure div.best-selling.img-border,
+.content > section:last-child div figure div.related.img-border {
     min-width: 160px;
 }
 
-#trendy .img-border div.item-overlay,
-#best-selling .img-border div.item-overlay {
-    display: none;
-}
 #trendy .img-border:hover div.item-overlay,
-#best-selling .img-border:hover div.item-overlay {
+#best-selling .img-border:hover div.item-overlay,
+section.content div.related.img-border:hover div.item-overlay {
     display: none;
 }
 
@@ -161,45 +160,55 @@ article#best-selling figure div.best-selling.img-border {
     height: 71%;
 }
 #trendy figure:nth-of-type(2) img,
-#best-selling figure:nth-of-type(2) img {
+#best-selling figure:nth-of-type(2) img,
+.content > section:last-child figure:first-of-type img,
+.content > section:last-child figure:last-of-type img {
     width: 100%;
     height: 100%;
 }
 #trendy figure:nth-of-type(3) img,
-#best-selling figure:nth-of-type(3) img {
+#best-selling figure:nth-of-type(3) img,
+.content > section:last-child figure:nth-child(2) img {
     width: 92%;
     height: 92%;
 }
 #trendy figure:last-of-type img,
-#best-selling figure:last-of-type img {
+#best-selling figure:last-of-type img,
+.content > section:last-child figure:nth-child(3) img {
     width: 98%;
     height: 74%;
 }
 
 #trendy p i.fa-star,
-#best-selling p i.fa-star {
+#best-selling p i.fa-star,
+.content > section:last-child p i.fa-star {
     display: none;
 }
 
 #trendy figcaption,
-#best-selling figcaption {
+#best-selling figcaption,
+section.content .related.img-border + figcaption {
     margin-top: 15px;
 }
 
 #trendy figcaption > a,
 #trendy figcaption > p,
 #best-selling figcaption > a,
-#best-selling figcaption > p {
+#best-selling figcaption > p,
+.related + figcaption > a,
+ .related + figcaption > p {
     font-size: 14px;
 }
 
 #trendy figcaption > a:has(span):after,
-#best-selling figcaption > a:has(span):after {
+#best-selling figcaption > a:has(span):after
+.related + figcaption > a:has(span):after {
     content: '...';
 }
 
 #trendy figcaption span,
-#best-selling figcaption span {
+#best-selling figcaption span,
+.related + figcaption span {
     display: none;
 }
 /* -EINDE- Trendy Items/Best Selling gedeelte */

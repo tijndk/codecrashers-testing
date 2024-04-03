@@ -414,7 +414,8 @@ article#category figcaption {
 
 /* Het "Trendy Item" gedeelte en het "Best Selling" gedeelte omdat ze 90% hetzelfde zijn */
 article#trendy, 
-article#best-selling {
+article#best-selling,
+.content > section:last-child {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -447,9 +448,9 @@ article#trendy > header > ul > li:nth-of-type(2) > a {
     color: var(--color-one);
 }
 
-
 article#trendy > div, 
-article#best-selling > div {
+article#best-selling > div,
+.content > section:last-child > div {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -513,12 +514,13 @@ section.content .related.img-border img {
 
 #trendy figcaption,
 #best-selling figcaption,
-section.content .related.img-border {
+section.content .related.img-border + figcaption {
     margin-top: 25px;
 }
 
 #trendy figcaption > div,
-#best-selling figcaption > div {
+#best-selling figcaption > div,
+.related + figcaption > div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -526,24 +528,28 @@ section.content .related.img-border {
 }
 
 #trendy figcaption > a, #trendy figcaption > p,
-#best-selling figcaption > a, #best-selling figcaption > p {    /* Font voor de prijs en de naam */
+#best-selling figcaption > a, #best-selling figcaption > p,
+.related + figcaption > a, .related + figcaption > p {    /* Font voor de prijs en de naam */
     font-family: "Lora", serif;
     font-size: 16px;
     text-transform: capitalize;
 }
 
 #trendy figcaption > div > a,
-#best-selling figcaption > div > a {    /* De kleur van de categorie */
+#best-selling figcaption > div > a,
+.related + figcaption > div > a {    /* De kleur van de categorie */
     text-transform: capitalize;
     color: var(--color-three);
 }
 #trendy figcaption p, 
-#best-selling figcaption p {    /* Kleur van de prijs en de sterretjes/rating */
+#best-selling figcaption p,
+.related + figcaption p {    /* Kleur van de prijs en de sterretjes/rating */
     color: var(--color-two);
 }
 
 #trendy figcaption > div > p,
-#best-selling figcaption > div > p {
+#best-selling figcaption > div > p,
+.related + figcaption > div > p {
     font-size: 12px;
 }
 
