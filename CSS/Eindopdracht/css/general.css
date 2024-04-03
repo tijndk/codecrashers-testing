@@ -306,6 +306,7 @@ div#gap-container header p {
 div#slider {
     margin-top: 10px;
     display: grid;
+    align-items: center;
     grid-template-columns: 45% 55%;
     grid-template-rows: 35% 15% 15% 35%;
     grid-template-areas:
