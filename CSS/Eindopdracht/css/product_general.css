@@ -6,10 +6,12 @@ body {
 }
 
 /* gedeelte met alle content */
-section.content {
+div.content {
     max-width: 1420px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 40px;
+    margin-bottom: 80px;
     display: grid;
     grid-template-columns: 67% 32%;
     grid-template-areas:
@@ -242,13 +244,13 @@ section#description > ul:first-of-type {
     color: #222222;
 }
 
-#description > ul:first-of-type > li p {
-    color: #222222;
-    font-size: 18px;
-}
-
-#description > ul:first-of-type > p {
+#description > ul:first-of-type > li:nth-child(2) {
+    font-size: max(14px, 0.75vw);
+    text-transform: none;
+    color: var(--color-one);
     margin-top: 10px;
+    padding-top: 0;
+    border: none;
 }
 
 section#description > h3,
@@ -266,12 +268,12 @@ section#description > ol {
     align-items: flex-start;
 }
 
-#container > section.content > section:last-child h2 {
+#container > div.content > section:last-child h2 {
     font-weight: normal;
     text-transform: uppercase;
     padding-bottom: 30px;
 }
-#container > section.content > section:last-child h2 span {
+#container > div.content > section:last-child h2 span {
     font-weight: bold;
 }
 

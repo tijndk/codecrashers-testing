@@ -489,7 +489,7 @@ article#best-selling img[alt="next"] {
 /* kleine randje om de afbeeldingen in "Trendy Items" en "Best Selling" (+ paar afbeeldingen Product pagina) */
 article#trendy figure div.trendy.img-border,
 article#best-selling figure div.best-selling.img-border,
-section.content > section:last-child div figure div.related.img-border {
+div.content > section:last-child div figure div.related.img-border {
     width: 22vw;
     min-width: 185px;
     max-width: 330px;
@@ -506,7 +506,7 @@ section.content > section:last-child div figure div.related.img-border {
 
 #trendy img,
 #best-selling img,
-section.content .related.img-border img {
+div.content .related.img-border img {
     object-fit: cover;
 }
 #best-selling figure:nth-child(2) img {
@@ -515,7 +515,7 @@ section.content .related.img-border img {
 
 #trendy figcaption,
 #best-selling figcaption,
-section.content .related.img-border + figcaption {
+div.content .related.img-border + figcaption {
     margin-top: 25px;
 }
 

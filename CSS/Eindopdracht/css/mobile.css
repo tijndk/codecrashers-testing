@@ -149,7 +149,7 @@ article#best-selling figure div.best-selling.img-border,
 
 #trendy .img-border:hover div.item-overlay,
 #best-selling .img-border:hover div.item-overlay,
-section.content div.related.img-border:hover div.item-overlay {
+div.content div.related.img-border:hover div.item-overlay {
     display: none;
 }
 
@@ -161,7 +161,7 @@ section.content div.related.img-border:hover div.item-overlay {
 
 #trendy figcaption,
 #best-selling figcaption,
-section.content .related.img-border + figcaption {
+div.content .related.img-border + figcaption {
     margin-top: 15px;
 }
 
