@@ -1,0 +1,155 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	color: black;
+	font-size: 14px;
+	font-family: Verdana, Arial, sans-serif;
+	background-color: #BBBBBB;
+	
+	margin: 8px;
+}
+#container {
+	max-width: 960px;
+	min-height: 900px;
+	background-color: #FFFFFF;
+	margin: 0 auto;
+}
+header {
+	max-width: 960px;
+	height: 250px;
+	background-color: #999999;
+	background-image: url('../images/header.jpg');
+	position: relative;
+	font-family: "Courier New", monospace;
+	font-size: min(10vw, 80px);
+	font-weight: bold;
+	color: lightgrey;
+	line-height: 250px;
+	text-align: center;
+	text-shadow: 10px 10px #444444;
+}
+header a {
+	text-decoration: none;
+	color: lightgrey;
+}
+#fb {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 28px;
+	height: 28px;	
+}
+#wrapper {
+	display: flex;
+	flex-direction: row;
+}
+menu {
+	width: 260px;
+	min-height: 600px;
+	background-color: #BB4400;
+}
+
+menu ul {
+	margin: 1em 0;
+	padding-left: 40px;
+}
+
+menu li {
+	background-color: #FFCC11;
+	list-style-type: none;
+	border: 1px solid #000000;
+	width: 160px;
+	height: 25px;
+	margin: 5px;
+	line-height: 15px;
+}
+menu li:hover {
+	background-color: #FFEE99;
+}
+menu li.current {
+	background-color: #AABB44;
+}
+menu a {
+	text-decoration: none;
+	color: #000000;
+	padding: 5px;
+	display: block;
+}
+#content {
+	max-width: 650px;
+	min-height: 600px;
+	background-color: #FFEEAA;
+	padding: 25px;
+}
+
+#content h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+#content p {
+	margin: 1em 0;
+}
+
+#content h2 {
+	margin: 0.83em 0;
+}
+
+#content figure {
+	margin: 0 0 10px 10px;
+	float: right;
+}
+
+#content img {
+	width: 100%;
+	height: auto;
+	border: 5px double #000000;
+}
+
+#content figcaption {
+	text-align: center;
+}
+
+footer {
+	max-width: 960px;
+	height: 30px;
+	background-color: #CCBB77;
+	line-height: 30px;
+	font-size: 12px;
+	text-align: center;
+	font-style: italic;
+	font-family: Tahoma, "Times New Roman", serif;
+}
+footer p {
+	margin: 0;
+	padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+	#wrapper {
+		flex-direction: column;
+	}
+	
+	menu {
+		width: 100%;
+		min-height: auto;
+		display: flex;
+		justify-content: center;
+	}
+	
+	menu ul {
+		padding-left: 0;
+		width: 90%;
+	}
+
+	menu li {
+		text-align: center;
+		width: 100%;
+	}
+
+	#content {
+		max-width: 100%;
+	}
+}
