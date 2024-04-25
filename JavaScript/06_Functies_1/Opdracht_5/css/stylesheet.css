@@ -1,0 +1,18 @@
+body {
+    background-color: coral;
+}
+
+img {
+    margin: 20px;
+    border: 2px solid darkred;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Opdracht 5.2 */
+p {
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2em;
+    padding-left: 5px;
+    text-shadow: 2px 2px 2px darkred;
+}
