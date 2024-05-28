@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Opdracht 7</title>
+		<script src="js/script.js" defer></script>
+        <link rel="stylesheet" href="css/stylesheet.css">
+	</head>
+	<body>
+        <!-- Opdracht 7.1 -->
+        <form action="index.html">
+            <label for="elementen">Kies hier je element:</label>
+            <select name="elementen" id="elementen">
+                <option value="h1">(h1) Titel</option>
+                <option value="h2">(h2) Kleinere titel</option>
+                <option value="h3">(h3) Kleinste titel</option>
+                <option value="p">(p) Normale paragraaf</option>
+                <option value="blockquote">(blockquote) Een quote</option>
+            </select>
+
+            <textarea name="tekstInput" id="tekstInput" cols="30" rows="10" placeholder="Typ hier je tekst die je op de pagina wilt in het element..."></textarea>
+
+            <!-- Opdracht 7.2 -->
+            <label for="lettertype">Pas het lettertype aan:</label>
+            <select name="lettertype" id="lettertype">
+                <option value="times">Times New Roman</option>
+                <option value="arial">Arial</option>
+                <option value="sans">Comic Sans</option>
+                <option value="courier">Courier New</option>
+            </select>
+
+            <label for="achtergrondkleur">Pas de achtergrondkleur aan:</label>
+            <input type="color" name="achtergrondkleur" id="achtergrondkleur" value="#FFFFFF">
+
+            <label for="tekstkleur">Pas de tekstkleur aan:</label>
+            <input type="color" name="tekstkleur" id="tekstkleur">
+
+            <label for="tekstgrootte">Pas de tekstgrootte aan:</label>
+            <input type="number" name="tekstgrootte" id="tekstgrootte" value="16">
+
+            <button>Toevoegen</button>
+        </form>
+        <hr>
+        <div>
+
+        </div>
+	</body>
+</html>

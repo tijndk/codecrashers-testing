@@ -1,0 +1,55 @@
+form {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    grid-template-areas:
+    'elementLabel lettertypeLabel'
+    'element lettertype'
+    'tekstInput achtergrondkleurLabel'
+    'tekstInput achtergrondkleur'
+    'tekstInput tekstkleurLabel'
+    'tekstInput tekstkleur'
+    'tekstInput tekstgrootteLabel'
+    'button tekstgrootte';
+    row-gap: 10px;
+    column-gap: 30px;
+}
+label[for="elementen"]{
+    grid-area: elementLabel;
+}
+#elementen {
+    grid-area: element;
+}
+#tekstInput {
+    grid-area: tekstInput;
+}
+label[for="lettertype"]{
+    grid-area: lettertypeLabel;
+}
+#lettertype {
+    grid-area: lettertype;
+}
+label[for="achtergrondkleur"]{
+    grid-area: achtergrondkleurLabel;
+}
+#achtergrondkleur {
+    grid-area: achtergrondkleur;
+}
+label[for="tekstkleur"]{
+    grid-area: tekstkleurLabel;
+}
+#tekstkleur {
+    grid-area: tekstkleur;
+}
+label[for="tekstgrootte"]{
+    grid-area: tekstgrootteLabel;
+}
+#tekstgrootte {
+    grid-area: tekstgrootte;
+}
+button {
+    grid-area: button;
+}
+div {
+    max-width: 90%;
+    margin: 0 auto;
+}
