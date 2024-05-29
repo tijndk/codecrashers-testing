@@ -36,12 +36,12 @@ function maakElement() {
         blockquote.innerText = document.getElementById("tekstInput").value;
         content.appendChild(blockquote);
     };
-}
+};
 
-document.querySelector("button").addEventListener("click", function(e) {
+document.querySelector("button:first-of-type").addEventListener("click", function(e) {
     e.preventDefault();
     maakElement();
-})
+});
 
 
 // Opdracht 7.2
@@ -50,13 +50,13 @@ const lettertypeKeuze = document.querySelector("select#lettertype");
 
 lettertypeKeuze.addEventListener("change", function() {
     if (lettertypeKeuze.options[0].selected == true) {
-        body.style.fontFamily = "'Times New Roman', Times, serif";
+        content.style.fontFamily = "'Times New Roman', Times, serif";
     } else if (lettertypeKeuze.options[1].selected == true) {
-        body.style.fontFamily = "Arial, Helvetica, sans-serif";
+        content.style.fontFamily = "Arial, Helvetica, sans-serif";
     } else if (lettertypeKeuze.options[2].selected == true) {
-        body.style.fontFamily = "'Comic Sans MS', cursive, sans-serif";
+        content.style.fontFamily = "'Comic Sans MS', cursive, sans-serif";
     } else if (lettertypeKeuze.options[3].selected == true) {
-        body.style.fontFamily = "'Courier New', Courier, monospace";
+        content.style.fontFamily = "'Courier New', Courier, monospace";
     }
 });
 
@@ -72,14 +72,18 @@ achtergrondkleurKeuze.addEventListener("change", function() {
 const tekstkleurKeuze = document.querySelector("input#tekstkleur");
 
 tekstkleurKeuze.addEventListener("change", function() {
-    body.style.color = tekstkleurKeuze.value;
+    content.style.color = tekstkleurKeuze.value;
 });
 
 // hiermee kun je de tekstgrootte aanpassen
 const tekstgrootteKeuze = document.querySelector("input#tekstgrootte");
-tekstgrootteKeuze.addEventListener("change", function() {
-    body.style.fontSize = tekstgrootteKeuze.value;
-})
+tekstgrootteKeuze.addEventListener("input", function() {
+    content.style.fontSize = tekstgrootteKeuze.value + "px";
+});
 
 
 // Opdracht 7.3
+document.querySelector("button:last-of-type").addEventListener("click", function(e) {
+    e.preventDefault();
+    content.removeChild(content.lastElementChild);
+});

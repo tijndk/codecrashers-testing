@@ -1,17 +1,20 @@
 form {
+    padding: 10px;
     display: grid;
-    grid-template-columns: 250px 250px;
+    grid-template-columns: 125px 125px 250px;
     grid-template-areas:
-    'elementLabel lettertypeLabel'
-    'element lettertype'
-    'tekstInput achtergrondkleurLabel'
-    'tekstInput achtergrondkleur'
-    'tekstInput tekstkleurLabel'
-    'tekstInput tekstkleur'
-    'tekstInput tekstgrootteLabel'
-    'button tekstgrootte';
+    'elementLabel elementLabel lettertypeLabel'
+    'element element lettertype'
+    'tekstInput tekstInput achtergrondkleurLabel'
+    'tekstInput tekstInput achtergrondkleur'
+    'tekstInput tekstInput tekstkleurLabel'
+    'tekstInput tekstInput tekstkleur'
+    'tekstInput tekstInput tekstgrootteLabel'
+    'toevoegen verwijderen tekstgrootte';
     row-gap: 10px;
     column-gap: 30px;
+
+    background-color: white;
 }
 label[for="elementen"]{
     grid-area: elementLabel;
@@ -46,8 +49,11 @@ label[for="tekstgrootte"]{
 #tekstgrootte {
     grid-area: tekstgrootte;
 }
-button {
-    grid-area: button;
+button:first-of-type {
+    grid-area: toevoegen;
+}
+button:last-of-type {
+    grid-area: verwijderen;
 }
 div {
     max-width: 90%;
