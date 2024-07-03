@@ -1,6 +1,7 @@
 :root {
 	scrollbar-width: none;
 	scroll-snap-type: both mandatory;
+
 	touch-action: pan-x pan-y;
 }
 :root::-webkit-scrollbar {
@@ -71,7 +72,7 @@ div.health {
 	z-index: 100;
 }
 .health > img {
-	width: 100%;
+	width: 33%;
 	height: auto;
 }
 /* /8.6 */

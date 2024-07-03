@@ -36,19 +36,19 @@ document.querySelector("main").style.gridTemplateAreas = newGrid;
 
 // Opdracht 8.3
 let characterChoice = prompt(`
-Vul één van onderstaande getallen in om een personage te kiezen:\n
-1 - Isaac
-2 - Magdalene
-3 - Cain
-4 - ???
-5 - Eve
-6 - Azazel
-7 - Lazarus
-8 - The Lost
-9 - Lilith
-10 - Apollyon
-11 - The Forgotten
-12 - Esau
+	Vul één van onderstaande getallen in om een personage te kiezen:\n
+	1 - Isaac
+	2 - Magdalene
+	3 - Cain
+	4 - ???
+	5 - Eve
+	6 - Azazel
+	7 - Lazarus
+	8 - The Lost
+	9 - Lilith
+	10 - Apollyon
+	11 - The Forgotten
+	12 - Esau
 `);
 
 characterChoice = parseInt(characterChoice);
@@ -99,7 +99,6 @@ document.querySelector(".character > img").src = "images/characters/" + imageSrc
 // /8.3
 
 // Opdracht 8.5
-//werkt niet
 function isInViewport(element) {
 	const rect = element.getBoundingClientRect();
 	return (
@@ -108,13 +107,12 @@ function isInViewport(element) {
 		rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
 		rect.right <= (window.innerWidth || document.documentElement.clientWidth)
 	);
-
-    
 }
 
 const treasureRoom = document.querySelector(".level-2-1");
 
-document.querySelector("main").addEventListener("scroll", (event) => {
+// hier document.querySelector("main") veranderd naar window
+window.addEventListener("scroll", (event) => {
 	if (isInViewport(treasureRoom)){
 		let random = Math.floor(Math.random() * 8) + 1;
 		let imageSrc = "";
@@ -155,11 +153,11 @@ document.querySelector("main").addEventListener("scroll", (event) => {
 // /8.5
 
 // Opdracht 8.7
-// Werkt ook niet
 const spikeRoom = document.querySelector(".level-3-1");
 let health = 3;
 
-document.querySelector("main").addEventListener("scroll", (event) => {
+// hier ook document.querySelector("main") veranderd naar window
+window.addEventListener("scroll", (event) => {
 	if (isInViewport(spikeRoom)){
 		health = health -1;
 
@@ -175,7 +173,8 @@ document.querySelector("main").addEventListener("scroll", (event) => {
 				alert("GAME OVER!")
 			}, 500);
 			setTimeout(() => {
-				document.querySelector("main").scrollTo(0, 0)
+				// hier ook document.querySelector("main") veranderd naar window
+				window.scrollTo(0, 0)
 			}, 1000);
 			setTimeout(() => {
 				health = 3;
@@ -188,3 +187,23 @@ document.querySelector("main").addEventListener("scroll", (event) => {
 	}
 });
 //  /8.7
+
+// Opdracht 8.8
+const rainbowRoom = document.querySelector(".level-3-2");
+
+window.addEventListener("scroll", (event) => {
+	if (isInViewport(rainbowRoom)) {
+		health = 3;
+		document.querySelectorAll(".health > img").forEach(function(img) {
+			img.style.display = "block";
+		});
+	}
+})
+//  /8.8
+
+// Toegevoegd zodat wanneer je refresht je in de eerste kamer start
+window.addEventListener('load', () => {
+	setTimeout(() => {
+		window.scrollTo(0, 0)
+	}, 10);
+});
