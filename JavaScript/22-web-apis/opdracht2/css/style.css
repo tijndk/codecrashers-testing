@@ -14,7 +14,6 @@ nav {
     top: 0;
     padding: 10px;
     background-color: rgb(218, 186, 158);
-    z-index: 10;
 }
 nav > div {
     max-width: 205px;
@@ -59,7 +58,7 @@ nav > div {
     background-color: #0FFF50;
 }
 
-nav > p{
+nav > p {
     font-size: 12px;
     position: fixed;
     right: 20px;

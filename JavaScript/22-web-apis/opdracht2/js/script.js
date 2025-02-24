@@ -6,16 +6,14 @@ const config = {
 	cache: "default"
 };
 
-// Opdracht 2.3
-let lang = "nl-NL";
-
 // Opdracht 2.1
 const moviesContainer = document.getElementById("moviesContainer");
 
 // Opdracht 2.3
+let lang = "nl-NL";
+
 document.getElementById("languageSelector").addEventListener("click", (event) => {
 	if (event.target.classList.contains("flags")) { // als een div in languageSelector de class flags heeft dan
-
 		document.querySelectorAll(".flags").forEach(flag => {
             flag.classList.remove("selected");
         });
@@ -54,27 +52,27 @@ function loadMovies() {
 	moviesContainer.innerHTML = "";
 	for (let i = 1; i <= 5; i++) {
 		fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=cad3f4d7ef3117151254b536d55c673a&page=${i}&language=${lang}`, config)
-		.then(response => response.json())
-		.then(data => {
-			data.results.forEach(movie => {
-				const movieCard = document.createElement("div");
-				movieCard.classList.add("movie");
-				movieCard.classList.add(movie.id);
-	
-				movieCard.innerHTML = `
-					<img src="https://image.tmdb.org/t/p/w200${movie.poster_path}" alt="${movie.title}">
-					<p class="movieTitle"><strong>${movie.title}</strong></p>
-					<p>${movie.vote_average.toFixed(1)}</p>
-				`;
-	
-				// Opdracht 2.2
-				movieCard.querySelector(".movieTitle").addEventListener("click", () => {
-					showMovieDetails(movie.id, movieCard);
-				})
-	
-				moviesContainer.appendChild(movieCard);
+			.then(response => response.json())
+			.then(data => {
+				data.results.forEach(movie => {
+					const movieCard = document.createElement("div");
+					movieCard.classList.add("movie");
+					movieCard.classList.add(movie.id);
+		
+					movieCard.innerHTML = `
+						<img src="https://image.tmdb.org/t/p/w200${movie.poster_path}" alt="${movie.title}">
+						<p class="movieTitle"><strong>${movie.title}</strong></p>
+						<p>${movie.vote_average.toFixed(1)}</p>
+					`;
+		
+					// Opdracht 2.2
+					movieCard.querySelector(".movieTitle").addEventListener("click", () => {
+						showMovieDetails(movie.id, movieCard);
+					})
+		
+					moviesContainer.appendChild(movieCard);
+				});
 			});
-		});
 	}
 }
 
@@ -130,9 +128,9 @@ function showMovieDetails(movieId) {
 						}
 					});
 				});
-			});
+		});
 
-			document.getElementById("movieModal").style.display = "block";
+	document.getElementById("movieModal").style.display = "block";
 }
 
 // Opdracht 2.2
