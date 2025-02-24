@@ -60,7 +60,7 @@ nav > div {
 
 nav > p {
     font-size: 12px;
-    position: fixed;
+    position: absolute;
     right: 20px;
     top: -3px;
 }
