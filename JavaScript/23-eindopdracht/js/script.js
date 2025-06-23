@@ -57,7 +57,7 @@ async function fetchPokemon() {
   const initialBatchSize = 20;
   const restBatchSize = 25;
 
-  // Om de eerste 20 pokemon te laten zien
+  // Om de eerste 20 pokemon te laten zien in de index
   const initialBatch = allResults.slice(0, initialBatchSize)
   const initialData = await Promise.all(
     initialBatch.map((pokemon) => fetchPokemonData(pokemon))
