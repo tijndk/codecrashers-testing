@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokédex App</title>
-    <script src="js/script.js" defer></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- Opdracht 2.1 -->
@@ -20,14 +20,15 @@
         <div id="poke-info-container">
           <p id="loading-text">Loading...</p>
         </div>
-        <div id="combined-types-container"></div>
-        <!-- Opdracht 5.1 -->
-        <div id="team-stats-container" style="display: none">
-          <div id="team-container"></div>
-          <canvas id="total-stats-canvas" width="425" height="288"></canvas>
+        <div id="team-info-container">
+          <!-- Opdracht 5.1 -->
+          <div id="team-stats-container" style="display: none">
+            <div id="team-container"></div>
+            <canvas id="total-stats-canvas" width="425" height="293"></canvas>
+          </div>
+          <div id="combined-types-container"></div>
         </div>
       </div>
     </div>
-    <footer></footer>
   </body>
 </html>
