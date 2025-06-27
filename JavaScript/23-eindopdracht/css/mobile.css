@@ -44,9 +44,9 @@ p#flavor-text,
     width: 100%;
 }
 #info-top button {
-    width: 100%;
-    border: none;
-    box-shadow: none;
+    width: 50%;
+    height: 70px;
+    margin: 10px 0;
     position: relative;
     bottom: 0;
     right: 0;
