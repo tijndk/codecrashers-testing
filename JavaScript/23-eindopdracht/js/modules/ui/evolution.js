@@ -57,7 +57,7 @@ export async function renderEvolutionNode(node, currentName) {
   container.appendChild(pokeDiv);
 
   const branchContainer = document.createElement("div");
-  const isHorizontalBranch = node.species.name === "eevee";
+  const isHorizontalBranch = node.species.name === "eevee" && window.innerWidth > 1200;
 
   branchContainer.classList.add("branch-container");
   if (isHorizontalBranch) {
