@@ -165,6 +165,7 @@ export function drawStats(pokeData) {
     ctx.fillStyle = color;
     ctx.fillRect(textRoom, y, barWidth, barHeight);
 
+<<<<<<< HEAD
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       // lijntje achter tekst
       ctx.fillStyle = "#222"; // zwart lijntje
@@ -178,6 +179,12 @@ export function drawStats(pokeData) {
 
       ctx.fillStyle = "#222"; // zwarte tekst
     }
+=======
+    // het lijntje achter de stats
+    ctx.fillStyle = "#dbdbdb";
+    ctx.fillRect(0, y + 6, textRoom - 15, 3);
+    ctx.fillStyle = "#000";
+>>>>>>> 95379bbc4fd97a566fd2bb3115afc7ccbe8805e2
 
     ctx.textBaseline = "middle";
     ctx.font = '14px "Pokemon BW"';
