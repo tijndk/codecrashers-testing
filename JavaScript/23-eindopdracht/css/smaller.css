@@ -1,0 +1,65 @@
+html,
+body {
+  overflow: auto;
+}
+#pokedex-container {
+  flex-direction: column;
+  height: auto;
+}
+#number-index {
+  width: 100%;
+  max-height: 200px;
+  border-right: none;
+  border-bottom: 4px solid black;
+}
+#info-top,
+p#flavor-text,
+#evolution {
+  max-width: 880px;
+  width: 90%;
+  min-width: auto;
+  margin: 5px auto;
+}
+#info-top {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+#info-top h2 {
+  width: calc(100% - 20px);
+}
+#info-top canvas {
+  margin: 5px 0;
+}
+#info-top p {
+  width: 100%;
+}
+#info-top button {
+  width: 200px;
+  height: 70px;
+  margin: 10px 0;
+  position: relative;
+  bottom: 0;
+  right: 0;
+}
+p#flavor-text {
+  padding: 10px;
+}
+.evo-poke {
+  width: 100px;
+  height: 195px;
+}
+#team-info-container {
+  border: none;
+  border-top: 4px solid black;
+}
+#team-stats-container {
+  flex-flow: row wrap;
+}
+#team-container {
+  justify-content: center;
+}
+#total-stats-canvas {
+  max-width: 100%;
+}

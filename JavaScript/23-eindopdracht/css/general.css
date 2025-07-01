@@ -1,0 +1,418 @@
+@font-face {
+  src: url("../fonts/pokemon-bw.ttf");
+  font-family: "Pokemon BW";
+}
+/* fallback font */
+@import url("https://fonts.googleapis.com/css2?family=Tiny5&display=swap");
+
+:root {
+  --color-dark: #383838;
+  --color-gray: #808080;
+  --color-grayish-blue: #a3a2a8;
+  --color-light-text: #d8d8d8;
+  --color-yellow: #90e818;
+  --color-green: #68a838;
+
+  --bg-main: #ebebed;
+  --bg-accent: #dbdbdb;
+
+  --text-shadow-dark:
+    2px 2px var(--color-gray), 2px 0 var(--color-gray), 0 2px var(--color-gray),
+    1px 2px var(--color-gray), 0 1px var(--color-gray),
+    2px 1px var(--color-gray), 1px 0 var(--color-gray);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+/* meerdere dingetjes */
+header > h1,
+div.pokemon,
+span.type-label,
+p#flavor-text {
+  color: var(--color-light-text);
+  text-shadow: var(--text-shadow-dark);
+}
+
+#info-top,
+#info-top > button,
+p#flavor-text,
+#poke-team-container {
+  border: 4px solid black;
+  box-shadow: 4px 4px 3px 2px rgba(77, 77, 77, 0.5);
+}
+/* -- -- */
+
+html {
+  scrollbar-color: var(--yellow) #08b078;
+  scrollbar-width: thin;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+body {
+  font-family: "Pokemon BW", tiny5, "Comic Sans MS";
+  color: #57524f;
+  text-shadow:
+    2px 2px var(--color-grayish-blue),
+    0 2px var(--color-grayish-blue),
+    2px 0 var(--color-grayish-blue),
+    0 1px var(--color-grayish-blue),
+    1px 2px var(--color-grayish-blue),
+    2px 1px var(--color-grayish-blue),
+    1px 0 var(--color-grayish-blue);
+}
+
+/* de header met >POKÉDEX */
+header {
+  background-image: linear-gradient(to bottom, black, #606060);
+  border-bottom: 4px solid var(--color-yellow);
+}
+
+header > h1 {
+  margin-left: 20px;
+}
+
+header > h1::before {
+  content: ">";
+  color: var(--color-yellow);
+}
+/* -- einde header -- */
+
+/* de container van de rest van de content */
+#pokedex-container {
+  height: 93.5%;
+
+  display: flex;
+  flex-direction: row;
+
+  background-image: url("../images/pokedex-repeating-background.png");
+  background-repeat: repeat;
+}
+
+/* de zijkant waar de pokemon genummerd staan */
+#number-index {
+  width: 30%;
+  padding: 0 20px 0;
+  overflow: auto;
+
+  background-image: url("../images/index-repeating-background.png");
+  background-repeat: repeat;
+  border-right: 4px solid black;
+}
+/* één pokemon div */
+div.pokemon {
+  min-width: 166px;
+  font-size: 1.5rem;
+  margin: 10px 0;
+  padding: 0 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  transform: skew(-14deg);
+  background-color: #181818;
+}
+div.pokemon:hover {
+  cursor: pointer;
+  background-color: #305810;
+  color: #d0f878;
+  text-shadow:
+    2px 2px var(--color-green),
+    0 2px var(--color-green),
+    2px 0 var(--color-green),
+    0 1px var(--color-green),
+    1px 2px var(--color-green),
+    2px 1px var(--color-green),
+    1px 0 var(--color-green);
+}
+#number-index > div > img,
+#number-index > div > p {
+  transform: skew(14deg);
+}
+/* -- einde nummer index -- */
+/* -- einde container -- */
+
+/* gedeelte waar de uitgebreidere informatie staat */
+#right-container {
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: auto;
+}
+/* de Loading... tekst */
+#poke-info-container > #loading-text {
+  width: 66%;
+  font-size: 3rem;
+  line-height: 3rem;
+  color: black;
+  text-shadow:
+    4px 4px var(--color-gray),
+    0 4px var(--color-gray),
+    4px 0 var(--color-gray),
+    0 2px var(--color-gray),
+    2px 4px var(--color-gray),
+    4px 2px var(--color-gray),
+    2px 0 var(--color-gray);
+}
+#info-top {
+  width: 525px;
+  margin: 10px auto;
+
+  position: relative;
+
+  background-color: var(--bg-main);
+}
+#info-top h2 {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--bg-accent);
+}
+#info-top h2 > span {
+  height: 35px;
+  line-height: 35px;
+}
+#info-top h2 #gen-and-region {
+  font-size: 18px;
+}
+#info-top img {
+  height: auto;
+}
+#info-top p:first-of-type {
+  padding: 5px 0;
+  background-image: url("../images/info-repeating-background.png");
+  background-repeat: repeat;
+}
+span.type-label {
+  width: 110px;
+  text-align: center;
+  margin-right: 10px;
+  padding: 5px 0;
+
+  display: inline-block;
+
+  border: 2px solid black;
+  color: white;
+}
+#info-top p:nth-of-type(2) {
+  margin: 5px 0;
+  background-image: linear-gradient(
+    to bottom,
+    var(--bg-main) 35%,
+    var(--bg-accent) 35% 65%,
+    var(--bg-main) 65%
+  );
+}
+#info-top > button {
+  width: 100px;
+  height: 92px;
+  font-family: "Pokemon BW", Tiny5, "Comic Sans MS";
+  font-size: 1.5rem;
+
+  position: absolute;
+  bottom: 40px;
+  right: -60px;
+
+  text-shadow:
+    2px 2px var(--color-gray),
+    2px 0 var(--color-gray),
+    0 2px var(--color-gray);
+  background-image: url("../images/button-repeating-background.png");
+  background-repeat: repeat;
+  cursor: pointer;
+}
+
+#info-top > button:hover {
+  color: black;
+}
+p#flavor-text {
+  width: 435px;
+  min-height: 100px;
+  font-size: 1.2rem;
+  padding: 5px 45px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  background-color: var(--color-dark);
+}
+/* -- einde info -- */
+
+/* evolution chain */
+#evolution {
+  min-width: 487px;
+  margin: 10px;
+  padding: 10px;
+  background-color: var(--bg-main);
+  box-shadow: 4px 4px 3px 2px rgba(77, 77, 77, 0.5);
+}
+#evolution > h3 {
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  background-color: var(--bg-accent);
+}
+.evo-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.branch-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.branch-container.horizontal-branch {
+  flex-direction: row;
+  justify-content: center;
+  gap: 0;
+}
+.evo-row {
+  display: flex;
+  align-items: center;
+}
+.evo-poke {
+  width: 140px;
+}
+.evo-poke img {
+  padding: 5px;
+}
+.horizontal-branch .evo-poke {
+  width: 100px;
+}
+.evo-div .type-label {
+  width: 55px;
+  font-size: 12px;
+  margin: 0 5px 5px;
+  padding: 0;
+}
+/* einde evolution chain */
+
+#team-info-container {
+  width: 100%;
+  padding: 10px 0;
+  background-color: var(--bg-main);
+  border: 4px solid black;
+  border-bottom: none;
+  border-left: none;
+}
+/* alle types van team */
+#combined-types-container {
+  background-image: url("../images/info-repeating-background.png");
+  background-repeat: repeat;
+}
+#combined-types-container > .type-label {
+  margin: 5px;
+}
+/* team en stats */
+#team-stats-container {
+  margin: 5px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+/* gedeelte van het pokemon team */
+#team-container {
+  max-width: 414px;
+
+  display: flex;
+  flex-flow: row wrap;
+}
+div.team-card {
+  width: 120px;
+  margin: 5px;
+  position: relative;
+  background-color: var(--bg-accent);
+}
+.team-card .delete-pokemon {
+  width: 20px;
+  height: 20px;
+  font-family: "Pokemon BW", Tiny5, "Comic Sans MS";
+  font-size: 1rem;
+  font-weight: bold;
+
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+div.team-card p {
+  padding: 0 5px 5px;
+}
+input.nickname-input {
+  width: 100%;
+}
+/* -- einde pokemon team -- */
+
+/* canvas met alle stats */
+#total-stats-canvas {
+  width: auto;
+}
+/* -- -- */
+
+/* scrollbalk */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #08b078;
+  box-shadow: inset 0 0 0 3px #282828;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-yellow);
+  box-shadow: inset 0 0 0 3px #488018;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+/* -- einde scrollbalk -- */
+
+/* voor dark mode gebruikers */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-main: rgb(56, 56, 56);
+    --bg-accent: rgb(34, 34, 34);
+  }
+  body,
+  button {
+    color: var(--color-light-text);
+    text-shadow: var(--text-shadow-dark);
+  }
+  #info-top p:first-of-type,
+  #combined-types-container {
+    background-image: url("../images/dark-info-repeating-background.png");
+  }
+
+  #info-top > button {
+    background-image: url("../images/dark-button-repeating-background.png");
+  }
+}
