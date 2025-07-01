@@ -10,7 +10,6 @@ export async function fetchEvolution(pokeData) {
 
   const evolution = document.createElement("div");
   evolution.id = "evolution";
-<<<<<<< HEAD
   evolution.style.border = `3px solid ${
     pokeData.types[1]
       ? typeColors[pokeData.types[1].type.name]
@@ -27,27 +26,17 @@ export async function fetchEvolution(pokeData) {
     pokeData.name,
     useHorizontalLayout,
   );
-=======
-  evolution.style.border = `3px solid ${pokeData.types[1] ? typeColors[pokeData.types[1].type.name] : "rgba(0,0,0,0.25)"}`;
-  evolution.innerHTML = "<h3>Evolution Chain</h3>";
-
-  const tree = await renderEvolutionNode(chainData.chain, pokeData.name);
->>>>>>> 95379bbc4fd97a566fd2bb3115afc7ccbe8805e2
   evolution.appendChild(tree);
 
   document.getElementById("poke-info-container").appendChild(evolution);
 }
 
 // functie om de evolution chain duidelijk te krijgen
-<<<<<<< HEAD
 export async function renderEvolutionNode(
   node,
   currentName,
   horizontalLayout = false,
 ) {
-=======
-export async function renderEvolutionNode(node, currentName) {
->>>>>>> 95379bbc4fd97a566fd2bb3115afc7ccbe8805e2
   const pokeData = await fetch(
     `https://pokeapi.co/api/v2/pokemon/${node.species.name}`,
   ).then((r) => r.json());
@@ -65,15 +54,11 @@ export async function renderEvolutionNode(node, currentName) {
   img.height = 80;
 
   img.style.backgroundColor = typeColors[pokeData.types[0].type.name];
-<<<<<<< HEAD
   img.style.border = `3px solid ${
     pokeData.types[1]
       ? typeColors[pokeData.types[1].type.name]
       : "rgba(0,0,0,0.25)"
   }`;
-=======
-  img.style.border = `3px solid ${pokeData.types[1] ? typeColors[pokeData.types[1].type.name] : "rgba(0,0,0,0.25)"}`;
->>>>>>> 95379bbc4fd97a566fd2bb3115afc7ccbe8805e2
 
   const label = document.createElement("p");
   label.textContent = capitalize(node.species.name);
@@ -91,7 +76,6 @@ export async function renderEvolutionNode(node, currentName) {
   pokeDiv.append(img, label, type);
   container.appendChild(pokeDiv);
 
-<<<<<<< HEAD
   if (node.evolves_to.length > 0) {
     const branchContainer = document.createElement("div");
     branchContainer.classList.add("branch-container");
@@ -135,46 +119,5 @@ export async function renderEvolutionNode(node, currentName) {
     container.appendChild(branchContainer);
   }
 
-=======
-  const branchContainer = document.createElement("div");
-  const isHorizontalBranch = node.species.name === "eevee" && window.innerWidth > 1200;
-
-  branchContainer.classList.add("branch-container");
-  if (isHorizontalBranch) {
-    branchContainer.classList.add("horizontal-branch");
-  }
-
-  for (const child of node.evolves_to) {
-    const childTree = await renderEvolutionNode(child, currentName);
-
-    if (isHorizontalBranch) {
-      container.style.flexDirection = "column";
-
-      const wrapper = document.createElement("div");
-      wrapper.style.display = "flex";
-      wrapper.style.flexDirection = "column";
-      wrapper.style.alignItems = "center";
-
-      const arrow = document.createElement("div");
-      arrow.classList.add("arrow");
-      arrow.textContent = "↓";
-
-      wrapper.append(arrow, childTree);
-      branchContainer.appendChild(wrapper);
-    } else {
-      const evoRow = document.createElement("div");
-      evoRow.classList.add("evo-row");
-
-      const arrow = document.createElement("div");
-      arrow.classList.add("arrow");
-      arrow.textContent = "→";
-
-      evoRow.append(arrow, childTree);
-      branchContainer.appendChild(evoRow);
-    }
-  }
-
-  container.appendChild(branchContainer);
->>>>>>> 95379bbc4fd97a566fd2bb3115afc7ccbe8805e2
   return container;
 }

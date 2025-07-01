@@ -153,7 +153,6 @@ export function drawTotalStats(myTeam) {
   let y = 0;
 
   Object.entries(totals).forEach(([name, value]) => {
-<<<<<<< HEAD
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       // lijntje achter tekst
       ctx.fillStyle = "#222"; // zwart lijntje
@@ -169,14 +168,6 @@ export function drawTotalStats(myTeam) {
     }
 
     // de tekst
-=======
-    // lijntje achter tekst
-    ctx.fillStyle = "#dbdbdb";
-    ctx.fillRect(0, y + 8, 200, 3);
-
-    // de tekst
-    ctx.fillStyle = "#000";
->>>>>>> 95379bbc4fd97a566fd2bb3115afc7ccbe8805e2
     ctx.textBaseline = "bottom";
     ctx.font = '14px "Pokemon BW"';
     ctx.fillText(`TOTAL ${name.toUpperCase()} (${value})`, 5, y + 18);
