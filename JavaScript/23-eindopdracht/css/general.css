@@ -77,6 +77,7 @@ body {
 
 /* de header met >POKÉDEX */
 header {
+  height: 6%;
   background-image: linear-gradient(to bottom, black, #606060);
   border-bottom: 4px solid var(--color-yellow);
 }
@@ -93,7 +94,7 @@ header > h1::before {
 
 /* de container van de rest van de content */
 #pokedex-container {
-  height: 93.5%;
+  height: 94%;
 
   display: flex;
   flex-direction: row;
