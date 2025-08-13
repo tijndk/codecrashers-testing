@@ -6,30 +6,25 @@ import {
   saveTeamToLocalStorage,
   loadTeamFromLocalStorage,
 } from "../utils.js";
+import { t } from "../langSelect.js"; // Opdracht 8
 
 // Opdracht 5.1
 export const myTeam = [];
 
 // Opdracht 5.1 - voeg pokemon toe aan team
 export function addPokemonToTeam(pokeData, isShiny) {
-  const speciesName = capitalize(pokeData.species.name);
+  const speciesName = capitalize(pokeData.localized_name) || capitalize(pokeData.species.name);
 
   if (myTeam.length >= 6) {
-    alert("Your team is full! (6 Pokémon maximum)");
+    alert(t("team_full")); // Opdracht 8
     return;
   }
 
   // Opdracht 5.3 - nickname
-  let nickname = prompt(
-    "Give your Pokémon a nickname? (click on name to change it)",
-    speciesName,
-  );
+  let nickname = prompt(t("nickname_prompt"), speciesName); // Opdracht 8
 
   // lengte controle voor de nickname
-  while (nickname && nickname.length > 12) {
-    nickname = prompt(
-      "Nickname too long! Max 12 characters.\nPlease enter a shorter nickname:",
-    );
+  while (nickname && nickname.length > 12) {nickname = prompt(t("nickname_too_long")); // Opdracht 8
   }
 
   const pokemon = {
@@ -75,11 +70,7 @@ export function renderTeam() {
     deleteBtn.classList.add("delete-pokemon");
     deleteBtn.textContent = "x";
     deleteBtn.addEventListener("click", () => {
-      if (
-        confirm(
-          `Are you sure you want to remove ${pokemon.name} from your team?`,
-        )
-      ) {
+      if (confirm(t("confirm_delete", { name: pokemon.name }))) {
         card.remove();
         myTeam.splice(myTeam.indexOf(pokemon), 1);
         // Opdracht 5.4 - team opslaan
@@ -153,15 +144,24 @@ export function drawTotalStats(myTeam) {
   let y = 0;
 
   Object.entries(totals).forEach(([name, value]) => {
-    // lijntje achter tekst
-    ctx.fillStyle = "#dbdbdb";
-    ctx.fillRect(0, y + 8, 200, 3);
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      // lijntje achter tekst
+      ctx.fillStyle = "#222"; // zwart lijntje
+      ctx.fillRect(0, y + 8, 200, 3);
+
+      ctx.fillStyle = "#d8d8d8"; // lichte tekst
+    } else {
+      // lijntje achter tekst
+      ctx.fillStyle = "#dbdbdb";
+      ctx.fillRect(0, y + 8, 200, 3);
+
+      ctx.fillStyle = "#222"; // zwarte tekst
+    }
 
     // de tekst
-    ctx.fillStyle = "#000";
     ctx.textBaseline = "bottom";
     ctx.font = '14px "Pokemon BW"';
-    ctx.fillText(`TOTAL ${name.toUpperCase()} (${value})`, 5, y + 18);
+    ctx.fillText(`${t("total")} ${t(`stats.${name}`).toUpperCase()} (${value})`, 5, y + 18);
 
     // de balk
     const w = (value / maxStats) * drawWidth;
@@ -187,7 +187,7 @@ export function renderAllTypes(myTeam) {
   allTypes.forEach((type) => {
     const span = document.createElement("span");
     span.classList.add("type-label");
-    span.textContent = type.toUpperCase();
+    span.textContent = t(`types.${type}`).toUpperCase();
     span.style.backgroundColor = typeColors[type];
     container.appendChild(span);
   });

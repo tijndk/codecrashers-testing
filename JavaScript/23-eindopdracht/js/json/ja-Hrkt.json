@@ -1,0 +1,43 @@
+{
+    "title": "ずかん",
+    "loading": "積載する。。。",
+    "team_full": "あなたのチームはいっぱいです！(6ひきまでのポケモン)",
+    "add_to_team": "ちーむにくわえる",
+    "nickname_prompt": "ポケモンにあだ名をつけてください? (なまえをクリックしてかえてください)",
+    "nickname_too_long": "にっくねーむがながすぎる! まっくす じゅうに かくたりょう。\nみじかいにっくねーむを はいれてください:",
+    "confirm_delete": "{name}えを チームから さくじょ しても いいですか?",
+    "evolution_chain": "いしんけい",
+    "height_weight": "たかさ: {h} m - おもさ: {w} kg",
+    "no_description": "せつめいがありません",
+    "shiny_found": "あたらしいポケモンがあらわれた!",
+    "types": {
+        "normal": "ノーマル",
+        "fighting": "かくとう",
+        "flying": "ひこう",
+        "poison": "どく",
+        "ground": "じめん",
+        "rock": "いわ",
+        "bug": "むし",
+        "ghost": "ゴースト",
+        "steel": "はがね ",
+        "fire": "ほのお",
+        "water": "みず",
+        "grass": "くさ",
+        "electric": "でんき",
+        "psychic": "エスパー",
+        "ice": "こおり",
+        "dragon": "ドラゴン",
+        "dark": "あく",
+        "fairy": "フェアリー"
+    },
+    "total": "とおたる",
+    "stats": {
+        "hp": "hp",
+        "attack": "こうげき",
+        "defense": "ぼうぎょ",
+        "special-attack": "とくこう",
+        "special-defense": "とくぼう",
+        "speed": "すばやさ"
+    }
+  }
+  

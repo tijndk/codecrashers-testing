@@ -5,15 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokédex App</title>
     <script type="module" src="./js/main.js"></script>
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/middle.css">
-    <link rel="stylesheet" media="screen and (max-width: 576px)" href="css/mobile.css">
+    <!-- general css -->
+    <link rel="stylesheet" href="css/general.css" />
+    <!-- css voor kleinere apparaten -->
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1200px)"
+      href="css/smaller.css"
+    />
     <link rel="icon" href="./images/favicon.png" />
   </head>
   <body>
     <!-- Opdracht 2.1 -->
     <header>
-      <h1>POKÉDEX</h1>
+      <h1 data-lang="title">POKÉDEX</h1>
+      <select name="lang-select" id="lang-select">
+        <option value="en">🇬🇧 English</option>
+        <option value="nl">🇳🇱 Nederlands</option>
+        <option value="fr">🇫🇷 Français</option>
+        <option value="de">🇩🇪 Deutsch</option>
+        <option value="ja-Hrkt">🇯🇵 日本語</option>
+      </select>
     </header>
     <div id="pokedex-container">
       <!-- Opdracht 2.1 -->
@@ -21,7 +33,7 @@
       <div id="right-container">
         <!-- Opdracht 2.2 -->
         <div id="poke-info-container">
-          <p id="loading-text">Loading...</p>
+          <p id="loading-text" data-lang="loading"></p>
         </div>
         <div id="team-info-container">
           <!-- Opdracht 5.1 -->

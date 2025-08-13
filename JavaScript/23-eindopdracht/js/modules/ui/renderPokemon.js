@@ -4,9 +4,16 @@ import { typeColors, statColors, generationMap } from "../constants.js";
 import { capitalize } from "../utils.js";
 import { addPokemonToTeam } from "./team.js";
 import { fetchEvolution } from "./evolution.js";
+import { fetchPokemonData } from "../api/api.js";
+import { setSelectedPokemon } from "../state.js";
+import { t } from "../langSelect.js";
 
 // functie om elementen aan te maken en de pokemon index te renderen/laten zien op de pagina aan de linker kant
 export function renderPokemonIndex(pokeData) {
+  if (!pokeData.url) {
+    pokeData.url = `https://pokeapi.co/api/v2/pokemon/${pokeData.name}`;
+  }
+
   // de elementen
   const allPokemonContainer = document.getElementById("number-index");
   const pokeContainer = document.createElement("div");
@@ -31,8 +38,11 @@ export function renderPokemonIndex(pokeData) {
   pokeContainer.append(pokeNumber);
 
   // Opdracht 2.2 - event listener om pokemon informatie te tonen
-  pokeContainer.addEventListener("click", () => {
-    showInfo(pokeData);
+  pokeContainer.addEventListener("click", async () => {
+    const lang = localStorage.getItem("lang") || "en";
+    const updatedData = await fetchPokemonData({ url: pokeData.url }, lang);
+    setSelectedPokemon(updatedData);
+    showInfo(updatedData);
   });
 
   allPokemonContainer.appendChild(pokeContainer);
@@ -40,6 +50,11 @@ export function renderPokemonIndex(pokeData) {
 
 // Opdracht 2.2 - functie om pokemon informatie te tonen aan de rechterkant
 export function showInfo(pokeData) {
+  if (!pokeData || !pokeData.types) {
+    document.getElementById("poke-info-container").innerHTML = `<p>${t("no_description")}</p>`;
+    return;
+  }
+
   const pokeInfo = document.getElementById("poke-info-container");
   // Opdracht 4.1 - shiny kans is 1 op 10
   const isShiny = Math.random() < 1 / 10;
@@ -60,7 +75,7 @@ export function showInfo(pokeData) {
   pokeName.id = "pokemon-name";
 
   // Opdracht 2.3 - sterretje toevoegen als de pokemon legendary of mythical is
-  pokeName.textContent = `${pokeData.isLegendary || pokeData.isMythical ? "⭐" : ""} ${capitalize(pokeData.species.name)} ${isShiny ? "✨" : ""}`;
+  pokeName.textContent = `${pokeData.isLegendary || pokeData.isMythical ? "⭐" : ""} ${capitalize(pokeData.localized_name) || capitalize(pokeData.species.name)} ${isShiny ? "✨" : ""}`;
 
   // Opdracht 7.1 - generatie en regio van pokemon
   const genKey = pokeData.generation;
@@ -85,7 +100,7 @@ export function showInfo(pokeData) {
   // Opdracht 4.2
   if (isShiny) {
     setTimeout(() => {
-      console.log("A shiny Pokémon has appeared!");
+      console.log(t("shiny_found"));
     }, 2000);
   }
 
@@ -98,23 +113,26 @@ export function showInfo(pokeData) {
   // types, lengte, gewicht, en beschrijving
   // Opdracht 3.1 - de types van de pokemon
   const pokeTypes = document.createElement("p");
-  pokeData.types.forEach((t) => {
-    const typeName = t.type.name;
+  pokeData.types.forEach((typeObj) => {
+    const typeName = typeObj.type.name;
     const span = document.createElement("span");
     span.classList.add("type-label");
-    span.textContent = typeName.toUpperCase();
+    span.textContent = t(`types.${typeName}`).toUpperCase();
     span.style.backgroundColor = typeColors[typeName];
     pokeTypes.appendChild(span);
   });
 
   // lengte en gewicht
   const heightAndWeight = document.createElement("p");
-  heightAndWeight.textContent = `Height: ${pokeData.height / 10} m - Weight: ${pokeData.weight / 10} kg`;
+  heightAndWeight.textContent = t("height_weight", {
+    h: pokeData.height / 10,
+    w: pokeData.weight / 10
+  });
 
   // Opdracht 5.1 - add to team button
   const addPokemonButton = document.createElement("button");
   addPokemonButton.type = "button";
-  addPokemonButton.textContent = "Add to team";
+  addPokemonButton.textContent = t("add_to_team");
   addPokemonButton.addEventListener("click", () => {
     addPokemonToTeam(pokeData, isShiny);
   });
@@ -122,7 +140,7 @@ export function showInfo(pokeData) {
   // flavor text/beschrijving
   const description = document.createElement("p");
   description.id = "flavor-text";
-  description.textContent = pokeData.flavor_text;
+  description.textContent = pokeData.flavor_text || t("no_description");
 
   // voeg alles toe aan de info container
   infoTop.append(
@@ -138,7 +156,7 @@ export function showInfo(pokeData) {
   // teken de stats op het canvas
   drawStats(pokeData);
   // Opdracht 7.2 - evolution chain
-  fetchEvolution(pokeData);
+  fetchEvolution(pokeData, localStorage.getItem("lang") || "en");
 }
 
 // opdracht 3.2 - functie om de stats te tekenen
@@ -150,7 +168,7 @@ export function drawStats(pokeData) {
   const barHeight = 20; // de hoogte/breedte van de staven van boven naar beneden
   const gap = 15; // ruimte tussen de staven
   const maxStatValue = 255;
-  const textRoom = 170; // ruimte voor de tekst
+  const textRoom = 185; // ruimte voor de tekst
   const canvasWidth = canvas.width - textRoom;
 
   let y = 0;
@@ -165,14 +183,23 @@ export function drawStats(pokeData) {
     ctx.fillStyle = color;
     ctx.fillRect(textRoom, y, barWidth, barHeight);
 
-    // het lijntje achter de stats
-    ctx.fillStyle = "#dbdbdb";
-    ctx.fillRect(0, y + 6, textRoom - 15, 3);
-    ctx.fillStyle = "#000";
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      // lijntje achter tekst
+      ctx.fillStyle = "#222"; // zwart lijntje
+      ctx.fillRect(0, y + 6, textRoom - 15, 3);
+
+      ctx.fillStyle = "#d8d8d8"; // lichte tekst
+    } else {
+      // lijntje achter tekst
+      ctx.fillStyle = "#dbdbdb";
+      ctx.fillRect(0, y + 6, textRoom - 15, 3);
+
+      ctx.fillStyle = "#222"; // zwarte tekst
+    }
 
     ctx.textBaseline = "middle";
     ctx.font = '14px "Pokemon BW"';
-    ctx.fillText(`${name.toUpperCase()} (${value})`, 5, y + barHeight / 2);
+    ctx.fillText(`${t(`stats.${name}`).toUpperCase()} (${value})`, 5, y + barHeight / 2);
 
     y += barHeight + gap;
   });

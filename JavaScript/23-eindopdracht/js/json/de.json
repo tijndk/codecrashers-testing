@@ -1,0 +1,43 @@
+{
+    "title": "POKÉDEX",
+    "loading": "Laden...",
+    "team_full": "Ihr Team ist voll! (Maximal 6 Pokémon)",
+    "add_to_team": "Zum Team hinzufügen",
+    "nickname_prompt": "Deinem Pokémon einen spitznamen geben?? (Klicken Sie auf den Namen, um ihn zu ändern)",
+    "nickname_too_long": "Spitzname zu lang! Maximal 12 Zeichen.\nBitte geben Sie einen kürzeren Spitznamen ein:",
+    "confirm_delete": "Are you sure you want to remove {name} from your team?",
+    "evolution_chain": "Evolutionskette",
+    "height_weight": "Größe: {h} m - Gewicht: {w} kg",
+    "no_description": "Keine Beschreibung verfügbar",
+    "shiny_found": "Ein shiny Pokémon ist erschienen!",
+    "types": {
+        "normal": "normal",
+        "fighting": "Kampf",
+        "flying": "flug",
+        "poison": "gift",
+        "ground": "boden",
+        "rock": "gestein",
+        "bug": "käfer",
+        "ghost": "geist",
+        "steel": "stahl",
+        "fire": "feuer",
+        "water": "wasser",
+        "grass": "pflanze",
+        "electric": "elektro",
+        "psychic": "psycho",
+        "ice": "eis",
+        "dragon": "drache",
+        "dark": "unlicht",
+        "fairy": "fee"
+    },
+    "total": "TOTALER",
+    "stats": {
+        "hp": "hp",
+        "attack": "angriff",
+        "defense": "verteidigung",
+        "special-attack": "spezial-angriff",
+        "special-defense": "spezial-verteidigung",
+        "speed": "initiative"
+    }
+  }
+  

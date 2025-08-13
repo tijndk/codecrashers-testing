@@ -1,0 +1,43 @@
+{
+    "title": "POKÉDEX",
+    "loading": "Aan het laden...",
+    "team_full": "Je team zit vol! (maximaal 6 Pokémon)",
+    "add_to_team": "Toevoegen aan team",
+    "nickname_prompt": "Geef je Pokémon een bijnaam? (klik op de naam om deze te wijzigen)",
+    "nickname_too_long": "Bijnaam te lang! Max 12 characters.\nVoer alsjeblieft een kortere bijnaam in:",
+    "confirm_delete": "Weet je zeker dat je {name} uit je team wilt verwijderen?",
+    "evolution_chain": "Evolutie Keten",
+    "height_weight": "Lengte: {h} m - Gewicht: {w} kg",
+    "no_description": "Geen beschrijving beschikbaar",
+    "shiny_found": "Er is een shiny Pokémon verschenen!",
+    "types": {
+        "normal": "normaal",
+        "fighting": "vecht",
+        "flying": "vliegend",
+        "poison": "gif",
+        "ground": "grond",
+        "rock": "steen",
+        "bug": "insect",
+        "ghost": "geest",
+        "steel": "staal",
+        "fire": "vuur",
+        "water": "water",
+        "grass": "gras",
+        "electric": "electrisch",
+        "psychic": "psychisch",
+        "ice": "ijs",
+        "dragon": "draak",
+        "dark": "duister",
+        "fairy": "fee"
+    },
+    "total": "TOTALE",
+    "stats": {
+        "hp": "hp",
+        "attack": "aanval",
+        "defense": "verdediging",
+        "special-attack": "speciale-aanval",
+        "special-defense": "speciale-verdediging",
+        "speed": "snelheid"
+    }
+  }
+  
